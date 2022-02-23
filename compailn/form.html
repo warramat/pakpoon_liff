@@ -21,7 +21,6 @@
                 <br />
                 <h4>เรื่อง : <span id="topic"></span></h4>
             </div>
-
             <form>
                 <div class="form-group">
                     <label for="fname">เรื่อง</label>
@@ -42,21 +41,6 @@
                 <div class="form-group ">
                     <div class="row">
                         <div class="col-6">
-                            <video id="webCam" autoplay playsinlne width="500" height="300"></video>
-                            <canvas id="canvas"></canvas>
-                            <a download onclick="takeAPicture(event)">ถ่ายรูป</a>
-
-                            <script>
-                                const webCamElement = document.getElementById("webCam");
-                                const canvasElement = document.getElementById('canvas')
-                                const webcam = new Webcam(webCamElement, 'user', canvasElement)
-                                webcam.start()
-
-                                function takeAPicture() {
-                                    let picture = webcam.snap()
-                                    document.querySelector('a').href = picture;
-                                }
-                            </script>
                         </div>
                         <div class=" col-6">
                             <input type="file" id="upload" accept="image/*" name="img" onchange="loadFile(event)"

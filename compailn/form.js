@@ -52,20 +52,26 @@ $('form').submit((e) => {
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = JSON.stringify(data);
+      console.log(raw);
       var requestOptions = {
         method: 'POST',
         headers: myHeaders,
         body: raw,
         redirect: 'follow'
       };
+
       fetch(
         'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         requestOptions
-      ).then(() => {
-        Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() =>
-          location.reload()
-        );
-      });
+      )
+        .then(() => {
+          Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() =>
+            location.reload()
+          );
+        })
+        .catch((e) => {
+          console.log;
+        });
     }
   });
 });
