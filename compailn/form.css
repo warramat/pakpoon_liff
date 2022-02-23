@@ -40,3 +40,14 @@ li {
 .btn-danger {
   margin-top: -5rem;
 }
+
+a {
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+}
+
+canvas {
+  display: none;
+}
