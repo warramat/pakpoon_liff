@@ -1,20 +1,29 @@
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
-    $('#list_images').append(`
-    <div class="item">
-        <img src="${reader.result}">
-    </div>
-    `);
-    $('#upload').val('');
+    addImage(reader.result);
   };
   reader.readAsDataURL(event.target.files[0]);
+}
+
+function addImage(img) {
+  const id = Math.round(Math.random() * 10000);
+  $('#list_images').append(`
+    <li class="item" id="${id}">
+      <img class="img-row" src="${img}">
+      <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
+    </li>
+    `);
+  $('#upload').val('');
+}
+
+function remove_img(id) {
+  $('#' + id).remove();
 }
 
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
-  console.log(myParam);
   let data = await fetch(
     'https://smartcity-pakpoon.herokuapp.com/apply/search?topic=' + myParam
   );
@@ -29,7 +38,9 @@ $(document).ready(async () => {
 
 $('form').submit((e) => {
   e.preventDefault();
+  navigator.geolocation.getCurrentPosition(function (position) {});
   Swal.fire({
+    icon: 'question',
     title: 'ยืนยันการแจ้งเรื่อง',
     showDenyButton: true,
     showCancelButton: false,
@@ -37,15 +48,52 @@ $('form').submit((e) => {
     denyButtonText: 'ยกเลิก'
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success');
+      let data = prepareData();
+      let myHeaders = new Headers();
+      myHeaders.append('Content-Type', 'application/json');
+      const raw = JSON.stringify(data);
+      var requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: raw,
+        redirect: 'follow'
+      };
+      fetch(
+        'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
+        requestOptions
+      ).then(() => {
+        Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() =>
+          location.reload()
+        );
+      });
     }
   });
 });
 
-$('#take_image').click(async () => {
-  let stream = await navigator.mediaDevices.getUserMedia({
-    video: true,
-    audio: false
+function prepareData() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  let lat = 0;
+  let lng = 0;
+  let img = [];
+  $('.img-row').each(function (i, obj) {
+    img.push($(this).attr('src'));
   });
-  console.log(stream);
-});
+  navigator.geolocation.getCurrentPosition(function (position) {
+    lat = position.coords.latitude;
+    lng = position.coords.longitude;
+  });
+  let data = {
+    type: $('#choice').val(),
+    details: $('#detail').val(),
+    topic: myParam,
+    img: img,
+    gps: {
+      lat: lat,
+      lng: lng
+    }
+  };
+  return data;
+}
+
+$('#take_image').click(async () => {});

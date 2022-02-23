@@ -15,58 +15,57 @@
     <!--------------------------------------------------------------------------------------------->
     <!--------------------------------------------------------------------------------------------->
     <div class="card">
-        <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-            <img src="../img/logo.jpg" width="100" height="100" />
-            <br />
-            <h4>เรื่อง : <span id="topic"></span></h4>
-        </div>
-
         <div class="card-body ">
-            <div class=" d-flex align-items-center " style="flex-direction:column;">
-                <form>
-                    <div class="form-group" style="margin: 0 -3rem 0 -3rem;">
-                        <label for="fname">เรื่อง</label>
-                        <select id="choice" class="form-select" required>
-                            <option value="" selected disabled hidden>
-                                กรุณาเลือกเรื่อง
-                            </option>
-                        </select>
-                    </div>
-                    <br />
-                    <div class="form-group" style="margin: 0 -3rem 0 -3rem;">
-                        <label for="lname">รายละเอียด</label>
-                        <textarea value="" class="form-control " rows="3" required></textarea>
-                    </div>
-                    <br>
-
-                    <div class="form-group ">
-                        <div class="row" style="min-width: 150%; margin-left: -25%">
-                            <div class="col-6">
-                                <button id="take_image" class="btn btn-outline-primary"
-                                    style="width: 110%">ถ่ายรูป</button>
-                            </div>
-                            <div class=" col-6">
-                                <input type="file" id="upload" accept="image/*" name="img" onchange="loadFile(event)"
-                                    hidden />
-                                <label for="upload" class="btn btn-primary" style="width: 110%">แนบรูป</label>
-                            </div>
-                        </div>
-
-                    </div>
-                    <br>
-                    <div class="row" style="min-width: 150%; margin-left: -25%;">
-                        <div class="col-6">
-                            <a class="btn btn-outline-primary " href="main_rongrian.html" style="width: 110%;">
-                                ย้อนกลับ</a>
-                        </div>
-                        <div class="col-6 ">
-                            <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 110%;">
-                        </div>
-
-                    </div>
+            <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                <img src="../img/logo.jpg" width="100" height="100" />
+                <br />
+                <h4>เรื่อง : <span id="topic"></span></h4>
             </div>
-            </form>
+
+            <form>
+                <div class="form-group">
+                    <label for="fname">เรื่อง</label>
+                    <select id="choice" class="form-select" required>
+                        <option value="" selected disabled hidden>
+                            กรุณาเลือกเรื่อง
+                        </option>
+                    </select>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="lname">รายละเอียด</label>
+                    <textarea value="" class="form-control " id="detail" rows="3" required></textarea>
+                </div>
+                <br>
+                <ul class="images" id="list_images"></ul>
+                <br>
+                <div class="form-group ">
+                    <div class="row">
+                        <div class="col-6">
+                            <button id="take_image" class="btn btn-outline-primary" style="width: 100%">ถ่ายรูป</button>
+                        </div>
+                        <div class=" col-6">
+                            <input type="file" id="upload" accept="image/*" name="img" onchange="loadFile(event)"
+                                hidden />
+                            <label for="upload" class="btn btn-primary" style="width: 100%">แนบรูป <span>&nbsp; <img
+                                        src="../img/logo.jpg" width="15" height="15" /></span></label>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-6">
+                        <a class="btn btn-outline-primary " href="./main_compailn.html" style="width: 100%;">
+                            ย้อนกลับ</a>
+                    </div>
+                    <div class="col-6 ">
+                        <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 100%;">
+                    </div>
+
+                </div>
         </div>
+        </form>
     </div>
 
     </div>

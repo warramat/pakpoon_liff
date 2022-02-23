@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
 body {
   background-color: coral;
+  font-family: 'Kanit', sans-serif;
 }
 
 .card {
@@ -14,3 +17,26 @@ a {
   color: black;
 }
 
+ul.images {
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  min-width: 100%;
+  overflow-x: auto;
+}
+ul.images li {
+  display: inline;
+  width: 150px;
+}
+
+.img-row {
+  width: 150px;
+}
+
+li {
+  margin-right: 2rem;
+}
+
+.btn-danger {
+  margin-top: -5rem;
+}
