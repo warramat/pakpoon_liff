@@ -19,7 +19,10 @@ $(document).ready(async () => {
     redirect: 'follow'
   };
   // console.log(myParam);
-  let data = await fetch("https://smartcity-pakpoon.herokuapp.com/petition/search?topic=" , requestOptions)
+  let data = await fetch(
+    'https://smartcity-pakpoon.herokuapp.com/petition/search?topic=',
+    requestOptions
+  );
   data = await data.json();
   let html = '';
   $('#topic').text(data.topic.type);
@@ -32,14 +35,14 @@ $(document).ready(async () => {
 $('form').submit((e) => {
   e.preventDefault();
   Swal.fire({
-    title: 'ยืนยันการแจ้งเรื่อง',
+    title: 'ยืนยันการยื่นคำร้อง',
     showDenyButton: true,
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
     denyButtonText: 'ยกเลิก'
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success');
+      Swal.fire('ยื่นคำร้องสำเร็จ', '', 'success');
     }
   });
 });
