@@ -13,18 +13,20 @@ function loadFile(event) {
 
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get('topic');
-  console.log(myParam);
-  let data = await fetch(
-    'https://smartcity-pakpoon.herokuapp.com/apply/search?topic=' + myParam
-  );
+  // const myParam = urlParams.get('topic');
+  var requestOptions = {
+    method: 'GET',
+    redirect: 'follow'
+  };
+  // console.log(myParam);
+  let data = await fetch("https://smartcity-pakpoon.herokuapp.com/petition/search?topic=" , requestOptions)
   data = await data.json();
   let html = '';
-  $('#topic').text(data.type);
-  data.details.forEach((element) => {
+  $('#topic').text(data.topic.type);
+  data.type.forEach((element) => {
     html += `<option value="${element}">${element}</option>`;
   });
-  $('#choice').append(html);
+  $('#choice1').append(html);
 });
 
 $('form').submit((e) => {
