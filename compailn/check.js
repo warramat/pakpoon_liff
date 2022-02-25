@@ -1,6 +1,6 @@
 //----------------------get api-----------------------------//
 window.onload = async () => {
-  let data = await fetch('http://8d21-27-55-68-247.ngrok.io/api/conan.php');
+  let data = await fetch('https://jsonplaceholder.typicode.com/todos');
   let html = '';
   data = await data.json();
   data.map((item, key) => {
@@ -17,15 +17,13 @@ window.onload = async () => {
           />
         </div>
         <div class="col-8">
-          <h2>ลำดับที่ :${item.ID}</h2>
-          <h4>ชื่อ :${item.name}</h4>
-          <h4>นามสกุล :${item.sername}</h4>
+          <h2>ลำดับที่ :${item.id}</h2>
+          <h4>ชื่อ :${item.title}</h4>
           <h4>เพศ :<span style="color:${
-            item.gender === 'ชาย' ? 'skyblue' : 'pink'
-          }";>${item.gender}</span></h4>
+            item.completed === 'true' ? 'skyblue' : 'pink'
+          }";>${item.completed}</span></h4>
         </div>
         <br />
-        ที่อยู่ :${item.home}
       </div>
           </div>
            
