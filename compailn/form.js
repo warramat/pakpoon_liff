@@ -61,6 +61,7 @@ $('form').submit((e) => {
       };
 
       fetch(
+        // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         requestOptions
       )
