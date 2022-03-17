@@ -72,8 +72,13 @@ $('#district').change(async () => {
   makeList('subdistrict', subDistrict);
 });
 /*************************************************** */
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
 
-$('form').submit((e) => {
+$('form').submit(async (e) => {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
@@ -92,11 +97,12 @@ $('form').submit((e) => {
       }
       const prefix = $('#prefix').val();
       if (prefix === 'เด็กชาย' || prefix === 'นาย') {
-        json += ',"sex": "ชาย"';
+        json += ',"sex": "ชาย",';
       }
       if (prefix === 'นาง' || prefix === 'เด็กหญิง' || prefix === 'นางสาว') {
-        json += ',"sex": "หญิง"';
+        json += ',"sex": "หญิง",';
       }
+      json += `"userID":"${await getUID()}"`
       json += '}';
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
