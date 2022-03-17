@@ -50,7 +50,7 @@
             <form>
                 <div class="form-group">
                     <label for="fname">คำนำหน้า</label>
-                    <select id="prefix" class="form-select" required>
+                    <select id="prefix" name="prefix" class="form-select" required>
                         <option value="" selected disabled hidden>
                             กรุณาเลือก
                         </option>
@@ -64,44 +64,37 @@
                 </div>
                 <br />
                 <div class="form-group">
-                    <label for="fname">ชื่อ</label>
+                    <label for="name">ชื่อ</label>
                     <input id="name" name="name" class="form-control" type="text" placeholder="กรุณากรอก"
                         aria-label="default input example">
                 </div>
                 <br />
                 <div class="form-group">
-                    <label for="fname">นามสกุล</label>
+                    <label for="lastname">นามสกุล</label>
                     <input id="lastname" name="lastname" class="form-control" type="text" placeholder="กรุณากรอก"
                         aria-label="default input example">
                 </div>
-
-                <!-- <div class="form-group">
-                <label for="fname">เลขบัตรประชาชน</label>
-                <input id="cardid" class="form-control" type="text" placeholder="กรุณากรอก"
-                    aria-label="default input example" maxlength="13" minlength="13">
-            </div> -->
-
                 <br />
                 <div class="form-group">
-                    <label for="inputPassword" class="col-sm-2 col-form-label">เบอร์โทรศัพท์</label>
-                    <input type="tel" class="form-control" placeholder="กรุณากรอก" id="telephone" name="telephone">
-
+                    <label for="telephone" class="col-sm-2 col-form-label">เบอร์โทรศัพท์</label>
+                    <input type="telephone" class="form-control" placeholder="กรุณากรอก" id="telephone"
+                        name="telephone">
                 </div>
                 <br />
                 <div class="form-group">
-                    <label for="fname">บ้านเลขที่</label>
+                    <label for="housenumber">บ้านเลขที่</label>
                     <input id="housenumber" name="housenumber" class="form-control" type="text" placeholder="กรุณากรอก"
                         aria-label="default input example">
                 </div>
                 <br />
                 <div class="form-group">
-                    <label for="fname">หมู่</label>
+                    <label for="group">หมู่</label>
                     <input id="group" name="group" class="form-control" type="number" placeholder="กรุณากรอก"
                         aria-label="default input example">
                 </div>
                 <br />
                 <div class="form-group">
-                    <label for="fname">ตรอก/ซอย</label>
+                    <label for="alley">ตรอก/ซอย</label>
                     <input id="alley" name="alley" class="form-control" type="text" placeholder="กรุณากรอก"
                         aria-label="default input example">
                 </div>
@@ -151,7 +144,7 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <a class="btn btn-outline-primary " href="./main_compailn.html" style="width: 100%;">
+                        <a class="btn btn-outline-primary " href="./compailn/" style="width: 100%;">
                             ย้อนกลับ</a>
                     </div>
                     <div class="col-6 ">
@@ -184,52 +177,52 @@
 <script src="index.js"></script>
 
 </html>
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Post Api</title>
 </head>
 
 <body>
-    <section>
-        <input type="checkbox" id="check">
-        <header>
-            <h2><a href="#" class="logo">Logo</a></h2>
-            <div class="navigation">
-                <a href="#">ท่องเที่ยว</a>
-                <a href="#">ข่าวสาร</a>
-                <a href="#">สุขภาพ</a>
-                <a href="#">แจ้งเหตุ</a>
-                <a href="#">ร้องทุกข์</a>
-                <a href="#">อื่นๆ</a>
-            </div>
-            <label for="check">
-                <i class="fas fa-bars menu-btn"></i>
-                <i class="fas fa-times close-btn"></i>
-            </label>
-        </header>
-        <div class="content">
-            <div class="info">
-                <h2>Like Nature<br><span>Hello!!</span> </h2>
-                <p>5555555555555555555555555555555555</p>
-                <a href="#" class="info-btn">เพิ่มเติม</a>
-            </div>
-        </div>
-        <div class="media-icons">
-            <a href="#"></a>
-        </div>
-    </section>
+    <form id="form" method="post">
+        <input type="text" id="name" placeholder="Name" />
+        <input type="text" id="body" placeholder="Body" />
+        <input type="number" id="id" placeholder="Id" />
+        <input type="submit" value="บันทึก" />
+    </form>
 </body>
+
+<script>
+    var form = document.getElementById('form')
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+        var name = document.getElementById('name').value
+        var body = document.getElementById('body').value
+        var id = document.getElementById('id').value
+
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                title: name,
+                body: body,
+                id: id
+            }),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            }
+        })
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                console.log(data)
+            })
+    })
+</script>
 
 </html> -->

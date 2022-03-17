@@ -86,8 +86,15 @@ $('form').submit((e) => {
       let data = $('form').serializeArray();
       let json = '{';
       for (let i = 0; i < data.length; i++) {
-        json += data[i].name + ':' + data[i].value;
+        json += `"${data[i].name}" :"${data[i].value}"`;
         i + 1 == data.length ? (json += '') : (json += ',');
+      }
+      const prefix = $('#prefix').val();
+      if (prefix === 'เด็กชาย' || prefix === 'นาย') {
+        json += ',"sex": "ชาย"';
+      }
+      if (prefix === 'นาง' || prefix === 'เด็กหญิง' || prefix === 'นางสาว') {
+        json += ',"sex": "หญิง"';
       }
       json += '}';
       let myHeaders = new Headers();
