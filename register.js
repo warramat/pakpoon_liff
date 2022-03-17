@@ -36,11 +36,6 @@ function makeList(id, data, clear = true) {
 }
 
 $(document).ready(async () => {
-  if (!liff.isLoggedIn()) {
-    liff.login({
-      redirectUri: 'https://wonderful-lalande-320066.netlify.app/register.html'
-    });
-  }
   let provinces = await getProvinces();
   provinces = provinces.data.map(({ province }) => province);
   makeList('province', provinces, false);
