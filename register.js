@@ -106,6 +106,8 @@ $('form').submit((e) => {
       let u = await getUID();
       json += `"userID":"${u}"`;
       json += '}';
+      console.log(json)
+      /*
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = json;
@@ -128,6 +130,7 @@ $('form').submit((e) => {
         .catch((e) => {
           console.log(e);
         });
+        */
     }
   });
 });
