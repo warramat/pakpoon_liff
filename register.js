@@ -52,7 +52,7 @@ $('#province').change(async () => {
   );
   let zipcode = await getZipcode($('#province').val(), $('#district').val());
   subDistrict = subDistrict.data;
-  zipcode = zipcode.zipcode;3
+  zipcode = zipcode.zipcode;
   makeList('subdistrict', subDistrict);
   makeList('zipcode', zipcode);
   $('#district').prop('disabled', false);
@@ -102,7 +102,8 @@ $('form').submit(async (e) => {
       if (prefix === 'นาง' || prefix === 'เด็กหญิง' || prefix === 'นางสาว') {
         json += ',"sex": "หญิง",';
       }
-      json += `"userID":"${await getUID()}"`
+      let u = await getUID();
+      json += `"userID":"${u}"`;
       json += '}';
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
