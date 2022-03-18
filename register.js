@@ -105,8 +105,9 @@ $('form').submit((e) => {
       }
       let u = await getUID();
       json += `"userID":"${u}"`;
+
       json += '}';
-      console.log(json)
+      console.log(json);
       /*
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
