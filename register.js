@@ -78,7 +78,7 @@ async function getUID() {
   return uid;
 }
 
-$('form').submit(async (e) => {
+$('form').submit((e) => {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
@@ -87,7 +87,7 @@ $('form').submit(async (e) => {
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
     denyButtonText: 'ยกเลิก'
-  }).then((result) => {
+  }).then(async (result) => {
     if (result.isConfirmed) {
       let data = $('form').serializeArray();
       let json = '{';
