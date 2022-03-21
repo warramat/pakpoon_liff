@@ -1,4 +1,4 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' });
+liff.init({ liffId: '' });
 
 var ThaiAPI = 'https://thaiaddressapi-thaikub.herokuapp.com/v1/';
 async function getProvinces() {
@@ -105,10 +105,8 @@ $('form').submit((e) => {
       }
       let u = await getUID();
       json += `"userID":"${u}"`;
-
       json += '}';
-      console.log(json);
-      /*
+
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = json;
@@ -120,7 +118,7 @@ $('form').submit((e) => {
       };
       fetch(
         // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-        'https://smartcity-pakpoon.herokuapp.com/userSmart/Creuser',
+        'https://smartcity-pakpoon-api.herokuapp.com/userSmart/Creuser',
         requestOptions
       )
         .then(() => {
@@ -129,9 +127,8 @@ $('form').submit((e) => {
           );
         })
         .catch((e) => {
-          console.log(e);
+          console.log();
         });
-        */
     }
   });
 });

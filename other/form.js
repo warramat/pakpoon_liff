@@ -20,7 +20,7 @@ $(document).ready(async () => {
   };
   // console.log(myParam);
   let data = await fetch(
-    'https://smartcity-pakpoon.herokuapp.com/petition/search?topic=',
+    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=',
     requestOptions
   );
   data = await data.json();
