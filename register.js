@@ -1,4 +1,4 @@
-liff.init({ liffId: '' });
+liff.init({ liffId: '1656902981-0g1VVnpN' });
 
 var ThaiAPI = 'https://thaiaddressapi-thaikub.herokuapp.com/v1/';
 async function getProvinces() {
