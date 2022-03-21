@@ -19,7 +19,7 @@ window.onload = async () => {
           <h4>ชื่อ :${item.lastname}</h4>
           <h4>ชื่อ :${item.telephone}</h4>
           <h4>เพศ :<span style="color:${
-            item.sex === 'true' ? 'skyblue' : 'pink'
+            item.sex === 'ชาย' ? 'skyblue' : 'pink'
           }";>${item.sex}</span></h4>
         </div>
         <br />
