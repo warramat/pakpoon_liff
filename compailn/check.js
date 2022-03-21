@@ -1,7 +1,7 @@
 //----------------------get api-----------------------------//
 window.onload = async () => {
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/userSmart/userAll'
+    'https://smartcity-pakpoon.herokuapp.com/appeal/appealAll'
   );
   let html = '';
   data = await data.json();
@@ -14,13 +14,12 @@ window.onload = async () => {
           <div class="col-4">
         </div>
         <div class="col-8">
-          <h2>ลำดับที่ :${item.userID}</h2>
-          <h4>ชื่อ :${item.name}</h4>
-          <h4>ชื่อ :${item.lastname}</h4>
-          <h4>ชื่อ :${item.telephone}</h4>
+          <h2>ลำดับที่ :${item._id}</h2>
+          <h4>ชื่อ :${item.topic}</h4>
+          <h4>ชื่อ :${item.type}</h4>
           <h4>เพศ :<span style="color:${
-            item.sex === 'ชาย' ? 'skyblue' : 'pink'
-          }";>${item.sex}</span></h4>
+            item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
+          }";>${item.status}</span></h4>
         </div>
         <br />
       </div>
