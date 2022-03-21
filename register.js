@@ -37,6 +37,10 @@ function makeList(id, data, clear = true) {
 }
 
 $(document).ready(async () => {
+  const isFriend = await getFriend();
+  if (!isFriend) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  }
   let provinces = await getProvinces();
   provinces = provinces.data.map(({ province }) => province);
   makeList('province', provinces, false);
@@ -132,3 +136,8 @@ $('form').submit((e) => {
     }
   });
 });
+
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
