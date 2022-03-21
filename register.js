@@ -15,7 +15,7 @@ async function getSubDistrict(provinces, district) {
   let data = await fetch(
     `${ThaiAPI}thailand/provinces/${provinces}/district/${district}`
   );
-  return await data.json();
+  return data.json();
 }
 
 async function getZipcode(provinces, district) {
