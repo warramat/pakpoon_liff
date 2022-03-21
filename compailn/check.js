@@ -12,12 +12,12 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
-          <h2>ลำดับที่ :${item.img}</h2>
+          <h2>${item.img}</h2>
         </div>
         <div class="col-8">
-          <h2>ลำดับที่ :${item._id}</h2>
-          <h4>ชื่อ :${item.topic}</h4>
-          <h4>ชื่อ :${item.type}</h4>
+          <h2>เลขที่ :${item._id}</h2>
+          <h4>เรื่อง :${item.topic}</h4>
+          <h4>รายละเอียด :${item.type}</h4>
           <h4>สถานะ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
