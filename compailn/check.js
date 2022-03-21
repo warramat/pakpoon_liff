@@ -1,6 +1,8 @@
 //----------------------get api-----------------------------//
 window.onload = async () => {
-  let data = await fetch('https://jsonplaceholder.typicode.com/todos');
+  let data = await fetch(
+    'https://smartcity-pakpoon-api.herokuapp.com/userSmart/userAll'
+  );
   let html = '';
   data = await data.json();
   data.map((item, key) => {
@@ -10,18 +12,15 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
-          <img
-            src="${'http://8d21-27-55-68-247.ngrok.io/api' + item.img}"
-            width="75"
-            height="75"
-          />
         </div>
         <div class="col-8">
-          <h2>ลำดับที่ :${item.id}</h2>
-          <h4>ชื่อ :${item.title}</h4>
+          <h2>ลำดับที่ :${item.userID}</h2>
+          <h4>ชื่อ :${item.name}</h4>
+          <h4>ชื่อ :${item.lastname}</h4>
+          <h4>ชื่อ :${item.telephone}</h4>
           <h4>เพศ :<span style="color:${
-            item.completed === 'true' ? 'skyblue' : 'pink'
-          }";>${item.completed}</span></h4>
+            item.sex === 'true' ? 'skyblue' : 'pink'
+          }";>${item.sex}</span></h4>
         </div>
         <br />
       </div>
