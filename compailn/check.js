@@ -21,6 +21,7 @@ window.onload = async () => {
           <h4>เพศ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
+          <h4>ชื่อ :${item.updated}</h4>
         </div>
         <br />
       </div>
