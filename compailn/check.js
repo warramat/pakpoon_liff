@@ -12,6 +12,7 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
+          <h2>ลำดับที่ :${item._id}</h2>
         </div>
         <div class="col-8">
           <h2>ลำดับที่ :${item._id}</h2>
