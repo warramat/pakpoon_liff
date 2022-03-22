@@ -39,8 +39,8 @@ function makeList(id, data, clear = true) {
 $(document).ready(async () => {
   document.getElementsByTagName('BODY')[0].style.display = 'none';
   const uid = await getUID();
-  const checkUser = await checkUser(uid);
-  if (checkUser) {
+  const ck = await checkUser(uid);
+  if (ck) {
     window.location = './index.html';
   } else {
     document.getElementsByTagName('BODY')[0].style.display = '';

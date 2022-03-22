@@ -26,8 +26,8 @@ $(document).ready(async () => {
     });
   }
   const uid = await getUID();
-  const checkUser = await checkUser(uid);
-  if (!checkUser) {
+  const ck = await checkUser(uid);
+  if (!ck) {
     window.location = '../register.html?page=other';
   } else {
     document.getElementsByTagName('BODY')[0].style.display = '';
