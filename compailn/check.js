@@ -28,7 +28,9 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
-          <h2><img src="${item.img}"/></h2>
+          <h2><img src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
+            item.img
+          }"/></h2>
         </div>
         <div class="col-8">
           <h2>เลขที่ :${key + 1}</h2>
