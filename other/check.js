@@ -1,7 +1,20 @@
 //----------------------get api-----------------------------//
+liff.init({ liffId: '1656902981-0g1VVnpN' });
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
+
 window.onload = async () => {
   document.getElementsByTagName('BODY')[0].style.display = 'none';
-  const checkUser = await checkUser();
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri: 'https://wonderful-lalande-320066.netlify.app/register.html'
+    });
+  }
+  const uid = await getUID();
+  const checkUser = await checkUser(uid);
   if (!checkUser) {
     window.location = '../register.html?page=other';
   } else {

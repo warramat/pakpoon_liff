@@ -38,7 +38,8 @@ function makeList(id, data, clear = true) {
 
 $(document).ready(async () => {
   document.getElementsByTagName('BODY')[0].style.display = 'none';
-  const checkUser = await checkUser();
+  const uid = await getUID();
+  const checkUser = await checkUser(uid);
   if (checkUser) {
     window.location = './index.html';
   } else {
@@ -150,8 +151,8 @@ $('form').submit((e) => {
                   liff.closeWindow();
                 }
               }
-            }else{
-              window.location = './'+page;
+            } else {
+              window.location = './' + page;
             }
           });
         })

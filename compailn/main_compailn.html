@@ -251,14 +251,27 @@
     </div>
     </div>
 </body>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 <script src="../checkUser.js"></script>
 <script>
+    liff.init({ liffId: '1656902981-0g1VVnpN' });
+    async function getUID() {
+        const data = await liff.getProfile();
+        const uid = await data.userId;
+        return uid;
+    }
     window.onload = async () => {
-        document.getElementsByTagName("BODY")[0].style.display = "none";
-        const checkUser = await checkUser()
+        document.getElementsByTagName('BODY')[0].style.display = 'none';
+        if (!liff.isLoggedIn()) {
+            liff.login({
+                redirectUri: 'https://wonderful-lalande-320066.netlify.app/register.html'
+            });
+        }
+        const uid = await getUID()
+        const checkUser = await checkUser(uid);
         if (!checkUser) {
             window.location = '../register.html?page=compailn'
         } else {
