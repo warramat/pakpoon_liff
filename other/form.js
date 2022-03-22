@@ -12,6 +12,13 @@ function loadFile(event) {
 }
 
 $(document).ready(async () => {
+  document.getElementsByTagName('BODY')[0].style.display = 'none';
+  const checkUser = await checkUser();
+  if (!checkUser) {
+    window.location = '../register.html?page=other';
+  } else {
+    document.getElementsByTagName('BODY')[0].style.display = '';
+  }
   const urlParams = new URLSearchParams(window.location.search);
   // const myParam = urlParams.get('topic');
   var requestOptions = {

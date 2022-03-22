@@ -37,6 +37,13 @@ function makeList(id, data, clear = true) {
 }
 
 $(document).ready(async () => {
+  document.getElementsByTagName('BODY')[0].style.display = 'none';
+  const checkUser = await checkUser();
+  if (checkUser) {
+    window.location = './index.html';
+  } else {
+    document.getElementsByTagName('BODY')[0].style.display = '';
+  }
   const isFriend = await getFriend();
   if (!isFriend) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
@@ -126,9 +133,27 @@ $('form').submit((e) => {
         requestOptions
       )
         .then(() => {
-          Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(
-            () => (window.location = './compailn')
-          );
+          Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const page = urlParams.get('page');
+            if (!page) {
+              if (liff.getOS() === 'web') {
+                window.location = './index.html';
+              } else {
+                if (liff.getOS() === 'ios') {
+                  try {
+                    liff.closeWindow();
+                  } catch (e) {
+                    window.location = './index.html';
+                  }
+                } else {
+                  liff.closeWindow();
+                }
+              }
+            }else{
+              window.location = './'+page;
+            }
+          });
         })
         .catch((e) => {
           console.log();

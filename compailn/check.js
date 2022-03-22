@@ -1,5 +1,12 @@
 //----------------------get api-----------------------------//
 window.onload = async () => {
+  document.getElementsByTagName('BODY')[0].style.display = 'none';
+  const checkUser = await checkUser();
+  if (!checkUser) {
+    window.location = '../register.html?page=compailn';
+  } else {
+    document.getElementsByTagName('BODY')[0].style.display = '';
+  }
   let data = await fetch(
     'https://smartcity-pakpoon.herokuapp.com/appeal/appealAll'
   );
@@ -12,10 +19,10 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
-          <h2>${item.img}</h2>
+          <h2><img src="${item.img}"/></h2>
         </div>
         <div class="col-8">
-          <h2>เลขที่ :${item._id}</h2>
+          <h2>เลขที่ :${key+1}</h2>
           <h4>เรื่อง :${item.topic}</h4>
           <h4>รายละเอียด :${item.type}</h4>
           <h4>สถานะ :<span style="color:${

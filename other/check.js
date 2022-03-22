@@ -1,5 +1,12 @@
 //----------------------get api-----------------------------//
 window.onload = async () => {
+  document.getElementsByTagName('BODY')[0].style.display = 'none';
+  const checkUser = await checkUser();
+  if (!checkUser) {
+    window.location = '../register.html?page=other';
+  } else {
+    document.getElementsByTagName('BODY')[0].style.display = '';
+  }
   let data = await fetch('http://8d21-27-55-68-247.ngrok.io/api/conan.php');
   let html = '';
   data = await data.json();
