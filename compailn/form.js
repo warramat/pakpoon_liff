@@ -96,7 +96,7 @@ $('form').submit((e) => {
   });
 });
 
-function prepareData() {
+async function prepareData() {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
   let lat = 0;
@@ -113,6 +113,7 @@ function prepareData() {
     type: $('#choice').val(),
     details: $('#detail').val(),
     topic: myParam,
+    UserID: await getUID(),
     img: img,
     gps: {
       lat: lat,
