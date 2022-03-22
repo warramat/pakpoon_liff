@@ -1,9 +1,9 @@
+liff.init({ liffId: '1656902981-0g1VVnpN' });
 async function getUID() {
   const data = await liff.getProfile();
   const uid = await data.userId;
   return uid;
 }
-
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
