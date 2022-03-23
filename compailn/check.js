@@ -37,12 +37,12 @@ window.onload = async () => {
         </div>
         <div class="col-8">
           <h2>เลขที่ :${key + 1}</h2>
-          <h4>เรื่อง :${item.total}</h4>
-          <h4>รายละเอียด :${item.type}</h4>
+          <h4>เรื่อง :${item.topic}</h4>
+          <h4>รายละเอียด :${item.name}</h4>
           <h4>สถานะ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
-          <h4>${item.updated}</h4>
+          <h4>${item.data.name}</h4>
         </div>
         <br />
       </div>
