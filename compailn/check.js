@@ -20,7 +20,7 @@ window.onload = async () => {
     document.getElementsByTagName('BODY')[0].style.display = '';
   }
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/userSmart/data/pagination?province=นครศรีธรรมราช&district=&sub_district'
+    'https://smartcity-pakpoon.herokuapp.com/appeal/appealAll'
   );
   let html = '';
   data = await data.json();
@@ -38,11 +38,11 @@ window.onload = async () => {
         <div class="col-8">
           <h2>เลขที่ :${key + 1}</h2>
           <h4>เรื่อง :${item.topic}</h4>
-          <h4>รายละเอียด :${item.name}</h4>
+          <h4>รายละเอียด :${item.type}</h4>
           <h4>สถานะ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
-          <h4>${item.data.name}</h4>
+          <h4>${item.updated}</h4>
         </div>
         <br />
       </div>
