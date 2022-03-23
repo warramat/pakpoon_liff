@@ -20,7 +20,7 @@ window.onload = async () => {
   } else {
     document.getElementsByTagName('BODY')[0].style.display = '';
   }
-  let data = await fetch('http://8d21-27-55-68-247.ngrok.io/api/conan.php');
+  let data = await fetch('https://smartcity-pakpoon-api.herokuapp.com/userSmart/data/pagination?province=นครศรีธรรมราช&district=&sub_district');
   let html = '';
   data = await data.json();
   data.map((item, key) => {
@@ -37,7 +37,7 @@ window.onload = async () => {
           />
         </div>
         <div class="col-8">
-          <h2>ลำดับที่ :${item.ID}</h2>
+          <h2>ลำดับที่ :${total}</h2>
           <h4>ชื่อ :${item.name}</h4>
           <h4>นามสกุล :${item.sername}</h4>
           <h4>เพศ :<span style="color:${
