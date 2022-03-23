@@ -6,6 +6,7 @@ async function getUID() {
 }
 //----------------------get api-----------------------------//
 window.onload = async () => {
+  document.getElementsByTagName('BODY')[0].style.display = 'none';
   if (!liff.isLoggedIn()) {
     liff.login({
       redirectUri: 'https://wonderful-lalande-320066.netlify.app/register.html'
@@ -15,6 +16,8 @@ window.onload = async () => {
   const ck = await checkUser(uid);
   if (!ck) {
     window.location = '../register.html?page=compailn';
+  } else {
+    document.getElementsByTagName('BODY')[0].style.display = '';
   }
   let data = await fetch(
     'https://smartcity-pakpoon.herokuapp.com/appeal/appealAll'
