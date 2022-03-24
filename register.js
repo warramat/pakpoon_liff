@@ -141,15 +141,7 @@ $('form').submit((e) => {
               if (liff.getOS() === 'web') {
                 window.location = './index.html';
               } else {
-                if (liff.getOS() === 'ios') {
-                  try {
-                    liff.closeWindow();
-                  } catch (e) {
-                    window.location = './index.html';
-                  }
-                } else {
-                  liff.closeWindow();
-                }
+                liff.closeWindow();
               }
             } else {
               window.location = './' + page;
