@@ -1,17 +1,4 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' });
-async function getUID() {
-  const data = await liff.getProfile();
-  const uid = await data.userId;
-  return uid;
-}
-//----------------------get api-----------------------------//
 window.onload = async () => {
-  
-  const uid = await getUID();
-  const ck = await checkUser(uid);
-  if (!ck) {
-    window.location = '../register.html?page=compailn';
-  }
   let data = await fetch(
     'https://smartcity-pakpoon.herokuapp.com/appeal/appealAll'
   );

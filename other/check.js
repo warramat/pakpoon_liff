@@ -1,18 +1,5 @@
 //----------------------get api-----------------------------//
-liff.init({ liffId: '1656902981-0g1VVnpN' });
-async function getUID() {
-  const data = await liff.getProfile();
-  const uid = await data.userId;
-  return uid;
-}
-
 window.onload = async () => {
-
-  const uid = await getUID();
-  const ck = await checkUser(uid);
-  if (!ck) {
-    window.location = '../register.html?page=other';
-  }
   let data = await fetch('http://8d21-27-55-68-247.ngrok.io/api/conan.php');
   let html = '';
   data = await data.json();

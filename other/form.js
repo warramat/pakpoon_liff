@@ -1,10 +1,3 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' });
-async function getUID() {
-  const data = await liff.getProfile();
-  const uid = await data.userId;
-  return uid;
-}
-
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
@@ -19,11 +12,6 @@ function loadFile(event) {
 }
 
 $(document).ready(async () => {
-  const uid = await getUID();
-  const ck = await checkUser(uid);
-  if (!ck) {
-    window.location = '../register.html?page=other';
-  }
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
   var requestOptions = {

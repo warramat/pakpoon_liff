@@ -37,14 +37,11 @@ function makeList(id, data, clear = true) {
 }
 
 $(document).ready(async () => {
-  document.getElementsByTagName('BODY')[0].style.display = 'none';
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (ck) {
     window.location = './index.html';
-  } else {
-    document.getElementsByTagName('BODY')[0].style.display = '';
-  }
+  } 
   const isFriend = await getFriend();
   if (!isFriend) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
