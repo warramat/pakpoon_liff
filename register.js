@@ -41,7 +41,17 @@ $(document).ready(async () => {
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (ck) {
-    window.location = './index.html';
+    const urlParams = new URLSearchParams(window.location.search);
+    const page = urlParams.get('page');
+    if (!page) {
+      if (liff.getOS() === 'web') {
+        window.location = './index.html';
+      } else {
+        liff.closeWindow();
+      }
+    } else {
+      window.location = './' + page;
+    }
   } else {
     document.getElementsByTagName('BODY')[0].style.display = '';
   }
