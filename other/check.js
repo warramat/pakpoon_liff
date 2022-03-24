@@ -7,14 +7,11 @@ async function getUID() {
 }
 
 window.onload = async () => {
-  document.getElementsByTagName('BODY')[0].style.display = 'none';
- 
+
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (!ck) {
     window.location = '../register.html?page=other';
-  } else {
-    document.getElementsByTagName('BODY')[0].style.display = '';
   }
   let data = await fetch('http://8d21-27-55-68-247.ngrok.io/api/conan.php');
   let html = '';

@@ -19,17 +19,13 @@ function loadFile(event) {
 }
 
 $(document).ready(async () => {
-  document.getElementsByTagName('BODY')[0].style.display = 'none';
-
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (!ck) {
     window.location = '../register.html?page=other';
-  } else {
-    document.getElementsByTagName('BODY')[0].style.display = '';
   }
   const urlParams = new URLSearchParams(window.location.search);
-  // const myParam = urlParams.get('topic');
+  const myParam = urlParams.get('topic');
   var requestOptions = {
     method: 'GET',
     redirect: 'follow'
