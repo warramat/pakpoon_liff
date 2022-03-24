@@ -37,15 +37,20 @@ function makeList(id, data, clear = true) {
 }
 
 $(document).ready(async () => {
+  const isFriend = await getFriend();
+  if (!isFriend) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (ck) {
     window.location = './index.html';
-  } 
-  const isFriend = await getFriend();
-  if (!isFriend) {
-    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
   }
+
   let provinces = await getProvinces();
   provinces = provinces.data.map(({ province }) => province);
   makeList('province', provinces, false);

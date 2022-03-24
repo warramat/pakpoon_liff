@@ -39,121 +39,123 @@
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-body ">
-            <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                <img src="../img/logo.jpg" width="100" height="100" />
-                <br />
-                <h4>ลงทะเบียนผู้ใช้งาน</span></h4>
+    <div id="show" style="visibility: hidden;">
+        <div class="card">
+            <div class="card-body ">
+                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                    <img src="../img/logo.jpg" width="100" height="100" />
+                    <br />
+                    <h4>ลงทะเบียนผู้ใช้งาน</span></h4>
+                </div>
+                <br>
+                <form>
+                    <div class="form-group">
+                        <label for="fname">คำนำหน้า</label>
+                        <select id="prefix" name="prefix" class="form-select" required>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือก
+                            </option>
+                            <option value="เด็กชาย">เด็กชาย</option>
+                            <option value="เด็กหญิง">เด็กหญิง</option>
+                            <option value="นาย">นาย</option>
+                            <option value="นาง">นาง</option>
+                            <option value="นางสาว">นางสาว</option>
+
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="name">ชื่อ</label>
+                        <input id="name" name="name" class="form-control" type="text" placeholder="กรุณากรอก"
+                            aria-label="default input example">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="lastname">นามสกุล</label>
+                        <input id="lastname" name="lastname" class="form-control" type="text" placeholder="กรุณากรอก"
+                            aria-label="default input example">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="telephone" class="col-sm-2 col-form-label">เบอร์โทรศัพท์</label>
+                        <input type="telephone" class="form-control" placeholder="กรุณากรอก" id="telephone"
+                            name="telephone">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="housenumber">บ้านเลขที่</label>
+                        <input id="housenumber" name="housenumber" class="form-control" type="text"
+                            placeholder="กรุณากรอก" aria-label="default input example">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="group">หมู่</label>
+                        <input id="group" name="group" class="form-control" type="number" placeholder="กรุณากรอก"
+                            aria-label="default input example">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="alley">ตรอก/ซอย</label>
+                        <input id="alley" name="alley" class="form-control" type="text" placeholder="กรุณากรอก"
+                            aria-label="default input example">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="fname">ถนน</label>
+                        <input id="road" name="road" class="form-control" type="text" placeholder="กรุณากรอก"
+                            aria-label="default input example">
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="fname">จังหวัด</label>
+                        <select id="province" name="province" class="form-select" required>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือก
+                            </option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="fname">อำเภอ</label>
+                        <select id="district" name="district" class="form-select" required disabled>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือก
+                            </option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="fname">ตำบล</label>
+                        <select id="subdistrict" name="sub_district" class="form-select" required disabled>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือก
+                            </option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="fname">รหัสไปรษณีย์</label>
+                        <select id="zipcode" name="zipcode" class="form-select" required disabled>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือก
+                            </option>
+                        </select>
+                    </div>
+                    </br>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-outline-primary " href="./compailn/" style="width: 100%;">
+                                ย้อนกลับ</a>
+                        </div>
+                        <div class="col-6 ">
+                            <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
+                        </div>
+
+                    </div>
             </div>
-            <br>
-            <form>
-                <div class="form-group">
-                    <label for="fname">คำนำหน้า</label>
-                    <select id="prefix" name="prefix" class="form-select" required>
-                        <option value="" selected disabled hidden>
-                            กรุณาเลือก
-                        </option>
-                        <option value="เด็กชาย">เด็กชาย</option>
-                        <option value="เด็กหญิง">เด็กหญิง</option>
-                        <option value="นาย">นาย</option>
-                        <option value="นาง">นาง</option>
-                        <option value="นางสาว">นางสาว</option>
-
-                    </select>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="name">ชื่อ</label>
-                    <input id="name" name="name" class="form-control" type="text" placeholder="กรุณากรอก"
-                        aria-label="default input example">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="lastname">นามสกุล</label>
-                    <input id="lastname" name="lastname" class="form-control" type="text" placeholder="กรุณากรอก"
-                        aria-label="default input example">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="telephone" class="col-sm-2 col-form-label">เบอร์โทรศัพท์</label>
-                    <input type="telephone" class="form-control" placeholder="กรุณากรอก" id="telephone"
-                        name="telephone">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="housenumber">บ้านเลขที่</label>
-                    <input id="housenumber" name="housenumber" class="form-control" type="text" placeholder="กรุณากรอก"
-                        aria-label="default input example">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="group">หมู่</label>
-                    <input id="group" name="group" class="form-control" type="number" placeholder="กรุณากรอก"
-                        aria-label="default input example">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="alley">ตรอก/ซอย</label>
-                    <input id="alley" name="alley" class="form-control" type="text" placeholder="กรุณากรอก"
-                        aria-label="default input example">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="fname">ถนน</label>
-                    <input id="road" name="road" class="form-control" type="text" placeholder="กรุณากรอก"
-                        aria-label="default input example">
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="fname">จังหวัด</label>
-                    <select id="province" name="province" class="form-select" required>
-                        <option value="" selected disabled hidden>
-                            กรุณาเลือก
-                        </option>
-                    </select>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="fname">อำเภอ</label>
-                    <select id="district" name="district" class="form-select" required disabled>
-                        <option value="" selected disabled hidden>
-                            กรุณาเลือก
-                        </option>
-                    </select>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="fname">ตำบล</label>
-                    <select id="subdistrict" name="sub_district" class="form-select" required disabled>
-                        <option value="" selected disabled hidden>
-                            กรุณาเลือก
-                        </option>
-                    </select>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="fname">รหัสไปรษณีย์</label>
-                    <select id="zipcode" name="zipcode" class="form-select" required disabled>
-                        <option value="" selected disabled hidden>
-                            กรุณาเลือก
-                        </option>
-                    </select>
-                </div>
-                </br>
-
-                <div class="row">
-                    <div class="col-6">
-                        <a class="btn btn-outline-primary " href="./compailn/" style="width: 100%;">
-                            ย้อนกลับ</a>
-                    </div>
-                    <div class="col-6 ">
-                        <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
-                    </div>
-
-                </div>
+            </form>
         </div>
-        </form>
     </div>
     </div>
     <br />
@@ -169,6 +171,7 @@
     crossorigin="anonymous"></script>
 <script src="./checkUser.js"></script>
 <script src="register.js"></script>
+
 </html>
 
 <!-- 

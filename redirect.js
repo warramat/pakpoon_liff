@@ -17,5 +17,7 @@ async function redirectPage(page="") {
   const ck = await checkUser(uid);
   if (!ck) {
     window.location = '../register.html'+page;
+  }else{
+      document.getElementById('show').style.visibility = "visible"
   }
 }
