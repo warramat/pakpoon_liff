@@ -4,7 +4,7 @@ async function getUID() {
   const uid = await data.userId;
   return uid;
 }
-function redirectPage(page="") {
+async function redirectPage(page="") {
   if (liff.getOS() === 'web') {
     if (!liff.isLoggedIn()) {
       liff.login({
