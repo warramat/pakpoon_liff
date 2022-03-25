@@ -8,7 +8,8 @@ async function redirectPage(page = '') {
   if (liff.getOS() === 'web') {
     if (!liff.isLoggedIn()) {
       liff.login({
-        redirectUri: 'https://wonderful-lalande-320066.netlify.app'
+        redirectUri:
+          'https://wonderful-lalande-320066.netlify.app/register.html'
       });
     }
   }
