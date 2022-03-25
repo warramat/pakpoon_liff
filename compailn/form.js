@@ -94,7 +94,7 @@ async function prepareData() {
     type: $('#choice').val(),
     details: $('#detail').val(),
     topic: myParam,
-    UserID: await getUID(),
+    // UserID: await getUID(),
     img: img,
     gps: {
       lat: lat,
