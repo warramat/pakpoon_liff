@@ -4,20 +4,19 @@ async function getUID() {
   const uid = await data.userId;
   return uid;
 }
-async function redirectPage(page="") {
+async function redirectPage(page = '') {
   if (liff.getOS() === 'web') {
     if (!liff.isLoggedIn()) {
       liff.login({
-        redirectUri:
-          'https://wonderful-lalande-320066.netlify.app/register.html'
+        redirectUri: 'https://wonderful-lalande-320066.netlify.app'
       });
     }
   }
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (!ck) {
-    window.location = '../register.html'+page;
-  }else{
-      document.getElementById('show').style.visibility = "visible"
+    window.location = '../register.html' + page;
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
   }
 }
