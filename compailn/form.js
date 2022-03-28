@@ -100,6 +100,7 @@ async function prepareData() {
       lng: lng
     }
   };
+  console.log(data)
   return data;
 }
 
