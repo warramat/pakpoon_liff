@@ -46,9 +46,9 @@ $('form').submit((e) => {
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
     denyButtonText: 'ยกเลิก'
-  }).then((result) => {
+  }).then(async (result) => {
     if (result.isConfirmed) {
-      let data = prepareData();
+      let data = await prepareData();
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = JSON.stringify(data);
@@ -93,7 +93,7 @@ async function prepareData() {
     type: $('#choice').val(),
     details: $('#detail').val(),
     topic: myParam,
-    // UserID: await getUID(),
+    UserID: await getUID(),
     img: img,
     gps: {
       lat: lat,
