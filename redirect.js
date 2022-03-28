@@ -5,8 +5,13 @@ async function getUID() {
   return uid;
 }
 async function redirectPage(page = '') {
-  if (!liff.isLoggedIn()) {
-    liff.login();
+  if (liff.getOS() === 'web') {
+    if (!liff.isLoggedIn()) {
+      liff.login({
+        redirectUri:
+          'https://wonderful-lalande-320066.netlify.app/register.html'
+      });
+    }
   }
   const uid = await getUID();
   const ck = await checkUser(uid);
