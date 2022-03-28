@@ -52,7 +52,6 @@ $('form').submit((e) => {
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = JSON.stringify(data);
-      console.log(raw);
       var requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -100,7 +99,6 @@ async function prepareData() {
       lng: lng
     }
   };
-  console.log(data)
   return data;
 }
 
