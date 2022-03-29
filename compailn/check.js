@@ -1,4 +1,5 @@
 window.onload = async () => {
+  const UID = getUID()
   let data = await fetch(
     'https://smartcity-pakpoon.herokuapp.com/appeal/appealAll'
   );

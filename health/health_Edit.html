@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+        body {
+            background-color: rgb(96, 154, 231);
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .card {
+            margin: 1.5rem 0.75rem 1.5rem 0.75rem;
+        }
+
+        .text-manu {
+            text-align: center;
+            color: black;
+        }
+
+        .lp {
+            margin-left: 0.5rem;
+        }
+
+        .ln {
+            margin-left: -1rem;
+        }
+
+        .r {
+            margin-bottom: -1rem;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stysheet" href="style.css" />
+</head>
+
+<body>
+    <div id="show" style="visibility: hidden;">
+        <div class="card">
+            <div class="card-body ">
+                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                    <img src="./img/logo.jpg" width="100" height="100" />
+                    <br />
+                    <h4></span>แก้ไขข้อมูลส่วนตัว</span></h4>
+                </div>
+                <br>
+                <br id="form" method="post">
+                <br />
+                <div class="form-group">
+                    <label for="cardID">เลขบัตรประชาชน</label>
+                    <input id="cardID" name="cardID" class="form-control" type="number"
+                        placeholder="กรุณากรอกเลขบัตรประชาชน" aria-label="default input example">
+                </div>
+                <br />
+                <label for="fname">โรงพยาบาล</label>
+                <select id="hospital" name="hospital" class="form-select" required>
+                    <option value="" selected disabled hidden>
+                        กรุณาเลือกโรงพยาบาล
+                    </option>
+                    <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
+                    <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส
+                    </option>
+                    <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู
+                    </option>
+                    <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
+                    <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
+
+                </select>
+
+                <div class="row-6 form-group">
+
+
+                    <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                        วันเดือนปีเกิด
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="fname">วัน</label>
+                            <select id="hospital" name="hospital" class="form-select" required>
+                                <option value="" selected disabled hidden>
+                                    วัน
+                                </option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="month">เดือน</label>
+                            <select id="month" name="month" class="form-select" required>
+                                <option value="" selected disabled hidden>
+                                    เดือน
+                                </option>
+                                <option value="มกราคม">มกราคม</option>
+                                <option value="กุมภาพันธ์">กุมภาพันธ์
+                                </option>
+                                <option value="มีนาคม">มีนาคม</option>
+                                <option value="เมษายน">เมษายน</option>
+                                <option value="พฤษภาคม">พฤษภาคม</option>
+                                <option value="มิถุนายน">มิถุนายน</option>
+                                <option value="กรกฏาคม">กรกฏาคม</option>
+                                <option value="สิงหาคม">สิงหาคม</option>
+                                <option value="กันยายน">กันยายน</option>
+                                <option value="ตุลาคม">ตุลาคม</option>
+                                <option value="พฤศจิกายน">พฤศจิกายน</option>
+                                <option value="ธันวาคม">ธันวาคม</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="month">ปี (พ.ศ.)</label>
+                            <select id="month" name="month" class="form-select" required>
+                                <option value="" selected disabled hidden>
+                                    ปี
+                                </option>
+                                <option value="2565">2565</option>
+                                <option value="2564">2564</option>
+                                <option value="2563">2564</option>
+                                <option value="2562">2564</option>
+                                <option value="2561">2564</option>
+                                <option value="2560">2564</option>
+                                <option value="2559">2559</option>
+                                <option value="2558">2558</option>
+                                <option value="2557">2557</option>
+                                <option value="2556">2556</option>
+                                <option value="2555">2555</option>
+                                <option value="2554">2554</option>
+                                <option value="2553">2553</option>
+                                <option value="2552">2552</option>
+                                <option value="2551">2551</option>
+                                <option value="2550">2550</option>
+                                <option value="2549">2549</option>
+                                <option value="2548">2548</option>
+                                <option value="2547">2547</option>
+                                <option value="2546">2546</option>
+                                <option value="2545">2545</option>
+                                <option value="2544">2544</option>
+                                <option value="2543">2543</option>
+                                <option value="2542">2542</option>
+                                <option value="2541">2541</option>
+                                <option value="2540">2540</option>
+                                <option value="2539">2539</option>
+                                <option value="2538">2538</option>
+                                <option value="2537">2537</option>
+                                <option value="2536">2536</option>
+                                <option value="2535">2535</option>
+                                <option value="2534">2534</option>
+                                <option value="2533">2533</option>
+                                <option value="2532">2532</option>
+                                <option value="2531">2531</option>
+                                <option value="2530">2530</option>
+                                <option value="2529">2529</option>
+                                <option value="2528">2528</option>
+                                <option value="2527">2527</option>
+                                <option value="2526">2526</option>
+                                <option value="2525">2525</option>
+                                <option value="2524">2524</option>
+                                <option value="2523">2523</option>
+                                <option value="2522">2522</option>
+                                <option value="2521">2521</option>
+                                <option value="2520">2520</option>
+                                <option value="2519">2519</option>
+                                <option value="2518">2518</option>
+                                <option value="2517">2517</option>
+                                <option value="2516">2516</option>
+                                <option value="2515">2515</option>
+                                <option value="2514">2514</option>
+                                <option value="2513">2513</option>
+                                <option value="2512">2512</option>
+                                <option value="2511">2511</option>
+                                <option value="2510">2510</option>
+                                <option value="2509">2509</option>
+                                <option value="2509">2508</option>
+                                <option value="2509">2507</option>
+                                <option value="2509">2506</option>
+                                <option value="2509">2505</option>
+                                <option value="2509">2504</option>
+                                <option value="2509">2503</option>
+                                <option value="2509">2502</option>
+                                <option value="2509">2501</option>
+                                <option value="2509">2500</option>
+                                <option value="2509">2499</option>
+                                <option value="2509">2498</option>
+                                <option value="2509">2497</option>
+                                <option value="2509">2496</option>
+                                <option value="2509">2495</option>
+                                <option value="2509">2494</option>
+                                <option value="2509">2493</option>
+                                <option value="2509">2492</option>
+                                <option value="2509">2491</option>
+                                <option value="2509">2490</option>
+                                <option value="2509">2489</option>
+                                <option value="2509">2488</option>
+                                <option value="2509">2487</option>
+                                <option value="2509">2486</option>
+                                <option value="2509">2485</option>
+                                <option value="2509">2484</option>
+                                <option value="2509">2483</option>
+                                <option value="2509">2482</option>
+                                <option value="2509">2481</option>
+                                <option value="2509">2480</option>
+                                <option value="2509">2479</option>
+                                <option value="2509">2478</option>
+                                <option value="2509">2477</option>
+                                <option value="2509">2476</option>
+                                <option value="2509">2475</option>
+                                <option value="2509">2474</option>
+                                <option value="2509">2473</option>
+                                <option value="2509">2472</option>
+                                <option value="2509">2471</option>
+                                <option value="2509">2470</option>
+                                <option value="2509">2469</option>
+                                <option value="2509">2468</option>
+                                <option value="2509">2467</option>
+                                <option value="2509">2466</option>
+                                <option value="2509">2465</option>
+                                <option value="2509">2464</option>
+                                <option value="2509">2463</option>
+                                <option value="2509">2462</option>
+                                <option value="2509">2461</option>
+                                <option value="2509">2460</option>
+                                <option value="2509">2459</option>
+                                <option value="2509">2458</option>
+                                <option value="2509">2457</option>
+                                <option value="2509">2456</option>
+                                <option value="2509">2455</option>
+                                <option value="2509">2454</option>
+                                <option value="2509">2453</option>
+                                <option value="2509">2452</option>
+                                <option value="2509">2451</option>
+                                <option value="2509">2450</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                </br>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ผู้สูงอายุ</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ผู้ป่วยติดเตียง</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ผู้พิการ</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคประจำตัว</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคเบาหวาน</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคปอด / หอบหืด</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคไต</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคภูมิคุ้มกันบกพร่อง</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคตับ</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ไมเกรน</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ความดันโลหิตสูง</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ธาลัสซีเมีย</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคหัวใจ</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>ภูมิแพ้</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>โรคลมชัก</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-5">
+                            <p>อื่นๆ</p>
+                        </div>
+                        <div class="col-7">
+                            <input type="radio" id="no" name="no" value="no">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            <input type="radio" id="yes" name="yes" value="yes">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="disease">โรค</label>
+                    <input id="disease" name="disease" class="form-control" type="text" placeholder="กรุณากรอกโรค"
+                        aria-label="default input example">
+                </div>
+                </br>
+                <div class="row">
+                    <div class="col-6">
+                        <a class="btn btn-outline-primary " href="./index.html" style="width: 100%;">
+                            ย้อนกลับ</a>
+                    </div>
+                    <div class="col-6 ">
+                        <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
+                    </div>
+
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="../checkUser.js"></script>
+<script src="../redirect.js"></script>
+<script> redirectPage('?page=health') </script>
+<script src="./health_history.js"></script>
+<script src="./health_screen.js"></script>
+
+</html>
