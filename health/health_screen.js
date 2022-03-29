@@ -1,5 +1,5 @@
 var form = document.getElementById('form');
-form.addEventListener('submit', function (e) {
+form.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   var weight = document.getElementById('weight').value;
@@ -27,7 +27,7 @@ form.addEventListener('submit', function (e) {
       upper_blood2: upper_blood2,
       lower_blood2: lower_blood2,
       blood_sugar: blood_sugar,
-      userID:
+      userID: await getUID()
     }),
     headers: {
       'Content-Type': 'application/json; charset=UTF-8'
