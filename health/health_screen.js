@@ -19,7 +19,7 @@ async function senddata() {
   var weight = document.getElementById('weight').value;
   var height = document.getElementById('height').value;
   var BMI = document.getElementById('BMI').value;
-  var proportion = document.getElementById('proportion').value;
+  var proportion = document.getElementById('proportion').innerText;
 
   var upper_blood1 = document.getElementById('upper_blood1').value;
   var lower_blood1 = document.getElementById('lower_blood1').value;
