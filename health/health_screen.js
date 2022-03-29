@@ -54,9 +54,7 @@ async function senddata() {
       showCancelButton: false,
       confirmButtonText: 'ตกลง',
       timer: 3000
-    }).then(async (result) => {
-      location.reload();
-    });
+    }).then(async (result) => {});
   });
 }
 
