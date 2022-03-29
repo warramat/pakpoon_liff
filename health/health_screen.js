@@ -110,7 +110,7 @@ function set() {
   } else if (BMI >= 18.5 && BMI < 22.9) {
     $('#proportion').text('สมส่วน');
   } else if (BMI >= 23 && BMI < 24.9) {
-    $('#proportion').text('น้ำหนักเกิน');
+    $('#proportion').text('ท้วม');
   } else if (BMI >= 25 && BMI < 29.9) {
     $('#proportion').text('โรคอ้วน');
   } else if (BMI > 30) {
