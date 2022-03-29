@@ -27,21 +27,23 @@ async function senddata() {
   var lower_blood2 = document.getElementById('lower_blood2').value;
   var blood_sugar = document.getElementById('blood_sugar').value;
   var UID = await getUID();
+  var data = {
+    weight: weight,
+    height: height,
+    BMI: BMI,
+    proportion: proportion,
+    waistline: waistline,
+    upper_blood1: upper_blood1,
+    lower_blood1: lower_blood1,
+    upper_blood2: upper_blood2,
+    lower_blood2: lower_blood2,
+    blood_sugar: blood_sugar,
+    userID: UID
+  };
+  console.log(data);
   fetch('https://smartcity-pakpoon-api.herokuapp.com/health/addhealth', {
     method: 'POST',
-    body: JSON.stringify({
-      weight: weight,
-      height: height,
-      BMI: BMI,
-      proportion: proportion,
-      waistline: waistline,
-      upper_blood1: upper_blood1,
-      lower_blood1: lower_blood1,
-      upper_blood2: upper_blood2,
-      lower_blood2: lower_blood2,
-      blood_sugar: blood_sugar,
-      userID: UID
-    }),
+    body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json; charset=UTF-8'
     }
