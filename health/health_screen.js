@@ -1,7 +1,21 @@
 var form = document.getElementById('form');
-form.addEventListener('submit', async function (e) {
+form.addEventListener('submit', function (e) {
   e.preventDefault();
+  Swal.fire({
+    icon: 'question',
+    title: 'ยืนยันการแจ้งเรื่อง',
+    showDenyButton: true,
+    showCancelButton: false,
+    confirmButtonText: 'ยืนยัน',
+    denyButtonText: 'ยกเลิก'
+  }).then(async (result) => {
+    if (result.isConfirmed) {
+      await senddata();
+    }
+  });
+});
 
+async function senddata() {
   var weight = document.getElementById('weight').value;
   var height = document.getElementById('height').value;
   var BMI = document.getElementById('BMI').value;
@@ -32,14 +46,19 @@ form.addEventListener('submit', async function (e) {
     headers: {
       'Content-Type': 'application/json; charset=UTF-8'
     }
-  })
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
+  }).then(function (response) {
+    Swal.fire({
+      icon: 'success',
+      title: 'การบันทึกข้อมูลเสร็จสิ้น',
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: 'ตกลง',
+      timer: 3000
+    }).then(async (result) => {
+      location.reload();
     });
-});
+  });
+}
 
 /********************************************** */
 
