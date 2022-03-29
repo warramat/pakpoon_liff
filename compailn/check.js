@@ -1,10 +1,11 @@
 window.onload = async () => {
-  const UID = getUID();
+  const UID = await getUID();
   let data = await fetch(
     'https://smartcity-pakpoon-api.herokuapp.com/appeal/find/data?userID=' + UID
   );
   let html = '';
   data = await data.json();
+
   data.map((item, key) => {
     html += `
       <div class="min-vw-100">
