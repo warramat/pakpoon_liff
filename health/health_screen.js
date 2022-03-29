@@ -20,7 +20,7 @@ async function senddata() {
   var height = document.getElementById('height').value;
   var BMI = document.getElementById('BMI').value;
   var proportion = document.getElementById('proportion').innerText;
-
+  var waistline = document.getElementById('waistline').value;
   var upper_blood1 = document.getElementById('upper_blood1').value;
   var lower_blood1 = document.getElementById('lower_blood1').value;
   var upper_blood2 = document.getElementById('upper_blood2').value;
