@@ -52,9 +52,9 @@ async function senddata() {
       icon: 'success',
       title: 'การบันทึกข้อมูลเสร็จสิ้น',
       showDenyButton: true,
-      showCancelButton: false,
+      // showCancelButton: false,
       confirmButtonText: 'ตกลง',
-      timer: 3000
+      timer: 3000 ,
     }).then(async (result) => {
       location.reload();
     });
