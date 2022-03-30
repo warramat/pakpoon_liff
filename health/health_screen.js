@@ -53,7 +53,7 @@ async function senddata() {
       title: 'การบันทึกข้อมูลเสร็จสิ้น',
       showDenyButton: true,
       showCancelButton: false,
-      confirmButtonText: 'ตกลง',
+      // confirmButtonText: 'ตกลง',
       timer: 3000
     }).then(async (result) => {
       location.reload();
