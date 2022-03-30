@@ -1,10 +1,12 @@
 window.onload = async () => {
+  const UID = await getUID();
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/health/healthAll/'
+    'https://smartcity-pakpoon-api.herokuapp.com/health/find/data?userID=' + UID
   );
   let html = '';
   data = await data.json();
-  data.map((item, key) => {
+  data = data.data;
+  data.foeEach((item, key) => {
     html += `
         <div class="min-vw-100">
           <div class="card">
@@ -21,7 +23,6 @@ window.onload = async () => {
                   <a class="btn btn-outline-primary " href="./Checkhealth.html" style="width: 100%;">
                       ดูรายละเอียด</a>
                 </div>
-          
               </div>
             </div>
           </div>

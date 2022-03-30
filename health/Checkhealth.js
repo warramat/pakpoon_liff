@@ -5,7 +5,6 @@ window.onload = async () => {
   );
   let html = '';
   data = await data.json();
-  console.log(data.data);
   data = data.data;
   data.forEach((item, key) => {
     html += `
