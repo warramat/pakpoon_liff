@@ -1,10 +1,12 @@
 window.onload = async () => {
+  const UID = await getUID();
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/health/healthAll/'
+    'https://smartcity-pakpoon-api.herokuapp.com/health/find/data?userID=' + UID
   );
   let html = '';
   data = await data.json();
-  data.map((item, key) => {
+  data = data.data;
+  data.forEach((item, key) => {
     html += `
       <div class="min-vw-100">
         <div class="card">
