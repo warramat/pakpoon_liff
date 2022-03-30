@@ -6,7 +6,7 @@ window.onload = async () => {
   let html = '';
   data = await data.json();
   data = data.data;
-  data.foeEach((item, key) => {
+  data.forEach((item, key) => {
     html += `
         <div class="min-vw-100">
           <div class="card">
