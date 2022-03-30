@@ -5,7 +5,7 @@ window.onload = async () => {
   );
   let html = '';
   data = await data.json();
-  data =data.data
+  data = data.data;
   data.forEach((item, key) => {
     html += `
       <div class="min-vw-100">
