@@ -90,21 +90,21 @@ function renderday(t) {
   if (leapyear(Number($('#year').val()) - 543)) {
     if ($('#month').val() === 'กุมภาพันธ์') {
       for (let i = 1; i != 30; i++) {
-        if (t && today.getdate() > i) {
+        if (t && today.getDate() > i) {
           break;
         }
         html += `<option value="${i}">${i}</option>`;
       }
     } else if ($('#month').val().indexOf('ยน') != -1) {
       for (let i = 1; i != 31; i++) {
-        if (t && today.getdate() > i) {
+        if (t && today.getDate() > i) {
           break;
         }
         html += `<option value="${i}">${i}</option>`;
       }
     } else {
       for (let i = 1; i != 32; i++) {
-        if (t && today.getdate() > i) {
+        if (t && today.getDate() > i) {
           break;
         }
         html += `<option value="${i}">${i}</option>`;
@@ -113,21 +113,21 @@ function renderday(t) {
   } else {
     if ($('#month').val() === 'กุมภาพันธ์') {
       for (let i = 1; i != 29; i++) {
-        if (t && today.getdate() > i) {
+        if (t && today.getDate() > i) {
           break;
         }
         html += `<option value="${i}">${i}</option>`;
       }
     } else if ($('#month').val().indexOf('ยน') != -1) {
       for (let i = 1; i != 31; i++) {
-        if (t && today.getdate() > i) {
+        if (t && today.getDate() > i) {
           break;
         }
         html += `<option value="${i}">${i}</option>`;
       }
     } else {
       for (let i = 1; i != 32; i++) {
-        if (t && today.getdate() > i) {
+        if (t && today.getDate() > i) {
           break;
         }
         html += `<option value="${i}">${i}</option>`;
