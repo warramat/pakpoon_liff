@@ -1,10 +1,14 @@
 $('#year').change(() => {
   makemouth();
 });
+$('#month').change(() => {
+  makeday();
+});
 
 $(document).ready(function () {
   makeyear();
   makemouth();
+  makeday();
 });
 
 function makeyear() {
