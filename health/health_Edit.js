@@ -1,4 +1,3 @@
-
 $('#year').change(() => {
   makemouth();
 });
