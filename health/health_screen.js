@@ -135,14 +135,14 @@ function set() {
   const BMI = $('#BMI').val();
   const proportion = $('#proportion').val();
   if (BMI < 18.5) {
-    $('#proportion').text('น้ำหนักต่ำกว่าเกณฑ์');
+    $('#proportion').val('น้ำหนักต่ำกว่าเกณฑ์');
   } else if (BMI >= 18.5 && BMI < 22.9) {
-    $('#proportion').text('สมส่วน');
+    $('#proportion').val('สมส่วน');
   } else if (BMI >= 23 && BMI < 24.9) {
-    $('#proportion').text('ท้วม');
+    $('#proportion').val('ท้วม');
   } else if (BMI >= 25 && BMI < 29.9) {
-    $('#proportion').text('โรคอ้วน');
+    $('#proportion').val('โรคอ้วน');
   } else if (BMI > 30) {
-    $('#proportion').text('โรคอ้วนอันตราย');
+    $('#proportion').val('โรคอ้วนอันตราย');
   }
 }
