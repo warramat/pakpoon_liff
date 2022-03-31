@@ -31,15 +31,28 @@ function makemouth() {
     'เมษายน',
     'พฤษภาคม',
     'มิถุนายน',
+    'กรกฏาคม',
     'สิงหาคม',
     'กันยายน',
     'ตุลาคม',
     'พฤศจิกายน',
     'ธันวาคม'
-  ];M.forEach((e, i) => {
-      html += `<option value="${e}">${e}</option>`;
-  });
- 
+  ];
+  if ($('#year').val() == today.getFullYear() + 543) {
+    M.forEach((e, i) => {
+      if (i > today.getMonth()) {
+        return;
+      } else if (i === today.getMonth()) {
+        html += `  <option selected value="${e}">${e}</option>`;
+      } else {
+        html += `  <option value="${e}">${e}</option>`;
+      }
+    });
+  } else {
+    M.forEach((e, i) => {
+      html += `  <option value="${e}">${e}</option>`;
+    });
+  }
   $('#month').html(html);
 }
 
@@ -52,6 +65,7 @@ function makeday() {
     'เมษายน',
     'พฤษภาคม',
     'มิถุนายน',
+    'กรกฏาคม',
     'สิงหาคม',
     'กันยายน',
     'ตุลาคม',
