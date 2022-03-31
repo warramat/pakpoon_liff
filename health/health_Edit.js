@@ -174,8 +174,7 @@ $('form').submit(function (e) {
         }
         console.log(data);
         fetch(
-          'https://smartcity-pakpoon-api.herokuapp.com/disease/editdisease' +
-            UID,
+          'https://smartcity-pakpoon-api.herokuapp.com/disease/adddisease',
           {
             method: 'PUT',
             body: JSON.stringify(data),
