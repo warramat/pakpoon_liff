@@ -209,7 +209,22 @@ $('form').submit(function (e) {
 
 /**************************แก้ไข*********************************** */
 async function load() {
-  const list = [];
+  const list = [
+    'bedridden_patient',
+    'handicapped',
+    'congenital_disease',
+    'diabetes',
+    'lung_disease',
+    'kidney_disease',
+    'immunodeficiency',
+    'liver_disease',
+    'migraine',
+    'high_blood',
+    'thalassemia',
+    'heart_disease',
+    'allergy',
+    'epilepsy'
+  ];
   const UID = await getUID();
   const data = await (
     await fetch(
@@ -225,10 +240,13 @@ async function load() {
     $('#day').val(row.day);
     $('#month').val(row.month);
     $('#year').val(row.year);
-    $("input[name='bedridden_patient']").each(function () {
-      if ($(this).val() === row.bedridden_patient) {
-        $(this).attr('checked', 'checked');
-      }
+    $('#other').val(row.other);
+    list.forEach((e) => {
+      $(`input[name='${e}']`).each(function () {
+        if ($(this).val() === row[e]) {
+          $(this).attr('checked', 'checked');
+        }
+      });
     });
   }
 }
