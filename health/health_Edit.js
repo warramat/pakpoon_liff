@@ -144,3 +144,46 @@ function renderday(t) {
   }
   $('#day').html(html);
 }
+
+/********************************************************* */
+$('form').submit(function (e) {
+  e.preventDefault();
+  Swal.fire({
+    icon: 'question',
+    title: 'ยืนยันการแจ้งเรื่อง',
+    showDenyButton: true,
+    showCancelButton: false,
+    confirmButtonText: 'ยืนยัน',
+    denyButtonText: 'ยกเลิก'
+  }).then(async (result) => {
+    if (result.isConfirmed) {
+      let data = {};
+      var UID = await getUID();
+      data.userID = UID;
+      $('form')
+        .serializeArray()
+        .forEach((e) => {
+          data[e.name] = e.value;
+        });
+      console.log(data);
+      fetch('https://smartcity-pakpoon-api.herokuapp.com/disease/adddisease', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8'
+        }
+      }).then(function (response) {
+        Swal.fire({
+          icon: 'success',
+          title: 'การบันทึกข้อมูลเสร็จสิ้น',
+          showDenyButton: true,
+          showCancelButton: false,
+          confirmButtonText: 'ตกลง',
+          timer: 3000
+        }).then(async (result) => {
+          location.reload();
+        });
+      });
+    }
+  });
+});
