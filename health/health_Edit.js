@@ -1,9 +1,9 @@
 $('#year').change(() => {
   let today = new Date();
   if (Number($('#year').val()) - today.getFullYear() - 543 > 60) {
-    $('#elderly').val('เป็น');
+    $('input[name=elderly][value=เป็น]').attr('checked', 'checked');
   } else {
-    $('#elderly').val('ไม่เป็น');
+    $('input[name=elderly][value=ไม่เป็น]').attr('checked', 'checked');
   }
   makemouth();
 });
@@ -12,7 +12,7 @@ $('#month').change(() => {
 });
 
 $(document).ready(function () {
-  $('#elderly').val('ไม่เป็น');
+  $('input[name=elderly][value=ไม่เป็น]').attr('checked', 'checked');
   makeyear();
   makemouth();
   makeday();
