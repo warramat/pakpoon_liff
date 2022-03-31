@@ -167,7 +167,7 @@ $('form').submit(function (e) {
           .forEach((e) => {
             data[e.name] = e.value;
           });
-        if (Number($('#year').val) - 543 - today.getFullYear() >= 60) {
+        if (Number($('#year').val()) - 543 - today.getFullYear() >= 60) {
           data.elderly = 'เป็น';
         } else {
           data.elderly = 'ไม่เป็น';
