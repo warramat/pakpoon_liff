@@ -53,52 +53,54 @@
                 </div>
                 <br>
                 <form id="form" method="post">
-                <br />
-                <div class="form-group">
-                    <label for="cardID">เลขบัตรประชาชน</label>
-                    <input id="cardID" name="cardID" class="form-control" type="number"
-                        placeholder="กรุณากรอกเลขบัตรประชาชน" aria-label="default input example">
-                </div>
-                <br />
-                <label for="fname">โรงพยาบาล</label>
-                <select id="hospital" name="hospital" class="form-select" required>
-                    <option value="" selected disabled hidden>
-                        กรุณาเลือกโรงพยาบาล
-                    </option>
-                    <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
-                    <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส
-                    </option>
-                    <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู
-                    </option>
-                    <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
-                    <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
-
-                </select>
-
-                <div class="row-6 form-group">
-
-
-                    <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                        วันเดือนปีเกิด
+                    <br />
+                    <div class="form-group">
+                        <label for="cardID">เลขบัตรประชาชน</label>
+                        <input id="cardID" name="cardID" class="form-control" type="number"
+                            placeholder="กรุณากรอกเลขบัตรประชาชน" aria-label="default input example">
                     </div>
+                    <br />
+                    <label for="fname">โรงพยาบาล</label>
+                    <select id="hospital" name="hospital" class="form-select" required>
+                        <option value="" selected disabled hidden>
+                            กรุณาเลือกโรงพยาบาล
+                        </option>
+                        <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
+                        <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเทศบาลเมืองปากพูน
+                            บ้านตลาดพฤหัส
+                        </option>
+                        <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเทศบาลเมืองปากพูน
+                            บ้านศาลาบางปู
+                        </option>
+                        <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
+                        <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
 
-                    <div class="row">
-                        <div class="col-4">
-                            <label for="year">ปี (พ.ศ.)</label>
-                            <select id="year" name="year" class="form-select" required></select>
-                        </div>
-                        <div class="col-4">
-                            <label for="month">เดือน</label>
-                            <select id="month" name="month" class="form-select" required></select>
-                        </div>
-                        <div class="col-4">
-                            <label for="fname">วัน</label>
-                            <select id="day" name="day" class="form-select" required></select>
-                        </div>
+                    </select>
+
+                    <div class="row-6 form-group">
 
 
+                        <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                            วันเดือนปีเกิด
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="year">ปี (พ.ศ.)</label>
+                                <select id="year" name="year" class="form-select" required></select>
+                            </div>
+                            <div class="col-4">
+                                <label for="month">เดือน</label>
+                                <select id="month" name="month" class="form-select" required></select>
+                            </div>
+                            <div class="col-4">
+                                <label for="fname">วัน</label>
+                                <select id="day" name="day" class="form-select" required></select>
+                            </div>
+
+
+                        </div>
                     </div>
-                </div>
                 </form>
                 <div>
                     <div class="row">
@@ -106,9 +108,9 @@
                             <p>ผู้สูงอายุ</p>
                         </div>
                         <div class="col-7">
-                            <input type="radio" name="elderly" value="ไม่เป็น">
+                            <input type="radio" name="elderly" value="ไม่เป็น" disabled>
                             <label for="contactChoice1">ไม่เป็น</label>
-                            <input type="radio" name="elderly" value="เป็น">
+                            <input type="radio" name="elderly" value="เป็น" disabled>
                             <label for="contactChoice2">เป็น</label>
                         </div>
                     </div>

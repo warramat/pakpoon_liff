@@ -1,4 +1,10 @@
 $('#year').change(() => {
+  let today = new Date();
+  if (Number($('#year').val()) - today.getFullYear() - 543 > 60) {
+    $('#elderly').val('เป็น');
+  } else {
+    $('#elderly').val('ไม่เป็น');
+  }
   makemouth();
 });
 $('#month').change(() => {
