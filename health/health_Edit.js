@@ -187,7 +187,7 @@ $('form').submit(function (e) {
           Swal.fire({
             icon: 'success',
             title: 'การบันทึกข้อมูลเสร็จสิ้น',
-            showDenyButton: true,
+            showDenyButton: false,
             showCancelButton: false,
             confirmButtonText: 'ตกลง',
             timer: 3000
