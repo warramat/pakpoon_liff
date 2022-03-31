@@ -223,6 +223,10 @@ async function load() {
     $('#day').val(row.day);
     $('#month').val(row.month);
     $('#year').val(row.year);
-    $("input[name='handicapped']").val(row.handicapped);
+    $("input[name='handicapped']").each(function () {
+      if ($(this).val() === row.handicapped) {
+        $(this).attr('checked', 'checked');
+      }
+    });
   }
 }
