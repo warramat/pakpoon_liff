@@ -37,8 +37,11 @@ function makemouth() {
     M.forEach((e, i) => {
       if (i > today.getMonth()) {
         return;
+      } else if (i === today.getMonth()) {
+        html += `  <option selected value="${e}">${e}</option>`;
+      } else {
+        html += `  <option value="${e}">${e}</option>`;
       }
-      html += `  <option value="${e}">${e}</option>`;
     });
   } else {
     M.forEach((e, i) => {
