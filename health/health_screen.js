@@ -11,12 +11,14 @@ $('form').submit(function (e) {
     if (result.isConfirmed) {
       let data = {};
       var UID = await getUID();
-      data['userID'] = UID;
+      data.userID = UID;
       $('form')
         .serializeArray()
         .forEach((e) => {
           data[e.name] = e.value;
         });
+      data.BMI = $('#BMI').val();
+      data.proportion = $('#proportion').text();
       console.log(data);
       fetch('https://smartcity-pakpoon-api.herokuapp.com/health/addhealth', {
         method: 'POST',
