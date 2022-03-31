@@ -12,6 +12,7 @@ $('#month').change(() => {
 });
 
 $(document).ready(function () {
+  $('#elderly').val('ไม่เป็น');
   makeyear();
   makemouth();
   makeday();
