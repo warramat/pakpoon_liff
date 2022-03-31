@@ -201,6 +201,8 @@ $('form').submit(function (e) {
     Swal.fire({
       icon: 'error',
       title: 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง',
+      showDenyButton: false,
+      showCancelButton: false,
       confirmButtonText: 'ตกลง',
       timer: 3000
     });
