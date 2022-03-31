@@ -36,22 +36,10 @@ function makemouth() {
     'ตุลาคม',
     'พฤศจิกายน',
     'ธันวาคม'
-  ];
-  if ($('#year').val() == today.getFullYear() + 543) {
-    M.forEach((e, i) => {
-      if (i > today.getMonth()) {
-        return;
-      } else if (i === today.getMonth()) {
-        html += `  <option selected value="${e}">${e}</option>`;
-      } else {
-        html += `  <option value="${e}">${e}</option>`;
-      }
-    });
-  } else {
-    M.forEach((e, i) => {
-      html += `  <option value="${e}">${e}</option>`;
-    });
-  }
+  ];M.forEach((e, i) => {
+      html += `<option value="${e}">${e}</option>`;
+  });
+ 
   $('#month').html(html);
 }
 
