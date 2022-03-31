@@ -5,10 +5,11 @@ $('#month').change(() => {
   makeday();
 });
 
-$(document).ready(function () {
+$(document).ready(async function () {
   makeyear();
   makemouth();
   makeday();
+  await load();
 });
 
 function makeyear() {
@@ -145,7 +146,7 @@ function renderday(t) {
   $('#day').html(html);
 }
 
-/********************************************************* */
+/*******************************เพิ่มข้อมูลเข้า ลำดับแรก************************** */
 $('form').submit(function (e) {
   const today = new Date();
   e.preventDefault();
@@ -205,3 +206,23 @@ $('form').submit(function (e) {
     });
   }
 });
+
+/**************************แก้ไข*********************************** */
+async function load() {
+  const UID = await getUID();
+  const data = await (
+    await fetch(
+      'https://smartcity-pakpoon-api.herokuapp.com/disease/find/data?userID=' +
+        UID
+    )
+  ).json();
+  if (data.total > 0) {
+    const row = data.data[0];
+    $('#cardID').val(row.cardID);
+    $('#hospital').val(row.hospital);
+    $('#day').val(row.day);
+    $('#month').val(row.month);
+    $('#year').val(row.year);
+    $("input[name='handicapped']").val(row.handicapped);
+  }
+}
