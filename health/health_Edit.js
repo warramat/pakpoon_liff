@@ -149,7 +149,7 @@ function renderday(t) {
 $('form').submit(function (e) {
   const today = new Date();
   e.preventDefault();
-  if (Script_checkID($('#cardID'))) {
+  if (Script_checkID($('#cardID').val())) {
     Swal.fire({
       icon: 'question',
       title: 'ยืนยันการแจ้งเรื่อง',
@@ -200,8 +200,6 @@ $('form').submit(function (e) {
     Swal.fire({
       icon: 'error',
       title: 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง',
-      showDenyButton: true,
-      showCancelButton: false,
       confirmButtonText: 'ตกลง',
       timer: 3000
     });
