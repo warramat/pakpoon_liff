@@ -134,5 +134,5 @@ function renderday(t) {
       }
     }
   }
-  return $('#day').html(html);
+  $('#day').html(html);
 }
