@@ -1,5 +1,4 @@
-var form = document.getElementById('form');
-form.addEventListener('submit', function (e) {
+$( "form" ).submit(function( e ) {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
@@ -10,11 +9,12 @@ form.addEventListener('submit', function (e) {
     denyButtonText: 'ยกเลิก'
   }).then(async (result) => {
     if (result.isConfirmed) {
-      await senddata();
+      console.log( $('form').serializeArray() );
     }
   });
 });
 
+/*
 async function senddata() {
   var weight = document.getElementById('weight').value;
   var height = document.getElementById('height').value;
@@ -60,7 +60,7 @@ async function senddata() {
     });
   });
 }
-
+*/
 /********************************************** */
 
 $('#weight').change(() => {

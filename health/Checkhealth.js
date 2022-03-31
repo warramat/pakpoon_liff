@@ -41,8 +41,6 @@ window.onload = async () => {
                 <h5>ค่าความดันโลหิตค่าบน :${item.lower_blood2}</h5>
                 <br></br>
                 <h5>ค่าน้ำตาลในเลือด :${item.blood_sugar}</h5>
-                <a class="btn btn-outline-primary " href="./health_history.html" style="width: 100%;">
-                    ย้อนกลับ</a>
               </div>
               <br />
             </div>
