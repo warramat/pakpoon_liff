@@ -1,4 +1,4 @@
-$( "form" ).submit(function( e ) {
+$('form').submit(function (e) {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
@@ -9,7 +9,33 @@ $( "form" ).submit(function( e ) {
     denyButtonText: 'ยกเลิก'
   }).then(async (result) => {
     if (result.isConfirmed) {
-      console.log( $('form').serializeArray() );
+      let data = {};
+      var UID = await getUID();
+      data['userID'] = UID;
+      $('form')
+        .serializeArray()
+        .forEach((e) => {
+          data[e.name] = e.value;
+        });
+      console.log(data);
+      fetch('https://smartcity-pakpoon-api.herokuapp.com/health/addhealth', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8'
+        }
+      }).then(function (response) {
+        Swal.fire({
+          icon: 'success',
+          title: 'การบันทึกข้อมูลเสร็จสิ้น',
+          showDenyButton: true,
+          showCancelButton: false,
+          confirmButtonText: 'ตกลง',
+          timer: 3000
+        }).then(async (result) => {
+          location.reload();
+        });
+      });
     }
   });
 });
