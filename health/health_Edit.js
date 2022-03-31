@@ -97,3 +97,18 @@ function set() {
     $('#proportion').text('โรคอ้วนอันตราย');
   }
 }
+
+
+$( document ).ready(function() {
+   makeyear()
+});
+
+function makeyear(){
+  let today = new Date();
+  const year = today.getFullYear()+543
+  let html=''
+  for(year;year>2449;year--){
+      html+=`  <option value="${year}">${year}</option>`
+  }
+  $('#year').html(html)
+}
