@@ -167,9 +167,9 @@ $('form').submit(function (e) {
           data[e.name] = e.value;
         });
       if (Number($('#year').val) - 543 - today.getFullYear() >= 60) {
-        e.elderly = 'เป็น';
+        data.elderly = 'เป็น';
       } else {
-        e.elderly = 'ไม่เป็น';
+        data.elderly = 'ไม่เป็น';
       }
       console.log(data);
       fetch('https://smartcity-pakpoon-api.herokuapp.com/disease/adddisease', {
