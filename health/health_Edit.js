@@ -147,6 +147,7 @@ function renderday(t) {
 
 /********************************************************* */
 $('form').submit(function (e) {
+  const today = new Date();
   e.preventDefault();
   Swal.fire({
     icon: 'question',
@@ -165,6 +166,11 @@ $('form').submit(function (e) {
         .forEach((e) => {
           data[e.name] = e.value;
         });
+      if (Number($('#year').val) - 543 - today.getFullYear() >= 60) {
+        e.elderly = 'เป็น';
+      } else {
+        e.elderly = 'ไม่เป็น';
+      }
       console.log(data);
       fetch('https://smartcity-pakpoon-api.herokuapp.com/disease/adddisease', {
         method: 'POST',
