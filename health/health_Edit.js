@@ -223,8 +223,73 @@ async function load() {
     $('#day').val(row.day);
     $('#month').val(row.month);
     $('#year').val(row.year);
+    $("input[name='bedridden_patient']").each(function () {
+      if ($(this).val() === row.bedridden_patient) {
+        $(this).attr('checked', 'checked');
+      }
+    });
     $("input[name='handicapped']").each(function () {
       if ($(this).val() === row.handicapped) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='congenital_disease']").each(function () {
+      if ($(this).val() === row.congenital_disease) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='diabetes']").each(function () {
+      if ($(this).val() === row.diabetes) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='lung_disease']").each(function () {
+      if ($(this).val() === row.lung_disease) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='kidney_disease']").each(function () {
+      if ($(this).val() === row.kidney_disease) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='immunodeficiency']").each(function () {
+      if ($(this).val() === row.immunodeficiency) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='liver_disease']").each(function () {
+      if ($(this).val() === row.liver_disease) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='migraine']").each(function () {
+      if ($(this).val() === row.migraine) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='high_blood']").each(function () {
+      if ($(this).val() === row.high_blood) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='thalassemia']").each(function () {
+      if ($(this).val() === row.thalassemia) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='heart_disease']").each(function () {
+      if ($(this).val() === row.heart_disease) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='allergy']").each(function () {
+      if ($(this).val() === row.allergy) {
+        $(this).attr('checked', 'checked');
+      }
+    });
+    $("input[name='epilepsy']").each(function () {
+      if ($(this).val() === row.epilepsy) {
         $(this).attr('checked', 'checked');
       }
     });
