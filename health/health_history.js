@@ -20,7 +20,7 @@ window.onload = async () => {
                 <div class="col-12">
                 <h4>คุณอยู่ในเกณฑ์ :${item.proportion}</h4>
                   <h5>BMI ค่าที่ได้ :${item.BMI}</h5>
-                  <a class="btn btn-outline-primary " href="./Checkhealth.html" style="width: 100%;">
+                  <a class="btn btn-outline-primary " href="./Checkhealth.html?_id=${itme._id}" style="width: 100%;">
                       ดูรายละเอียด</a>
                 </div>
               </div>

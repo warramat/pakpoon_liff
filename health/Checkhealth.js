@@ -6,7 +6,10 @@ window.onload = async () => {
   let html = '';
   data = await data.json();
   data = data.data;
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('_id');
   data.forEach((item, key) => {
+    if(item._id===myParam){
     html += `
       <div class="min-vw-100">
         <div class="card">
@@ -46,6 +49,7 @@ window.onload = async () => {
           </div>
         </div>
       </div>`;
+    }
   });
   document.getElementById('check').innerHTML = html;
 };
