@@ -9,7 +9,7 @@ $(document).ready(function () {
 
 function makeyear() {
   let today = new Date();
-  const year = today.getFullYear() + 543;
+  let year = today.getFullYear() + 543;
   let html = '';
   for (year; year > 2449; year--) {
     html += `  <option value="${year}">${year}</option>`;
