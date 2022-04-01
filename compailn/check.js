@@ -28,6 +28,10 @@ window.onload = async () => {
           <h4>${item.updated}</h4>
         </div>
         <br />
+        <a class="btn btn-outline-primary " href="./Checkhealth.html?_id=${
+          item._id
+        }" style="width: 100%;">
+        ดูรายละเอียด</a>
       </div>
           </div>
            
