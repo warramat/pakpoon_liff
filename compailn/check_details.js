@@ -35,5 +35,5 @@ window.onload = async () => {
         </div>
         `;
   });
-  document.getElementById('content').innerHTML = html;
+  document.getElementById('check').innerHTML = html;
 };
