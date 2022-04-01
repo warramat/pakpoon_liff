@@ -13,12 +13,10 @@ window.onload = async () => {
           <div class="card">
             <div class="card-body">
             <div class="row">
-            <div class="col-4">
+            <div class="col-2">
             <h2><img style="width:200px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
               item.img
             }"/></h2>
-          </div>
-          <div class="col-8">
             <h2 style="color:green">เลขที่ :${key + 1}</h2>
             <h4>เรื่อง :${item.topic}</h4>
             <h4>รายละเอียด :${item.type}</h4>
