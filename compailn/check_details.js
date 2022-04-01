@@ -10,7 +10,10 @@ window.onload = async () => {
   data.forEach((item, key) => {
     html += `
         <div class="min-vw-100">
-        <h2 style="color:green">เลขที่ :${key + 1}</h2>
+        <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+           <h2 style="color:green">เลขที่ :${key + 1}</h2>
+        </div>
+     
           <div class="card">
             <div class="card-body">
             <div class="col-12">
