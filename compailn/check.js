@@ -19,7 +19,7 @@ window.onload = async () => {
           }"/></h2>
         </div>
         <div class="col-8">
-          <h2 style="color:pink">เลขที่ :${key + 1}</h2>
+          <h2 style="color:green">เลขที่ :${key + 1}</h2>
           <h4>เรื่อง :${item.topic}</h4>
           <h4>รายละเอียด :${item.type}</h4>
           <h4>สถานะ :<span style="color:${
