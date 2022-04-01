@@ -6,11 +6,12 @@ window.onload = async () => {
   let html = '';
   data = await data.json();
   data = data.data;
+  data = data.reverse();
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('_id');
   data.forEach((item, key) => {
-    if(item._id===myParam){
-    html += `
+    if (item._id === myParam) {
+      html += `
       <div class="min-vw-100">
         <div class="card">
           <div class="card-body">
