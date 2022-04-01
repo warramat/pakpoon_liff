@@ -12,7 +12,6 @@ window.onload = async () => {
         <div class="min-vw-100">
           <div class="card">
             <div class="card-body">
-            <div class="row">
             <div class="col-12">
             <h2><img style="width:200px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
               item.img
@@ -26,9 +25,7 @@ window.onload = async () => {
             <h4>${item.updated}</h4>
           </div>
           <br />
-        </div>
             </div>
-             
           </div>
         </div>
         `;
