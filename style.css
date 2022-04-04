@@ -21,7 +21,5 @@ body {
 .main {
     text-align: center;
     width: 100%;
-    opacity: 0;
-    display: none;
     transition: opacity 1s ease-in;
 }
