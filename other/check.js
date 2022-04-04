@@ -10,9 +10,10 @@ window.onload = async () => {
   data = data.reverse();
   data.forEach((item, key) => {
     html += `
-    <a href="./Checkhealth.html?_id=${item._id}">
+    
     <div class="min-vw-100">
     <div class="card">
+    <a href="./Checkhealth.html?_id=${item._id}">
       <div class="card-body">
       <div class="col-12">
       <h3 style="color:blue">เลขที่ :${key + 1}</h3>
@@ -24,9 +25,10 @@ window.onload = async () => {
       <h4>${item.updated}</h4>
     </div>
       </div>
+      </a>
     </div>
   </div>
-    </a>
+   
        
         `;
   });
