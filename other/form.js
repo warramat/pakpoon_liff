@@ -1,16 +1,3 @@
-function loadFile(event) {
-  let reader = new FileReader();
-  reader.onload = function () {
-    $('#list_images').append(`
-    <div class="item">
-        <img src="${reader.result}">
-    </div>
-    `);
-    $('#upload').val('');
-  };
-  reader.readAsDataURL(event.target.files[0]);
-}
-
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
@@ -56,7 +43,7 @@ $('form').submit((e) => {
       };
       fetch(
         // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-        'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
+        'https://smartcity-pakpoon.herokuapp.com/petition/addpetition',
         requestOptions
       )
         .then(() => {
