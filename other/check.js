@@ -13,7 +13,7 @@ window.onload = async () => {
     
     <div class="min-vw-100">
     <div class="card">
-    <div href="./Checkhealth.html?_id=${item._id}">
+    <p href="./Checkhealth.html?_id=${item._id}">
       <div class="card-body">
       <div class="col-12">
       <h3 style="color:blue">เลขที่ :${key + 1}</h3>
@@ -25,7 +25,7 @@ window.onload = async () => {
       <h4>${item.updated}</h4>
     </div>
       </div>
-      </div>
+      </p>
     </div>
   </div>
    
