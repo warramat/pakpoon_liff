@@ -35,6 +35,7 @@ $(document).ready(async () => {
 $('form').submit((e) => {
   e.preventDefault();
   Swal.fire({
+    icon: 'question',
     title: 'ยืนยันการยื่นคำร้อง',
     showDenyButton: true,
     showCancelButton: false,
