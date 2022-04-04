@@ -30,7 +30,7 @@ $('form').submit((e) => {
     denyButtonText: 'ยกเลิก'
   }).then((result) => {
     if (result.isConfirmed) {
-      let data = prepareData();
+      let data = petition();
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = JSON.stringify(data);
@@ -57,3 +57,16 @@ $('form').submit((e) => {
     }
   });
 });
+
+/*************************************************** */
+
+async function petition() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  let data = {
+    type: $('#choice1').val(),
+    topic: myParam,
+    userID: await getUID()
+  };
+  return data;
+}
