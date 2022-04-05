@@ -19,11 +19,6 @@ window.onload = async () => {
             <h2><img style="width:300px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
               item.img
             }"/></h2>
-            <h4>เรื่อง :${item.topic}</h4>
-            <h4>รายละเอียด :${item.type}</h4>
-            <h4>สถานะ :<span style="color:${
-              item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
-            }";>${item.status}</span></h4>
             <h4>${item.updated}</h4>
           </div>
           <br />
