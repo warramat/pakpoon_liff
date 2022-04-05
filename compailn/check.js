@@ -30,7 +30,7 @@ window.onload = async () => {
         <br />
         <a class="btn btn-outline-primary " href="./check_details?_id=${
           item._id
-        }" style="width: 100%;">
+        }&item=${key}" style="width: 100%;">
         ดูรายละเอียด</a>
       </div>
           </div>
