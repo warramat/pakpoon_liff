@@ -1,7 +1,7 @@
 window.onload = async () => {
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
-  const key = urlParams.get('key')||"--";
+  const key = urlParams.get('key')||0;
   const _id = urlParams.get('_id');
   let data = await fetch(
     'https://smartcity-pakpoon-api.herokuapp.com/appeal/find/data?userID=' + UID
