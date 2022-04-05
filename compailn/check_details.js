@@ -11,7 +11,7 @@ window.onload = async () => {
   data = data.find((e) => e._id === _id);
   let html_img = ''
   data.img.forEach(e => {
-    html_img+=`<img style="width:300px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/>` 
+    html_img+=`<img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/>` 
   });
   let html = `
     <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
