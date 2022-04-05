@@ -15,7 +15,7 @@ window.onload = async () => {
   });
   let html = `
     <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-    <h2 style="color:green">เลขที่ :${Number(key + 1)}</h2>
+    <h2 style="color:green">เลขที่ :${Number(key) + 1}</h2>
     </div>
         <div class="min-vw-100">
           <div class="card">
