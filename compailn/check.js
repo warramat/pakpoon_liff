@@ -7,7 +7,7 @@ window.onload = async () => {
   data = await data.json();
   data = data.data;
   data = data.reverse();
-  const c = data.lenght;
+  const c = data.length;
   data.forEach((item, key) => {
     html += `
       <div class="min-vw-100">
