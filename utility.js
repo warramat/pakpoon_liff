@@ -14,6 +14,7 @@ function toThaidate(datetime) {
     'ธันวาคม'
   ];
   let date = datetime.split(' ')[0];
+  let time = datetime.split(' ')[1];
   date = date.split('-');
   const m =
     Number(date[1]) == 1 && Number(date[1]) == 2
@@ -23,7 +24,9 @@ function toThaidate(datetime) {
   const c = Number(date[2][0] + date[2][1]);
   const Thaiyear = Number(date[2]) + 543;
   const day = ZellerRule(Number(date[0]), m, y, c);
-  return `วัน${day}ที่ ${Number(date[0])}  ${M[Number(date[1])]} พ.ศ. ${Thaiyear}`;
+  return `วัน${day}ที่ ${Number(date[0])}  ${
+    M[Number(date[1])]
+  } พ.ศ. ${Thaiyear}  ${time}`;
 }
 
 function ZellerRule(D, M, Y, C) {
