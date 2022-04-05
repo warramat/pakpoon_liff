@@ -1,7 +1,7 @@
 window.onload = async () => {
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
-  const key = urlParams.get('key');
+  const key = urlParams.get('key')||"--";
   const _id = urlParams.get('_id');
   let data = await fetch(
     'https://smartcity-pakpoon-api.herokuapp.com/appeal/find/data?userID=' + UID
@@ -15,7 +15,7 @@ window.onload = async () => {
   });
   let html = `
     <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-    <h2 style="color:green">เลขที่ :${key}</h2>
+    <h2 style="color:green">เลขที่ :${key+1}</h2>
     </div>
         <div class="min-vw-100">
           <div class="card">
