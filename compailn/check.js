@@ -15,7 +15,7 @@ window.onload = async () => {
           <div class="card-body">
           <div class="row">
           <div class="col-4">
-          <h2><img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
+          <h2><img style="width:80px height:80px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
             item.img[0]
           }"/></h2>
         </div>
