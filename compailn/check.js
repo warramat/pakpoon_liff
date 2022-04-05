@@ -15,7 +15,7 @@ window.onload = async () => {
           <div class="row">
           <div class="col-4">
           <h2><img style="width:200px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${
-            item.img[0]
+            item.img
           }"/></h2>
         </div>
         <div class="col-8" style="font-size:20pt;">
