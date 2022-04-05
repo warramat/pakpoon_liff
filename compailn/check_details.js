@@ -1,7 +1,7 @@
 window.onload = async () => {
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
-  const key = urlParams.get('key')||0;
+  const key = urlParams.get('key') || 0;
   const _id = urlParams.get('_id');
   let data = await fetch(
     'https://smartcity-pakpoon-api.herokuapp.com/appeal/find/data?userID=' + UID
@@ -9,13 +9,13 @@ window.onload = async () => {
   data = await data.json();
   data = data.data;
   data = data.find((e) => e._id === _id);
-  let html_img = ''
-  data.img.forEach(e => {
-    html_img+=`<img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/>` 
+  let html_img = '';
+  data.img.forEach((e) => {
+    html_img += `<a href='https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}'><img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/></a>`;
   });
   let html = `
     <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-    <h2 style="color:green">เลขที่ :${Number(key+1)}</h2>
+    <h2 style="color:green">เลขที่ :${Number(key + 1)}</h2>
     </div>
         <div class="min-vw-100">
           <div class="card">
