@@ -5,16 +5,15 @@ async function getUID() {
   return uid;
 }
 async function redirectPage(page = '') {
-  if (!liff.isLoggedIn()) {
-    liff.login({
-      redirectUri: 'https://tapp-smartcity.netlify.app/register.html'
-    });
-  }
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (!ck) {
     window.location = '../register.html' + page;
   } else {
-    document.getElementById('show').style.visibility = 'visible';
+    if (!liff.isLoggedIn()) {
+      liff.login();
+    } else {
+      document.getElementById('show').style.visibility = 'visible';
+    }
   }
 }
