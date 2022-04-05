@@ -25,14 +25,17 @@ window.onload = async () => {
           <h4>สถานะ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
-          <h4>${toThaidate(item.updated)}</h4>
+        
         </div>
-        <br />
+        </div>
+        <div class="row">
+        <h4>${toThaidate(item.updated)}</h4>
+        </div>
         <a class="btn btn-outline-primary " href="./check_details?_id=${
           item._id
         }&key=${key}" style="width: 100%;">
         ดูรายละเอียด</a>
-      </div>
+  
           </div>
            
         </div>
