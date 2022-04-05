@@ -7,7 +7,7 @@ window.onload = async () => {
   data = await data.json();
   data = data.data;
   data = data.reverse();
-  const c = data.length;
+  const c = data.lenght;
   data.forEach((item, key) => {
     html += `
       <div class="min-vw-100">
@@ -35,7 +35,7 @@ window.onload = async () => {
         </div>
         <a class="btn btn-outline-primary " href="./check_details?_id=${
           item._id
-        }&key=${key}" style="width: 100%;">
+        }&key=${c - (key + 1)}" style="width: 100%;">
         ดูรายละเอียด</a>
   
           </div>
