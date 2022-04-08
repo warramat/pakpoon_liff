@@ -7,8 +7,6 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
   } else if (checkUser(await getUID())) {
     window.location = '../index.html';
-  } else {
-    document.getElementById('show').style.visibility = 'visible';
   }
 });
 
@@ -62,15 +60,11 @@ $(document).ready(async () => {
   const isFriend = await getFriend();
   if (!isFriend) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
-  } else {
-    document.getElementById('show').style.visibility = 'visible';
   }
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (ck) {
     window.location = './index.html';
-  } else {
-    document.getElementById('show').style.visibility = 'visible';
   }
 
   let provinces = await getProvinces();
