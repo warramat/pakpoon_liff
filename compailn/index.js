@@ -8,6 +8,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   } else if (!(await getFriend())) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
   } else {
+    console.log('login......');
     document.getElementById('show').style.visibility = 'visible';
   }
 });
