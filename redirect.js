@@ -12,8 +12,7 @@ async function redirectPage(page = '') {
   } else {
     if (!liff.isLoggedIn()) {
       liff.login();
-    } else {
-      document.getElementById('show').style.visibility = 'visible';
     }
+    document.getElementById('show').style.visibility = 'visible';
   }
 }
