@@ -1,3 +1,30 @@
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri:
+        'https://tapp-smartcity.netlify.app/compailn/form.html?topic=' + myParam
+    });
+  } else if (!checkUser(await getUID())) {
+    window.location = '../register.html';
+  } else if (!(await getFriend())) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
+});
+
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
+
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {

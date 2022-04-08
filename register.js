@@ -1,4 +1,26 @@
-liff.init({ liffId: '1656902981-0g1VVnpN' });
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri: 'https://tapp-smartcity.netlify.app/register.html'
+    });
+  } else if (!(await getFriend())) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else if (checkUser(await getUID())) {
+    window.location = '../index.html';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
+});
+
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
 
 var ThaiAPI = 'https://thaiaddressapi-thaikub.herokuapp.com/v1/';
 async function getProvinces() {
@@ -133,30 +155,19 @@ $('form').submit((e) => {
       fetch(
         'https://smartcity-pakpoon-api.herokuapp.com/userSmart/Creuser',
         requestOptions
-      )
-        .then(() => {
-          Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() => {
-            const urlParams = new URLSearchParams(window.location.search);
-            const page = urlParams.get('page');
-            if (!page) {
-              if (liff.getOS() === 'web') {
-                window.location = './index.html';
-              } else {
-                liff.closeWindow();
-              }
+      ).then(() => {
+        Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success')
+          .then(() => {
+            if (liff.getOS() === 'web') {
+              window.location = './index.html';
             } else {
-              window.location = './' + page;
+              liff.closeWindow();
             }
+          })
+          .catch((e) => {
+            console.log(e);
           });
-        })
-        .catch((e) => {
-          console.log();
-        });
+      });
     }
   });
 });
-
-async function getFriend() {
-  const friend = await liff.getFriendship();
-  return friend.friendFlag;
-}

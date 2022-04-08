@@ -1,3 +1,30 @@
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const key = urlParams.get('key') || 0;
+  const _id = urlParams.get('_id');
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri: `https://tapp-smartcity.netlify.app/compailn/check_details.html?key=${key}&_id=${_id}`
+    });
+  } else if (!checkUser(await getUID())) {
+    window.location = '../register.html';
+  } else if (!(await getFriend())) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
+});
+
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
+
 window.onload = async () => {
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);

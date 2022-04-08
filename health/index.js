@@ -1,16 +1,7 @@
-function logout() {
-  liff.logout();
-  if (liff.getOS() !== 'web') {
-    liff.closeWindow();
-  } else {
-    location.reload();
-  }
-}
-
 liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: 'https://tapp-smartcity.netlify.app'
+      redirectUri: 'https://tapp-smartcity.netlify.app/health'
     });
   } else if (!checkUser(await getUID())) {
     window.location = '../register.html';

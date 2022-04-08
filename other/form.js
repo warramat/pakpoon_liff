@@ -1,3 +1,29 @@
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri: 'https://tapp-smartcity.netlify.app/other/form.html?topic='+myParam
+    });
+  } else if (!checkUser(await getUID())) {
+    window.location = '../register.html';
+  } else if (!(await getFriend())) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
+});
+
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
+
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
@@ -5,9 +31,8 @@ $(document).ready(async () => {
     method: 'GET',
     redirect: 'follow'
   };
-  // console.log(myParam);
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=',
+    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic='+myParam,
     requestOptions
   );
   data = await data.json();
@@ -65,8 +90,8 @@ async function petition() {
   const myParam = urlParams.get('topic');
   let data = {
     type: $('#choice1').val(),
-    topic: myParam,
-    userID: await getUID()
+    topic: myParam
+    // userID: await getUID()
   };
   return data;
 }
