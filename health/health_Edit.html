@@ -47,267 +47,267 @@
 </head>
 
 <body>
-    <div id="show" style="visibility: hidden;">
-        <div class="card">
-            <div class="card-body ">
-                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                    <img src="./img/logo.jpg" width="100" height="100" />
-                    <br />
-                    <h4></span>แก้ไขข้อมูลส่วนตัว</span></h4>
-                </div>
-                <br>
-                <form id="form" method="post">
-                    <br />
-                    <div class="form-group">
-                        <label for="cardID">เลขบัตรประชาชน</label>
-                        <input id="cardID" name="cardID" class="form-control" type="number"
-                            placeholder="กรุณากรอกเลขบัตรประชาชน" aria-label="default input example">
-                    </div>
-                    <br />
-                    <label for="fname">โรงพยาบาล</label>
-                    <select id="hospital" name="hospital" class="form-select" required>
-                        <option value="" selected disabled hidden>
-                            กรุณาเลือกโรงพยาบาล
-                        </option>
-                        <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
-                        <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเทศบาลเมืองปากพูน
-                            บ้านตลาดพฤหัส
-                        </option>
-                        <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเทศบาลเมืองปากพูน
-                            บ้านศาลาบางปู
-                        </option>
-                        <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
-                        <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
 
-                    </select>
-                    <div class="row-6 form-group">
-
-
-                        <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                            วันเดือนปีเกิด
-                        </div>
-
-                        <div class="row">
-                            <div class="col-4">
-                                <label for="year">ปี (พ.ศ.)</label>
-                                <select id="year" name="year" class="form-select" required></select>
-                            </div>
-                            <div class="col-4">
-                                <label for="month">เดือน</label>
-                                <select id="month" name="month" class="form-select" required></select>
-                            </div>
-                            <div class="col-4">
-                                <label for="fname">วัน</label>
-                                <select id="day" name="day" class="form-select" required></select>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <br />
-
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>ผู้พิการ</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="handicapped" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-
-                                <input type="radio" name="handicapped" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <div class="row">
-                                <div class="col-7">
-                                    <p>ผู้ป่วยติดเตียง</p>
-                                </div>
-                                <div class="col-5">
-                                    <input type="radio" name="bedridden_patient" value="ไม่เป็น">
-                                    <label for="contactChoice1">ไม่เป็น</label>
-                                    &nbsp; &nbsp; &nbsp;
-                                    <input type="radio" name="bedridden_patient" value="เป็น">
-                                    <label for="contactChoice2">เป็น</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคเบาหวาน</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="diabetes" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="diabetes" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคปอด / หอบหืด</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="lung_disease" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="lung_disease" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคไต</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="kidney_disease" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="kidney_disease" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคภูมิคุ้มกันบกพร่อง</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="immunodeficiency" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="immunodeficiency" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคตับ</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="liver_disease" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="liver_disease" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>ไมเกรน</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="migraine" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="migraine" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>ความดันโลหิตสูง</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="high_blood" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="high_blood" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>ธาลัสซีเมีย</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="thalassemia" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="thalassemia" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคหัวใจ</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="heart_disease" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="heart_disease" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>ภูมิแพ้</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="allergy" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="allergy" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="row">
-                            <div class="col-7">
-                                <p>โรคลมชัก</p>
-                            </div>
-                            <div class="col-5">
-                                <input type="radio" name="epilepsy" value="ไม่เป็น">
-                                <label for="contactChoice1">ไม่เป็น</label>
-                                &nbsp; &nbsp; &nbsp;
-                                <input type="radio" name="epilepsy" value="เป็น">
-                                <label for="contactChoice2">เป็น</label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="other">โรค</label>
-                        <input id="other" name="other" class="form-control" type="text" placeholder="กรุณากรอกโรค"
-                            aria-label="default input example">
-                    </div>
-                    </br>
-                    <div class="row">
-                        <div class="col-6">
-                            <a class="btn btn-outline-primary " href="./index.html" style="width: 100%;">
-                                ย้อนกลับ</a>
-                        </div>
-                        <div class="col-6 ">
-                            <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
-                        </div>
-
-                    </div>
-                </form>
+    <div class="card">
+        <div class="card-body ">
+            <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                <img src="./img/logo.jpg" width="100" height="100" />
+                <br />
+                <h4></span>แก้ไขข้อมูลส่วนตัว</span></h4>
             </div>
+            <br>
+            <form id="form" method="post">
+                <br />
+                <div class="form-group">
+                    <label for="cardID">เลขบัตรประชาชน</label>
+                    <input id="cardID" name="cardID" class="form-control" type="number"
+                        placeholder="กรุณากรอกเลขบัตรประชาชน" aria-label="default input example">
+                </div>
+                <br />
+                <label for="fname">โรงพยาบาล</label>
+                <select id="hospital" name="hospital" class="form-select" required>
+                    <option value="" selected disabled hidden>
+                        กรุณาเลือกโรงพยาบาล
+                    </option>
+                    <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
+                    <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเทศบาลเมืองปากพูน
+                        บ้านตลาดพฤหัส
+                    </option>
+                    <option value="โรงพยาบาลเทศบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเทศบาลเมืองปากพูน
+                        บ้านศาลาบางปู
+                    </option>
+                    <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
+                    <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
+
+                </select>
+                <div class="row-6 form-group">
+
+
+                    <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                        วันเดือนปีเกิด
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="year">ปี (พ.ศ.)</label>
+                            <select id="year" name="year" class="form-select" required></select>
+                        </div>
+                        <div class="col-4">
+                            <label for="month">เดือน</label>
+                            <select id="month" name="month" class="form-select" required></select>
+                        </div>
+                        <div class="col-4">
+                            <label for="fname">วัน</label>
+                            <select id="day" name="day" class="form-select" required></select>
+                        </div>
+
+
+                    </div>
+                </div>
+                <br />
+
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>ผู้พิการ</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="handicapped" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+
+                            <input type="radio" name="handicapped" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div class="row">
+                            <div class="col-7">
+                                <p>ผู้ป่วยติดเตียง</p>
+                            </div>
+                            <div class="col-5">
+                                <input type="radio" name="bedridden_patient" value="ไม่เป็น">
+                                <label for="contactChoice1">ไม่เป็น</label>
+                                &nbsp; &nbsp; &nbsp;
+                                <input type="radio" name="bedridden_patient" value="เป็น">
+                                <label for="contactChoice2">เป็น</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคเบาหวาน</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="diabetes" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="diabetes" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคปอด / หอบหืด</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="lung_disease" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="lung_disease" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคไต</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="kidney_disease" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="kidney_disease" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคภูมิคุ้มกันบกพร่อง</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="immunodeficiency" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="immunodeficiency" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคตับ</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="liver_disease" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="liver_disease" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>ไมเกรน</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="migraine" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="migraine" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>ความดันโลหิตสูง</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="high_blood" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="high_blood" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>ธาลัสซีเมีย</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="thalassemia" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="thalassemia" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคหัวใจ</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="heart_disease" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="heart_disease" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>ภูมิแพ้</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="allergy" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="allergy" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>โรคลมชัก</p>
+                        </div>
+                        <div class="col-5">
+                            <input type="radio" name="epilepsy" value="ไม่เป็น">
+                            <label for="contactChoice1">ไม่เป็น</label>
+                            &nbsp; &nbsp; &nbsp;
+                            <input type="radio" name="epilepsy" value="เป็น">
+                            <label for="contactChoice2">เป็น</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="other">โรค</label>
+                    <input id="other" name="other" class="form-control" type="text" placeholder="กรุณากรอกโรค"
+                        aria-label="default input example">
+                </div>
+                </br>
+                <div class="row">
+                    <div class="col-6">
+                        <a class="btn btn-outline-primary " href="./index.html" style="width: 100%;">
+                            ย้อนกลับ</a>
+                    </div>
+                    <div class="col-6 ">
+                        <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
+                    </div>
+
+                </div>
+            </form>
         </div>
+    </div>
     </div>
 
 </body>
