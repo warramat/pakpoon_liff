@@ -11,7 +11,7 @@ async function redirectPage(page = '') {
     window.location = '../register.html?page=' + page;
   } else {
     if (!liff.isLoggedIn()) {
-      liff.login();
+      liff.login({ redirectUri: "https://tapp-smartcity.netlify.app/"+page });
     }
     document.getElementById('show').style.visibility = 'visible';
   }
