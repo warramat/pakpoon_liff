@@ -8,7 +8,7 @@ async function redirectPage(page = '') {
   const uid = await getUID();
   const ck = await checkUser(uid);
   if (!ck) {
-    window.location = '../register.html' + page;
+    window.location = '../register.html?page=' + page;
   } else {
     if (!liff.isLoggedIn()) {
       liff.login();
