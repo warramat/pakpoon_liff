@@ -49,8 +49,8 @@ window.onload = async () => {
             <div class="card-body">
             <div class="col-12">
             <h2>${html_img}</h2>
-            <h4>เรื่อง :${data.topic}</h4>
-            <h4>รายละเอียด :${data.type}</h4>
+            <h4>เรื่อง :${data.type}</h4>
+            <h4>รายละเอียด :${data.details}</h4>
             <h4>สถานะ :<span style="color:${
               data.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
             }";>${data.status}</span></h4>
