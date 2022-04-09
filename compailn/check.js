@@ -45,7 +45,7 @@ window.onload = async () => {
           }"/></h2>
         </div>
         <div class="col-8" >
-          <h2 style="color:green;">เลขที่ :${c - (key + 1)}</h2>
+          <h2 style="color:green;">เลขที่ :${c - key}</h2>
           <h4>เรื่อง :${item.topic}</h4>
           <h4>รายละเอียด :${item.type}</h4>
           <h4>สถานะ :<span style="color:${
@@ -60,7 +60,7 @@ window.onload = async () => {
         </div>
         <a class="btn btn-outline-primary " href="./check_details?_id=${
           item._id
-        }&key=${c - (key + 1)}" style="width: 100%;">
+        }&key=${c - key}" style="width: 100%;">
         ดูรายละเอียด</a>
   
           </div>
