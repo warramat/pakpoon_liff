@@ -33,6 +33,7 @@ window.onload = async () => {
   data = data.reverse();
   const c = data.length;
   data.forEach((item, key) => {
+    console.log(key);
     html += `
       <div class="min-vw-100">
         <div class="card">
