@@ -4,6 +4,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
       redirectUri: 'https://tapp-smartcity.netlify.app/compailn'
     });
   } else if (!checkUser(await getUID())) {
+    console.log('UserID is ', !checkUser(await getUID()));
     window.location = '../register.html';
   } else if (!(await getFriend())) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
