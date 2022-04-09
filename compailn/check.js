@@ -46,8 +46,8 @@ window.onload = async () => {
         </div>
         <div class="col-8" >
           <h2 style="color:green;">เลขที่ :${c - key}</h2>
-          <h4>เรื่อง :${item.topic}</h4>
-          <h4>รายละเอียด :${item.type}</h4>
+          <h4>เรื่อง :${item.type}</h4>
+          <h4>รายละเอียด :${item.details}</h4>
           <h4>สถานะ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
