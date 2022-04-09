@@ -3,10 +3,12 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     liff.login({
       redirectUri: 'https://tapp-smartcity.netlify.app/register.html'
     });
+  } else if (await checkUser(await getUID())) {
+    window.location = './index.html';
   } else if (!(await getFriend())) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
-  } else if (checkUser(await getUID())) {
-    window.location = '../index.html';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
   }
 });
 
