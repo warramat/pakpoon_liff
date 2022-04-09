@@ -7,7 +7,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
         'https://tapp-smartcity.netlify.app/other/form.html?topic=' + myParam
     });
   } else if (!checkUser(await getUID())) {
-    window.location = '../register.html';
+    location.replace('https://tapp-smartcity.netlify.app/register.html');
   } else if (!(await getFriend())) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
   }
