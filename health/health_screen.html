@@ -47,113 +47,113 @@
 </head>
 
 <body>
+    <div id="show" style="visibility: hidden;">
+        <div class="card">
+            <div class="card-body ">
+                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                    <img src="./img/logo.jpg" width="100" height="100" />
+                    <br />
+                    <h4></span>ดัชนีมวลกาย</span></h4>
+                </div>
+                <br>
+                <form id="form" method="post">
+                    <br />
+                    <div class="form-group">
+                        <label for="weight">น้ำหนัก (กิโลกรัม)</label>
+                        <input id="weight" name="weight" class="form-control" type="number" min="1"
+                            placeholder="กรุณากรอกน้ำหนัก" aria-label="default input example" required>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="height">ส่วนสูง (เซนติเมตร)</label>
+                        <input id="height" name="height" class="form-control" type="number" min="90"
+                            placeholder="กรุณากรอกส่วนสูง" aria-label="default input example" required>
+                    </div>
+                    </br>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="BMI">ค่า BMI :</label>
+                                <input id="BMI" name="BMI" class="form-control" type="text" placeholder=""
+                                    aria-label="default input example" disabled>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="proportion">สัดส่วน :</label>
+                                <input id="proportion" name="proportion" class="form-control" type="text" placeholder=""
+                                    aria-label="default input example" disabled>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="card">
-        <div class="card-body ">
-            <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                <img src="./img/logo.jpg" width="100" height="100" />
-                <br />
-                <h4></span>ดัชนีมวลกาย</span></h4>
+                    <!-- สัดส่วน: <span id="proportion"></span> -->
+                    </br>
+
+                    <div class="form-group">
+                        <label for="waistline">รอบเอว (เซนติเมตร)</label>
+                        <input id="waistline" name="waistline" class="form-control" type="number"
+                            placeholder="กรุณากรอกรอบเอว" aria-label="default input example" required>
+                    </div>
+                    <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                        ความดันโลหิตครั้งที่ 1
+                    </div>
+
+                    </br>
+
+                    <div class="form-group">
+                        <label for="upper_blood1">ความดันโลหิตค่าบน</label>
+                        <input id="upper_blood1" name="upper_blood1" class="form-control" type="number"
+                            placeholder="กรุณากรอกความดันโลหิตค่าบน" aria-label="default input example" required>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="lower_blood1">ความดันโลหิตค่าล่าง</label>
+                        <input id="lower_blood1" name="lower_blood1" class="form-control" type="number"
+                            placeholder="กรุณากรอกความดันโลหิตค่าล่าง" aria-label="default input example" required>
+                    </div>
+
+                    <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                        ความดันโลหิตครั้งที่ 2
+                    </div>
+                    </br>
+
+                    <div class="form-group">
+                        <label for="upper_blood2">ความดันโลหิตค่าบน</label>
+                        <input id="upper_blood2" name="upper_blood2" class="form-control" type="number"
+                            placeholder="กรุณากรอกความดันโลหิตค่าบน" aria-label="default input example" required>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <label for="lower_blood2">ความดันโลหิตค่าล่าง</label>
+                        <input id="lower_blood2" name="lower_blood2" class="form-control" type="number"
+                            placeholder="กรุณากรอกความดันโลหิตค่าล่าง" aria-label="default input example" required>
+                    </div>
+
+                    <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                        ค่าน้ำตาลในเลือด
+                    </div>
+                    </br>
+                    <div class="form-group">
+                        <label for="blood_sugar">ค่าน้ำตาลในเลือด</label>
+                        <input id="blood_sugar" name="blood_sugar" class="form-control" type="number"
+                            placeholder="ค่าน้ำตาลในเลือด" aria-label="default input example">
+                    </div>
+
+                    </br>
+                    <div class="row">
+                        <div class="col-6">
+                            <a class="btn btn-outline-primary " href="./index.html" style="width: 100%;">
+                                ย้อนกลับ</a>
+                        </div>
+                        <div class="col-6 ">
+                            <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
+                        </div>
+
+                    </div>
             </div>
-            <br>
-            <form id="form" method="post">
-                <br />
-                <div class="form-group">
-                    <label for="weight">น้ำหนัก (กิโลกรัม)</label>
-                    <input id="weight" name="weight" class="form-control" type="number" min="1"
-                        placeholder="กรุณากรอกน้ำหนัก" aria-label="default input example" required>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="height">ส่วนสูง (เซนติเมตร)</label>
-                    <input id="height" name="height" class="form-control" type="number" min="90"
-                        placeholder="กรุณากรอกส่วนสูง" aria-label="default input example" required>
-                </div>
-                </br>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="form-group">
-                            <label for="BMI">ค่า BMI :</label>
-                            <input id="BMI" name="BMI" class="form-control" type="text" placeholder=""
-                                aria-label="default input example" disabled>
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="form-group">
-                            <label for="proportion">สัดส่วน :</label>
-                            <input id="proportion" name="proportion" class="form-control" type="text" placeholder=""
-                                aria-label="default input example" disabled>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- สัดส่วน: <span id="proportion"></span> -->
-                </br>
-
-                <div class="form-group">
-                    <label for="waistline">รอบเอว (เซนติเมตร)</label>
-                    <input id="waistline" name="waistline" class="form-control" type="number"
-                        placeholder="กรุณากรอกรอบเอว" aria-label="default input example" required>
-                </div>
-                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                    ความดันโลหิตครั้งที่ 1
-                </div>
-
-                </br>
-
-                <div class="form-group">
-                    <label for="upper_blood1">ความดันโลหิตค่าบน</label>
-                    <input id="upper_blood1" name="upper_blood1" class="form-control" type="number"
-                        placeholder="กรุณากรอกความดันโลหิตค่าบน" aria-label="default input example" required>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="lower_blood1">ความดันโลหิตค่าล่าง</label>
-                    <input id="lower_blood1" name="lower_blood1" class="form-control" type="number"
-                        placeholder="กรุณากรอกความดันโลหิตค่าล่าง" aria-label="default input example" required>
-                </div>
-
-                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                    ความดันโลหิตครั้งที่ 2
-                </div>
-                </br>
-
-                <div class="form-group">
-                    <label for="upper_blood2">ความดันโลหิตค่าบน</label>
-                    <input id="upper_blood2" name="upper_blood2" class="form-control" type="number"
-                        placeholder="กรุณากรอกความดันโลหิตค่าบน" aria-label="default input example" required>
-                </div>
-                <br />
-                <div class="form-group">
-                    <label for="lower_blood2">ความดันโลหิตค่าล่าง</label>
-                    <input id="lower_blood2" name="lower_blood2" class="form-control" type="number"
-                        placeholder="กรุณากรอกความดันโลหิตค่าล่าง" aria-label="default input example" required>
-                </div>
-
-                <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
-                    ค่าน้ำตาลในเลือด
-                </div>
-                </br>
-                <div class="form-group">
-                    <label for="blood_sugar">ค่าน้ำตาลในเลือด</label>
-                    <input id="blood_sugar" name="blood_sugar" class="form-control" type="number"
-                        placeholder="ค่าน้ำตาลในเลือด" aria-label="default input example">
-                </div>
-
-                </br>
-                <div class="row">
-                    <div class="col-6">
-                        <a class="btn btn-outline-primary " href="./index.html" style="width: 100%;">
-                            ย้อนกลับ</a>
-                    </div>
-                    <div class="col-6 ">
-                        <input type="submit" value="บันทึก" class="btn btn-primary" style="width: 100%;">
-                    </div>
-
-                </div>
+            </form>
         </div>
-        </form>
-    </div>
     </div>
 </body>
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>

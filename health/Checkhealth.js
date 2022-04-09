@@ -7,10 +7,12 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
         'https://tapp-smartcity.netlify.app/health/Checkhealth.html?_id=' +
         myParam
     });
-  } else if (!checkUser(await getUID())) {
-    location.replace('https://tapp-smartcity.netlify.app/register.html');
+  } else if (!(await checkUser(await getUID()))) {
+    window.location = '../register.html';
   } else if (!(await getFriend())) {
     window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
   }
 });
 
