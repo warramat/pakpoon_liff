@@ -1,10 +1,8 @@
 liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get('topic');
   if (!liff.isLoggedIn()) {
     liff.login({
       redirectUri:
-        'https://tapp-smartcity.netlify.app/other/form.html?topic=' + myParam
+        'https://tapp-smartcity.netlify.app/other/form.html'
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
@@ -26,15 +24,12 @@ async function getUID() {
 }
 
 $(document).ready(async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get('topic');
   var requestOptions = {
     method: 'GET',
     redirect: 'follow'
   };
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=' +
-      myParam,
+    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=' ,
     requestOptions
   );
   data = await data.json();

@@ -7,5 +7,4 @@ $('form').submit(function (e) {
     sum += Number(e.value);
   });
   const avg = Math.round(sum / n);
-  
 });
