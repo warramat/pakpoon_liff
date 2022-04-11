@@ -30,10 +30,10 @@ $('#month').change(() => {
 });
 
 $(document).ready(async function () {
-  makeyear();
-  makemouth();
-  makeday();
   await load();
+  await makeyear();
+  await makemouth();
+  await makeday();
 });
 
 function makeyear() {
