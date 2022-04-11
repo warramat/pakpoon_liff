@@ -260,11 +260,13 @@ async function load() {
         }
       });
     });
+    let html = '';
     M.forEach((e, i) => {
       html += `<option ${
         row.month === e ? 'selected' : ''
       } value="${e}">${e}</option>`;
     });
+    $('#month').html(html);
   } else {
     await makeyear();
     await makemouth();
