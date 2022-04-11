@@ -247,6 +247,7 @@ async function load() {
   console.log(data.data);
   if (data.total > 0) {
     const D = new Date();
+    let html = '';
     const row = data.data[0];
     $('#cardID').val(row.cardID);
     $('#hospital').val(row.hospital);
@@ -265,7 +266,6 @@ async function load() {
         }
       });
     });
-    let html = '';
     M.forEach((e, i) => {
       html += `<option ${
         row.month == e ? 'selected' : ''
