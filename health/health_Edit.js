@@ -261,7 +261,7 @@ async function load() {
     let html = '';
     M.forEach((e, i) => {
       html += `<option ${
-        row.month === e ? 'selected' : ''
+        row.month == e ? 'selected' : ''
       } value="${e}">${e}</option>`;
     });
     $('#month').html(html);
@@ -269,7 +269,7 @@ async function load() {
       html = '';
       for (let d = 1; d < 31; d++) {
         html += `<option ${
-          row.day === d ? 'selected' : ''
+          row.day == d ? 'selected' : ''
         } value="${d}">${d}</option>`;
       }
       $('#day').html(html);
@@ -277,7 +277,7 @@ async function load() {
       html = '';
       for (let d = 1; d < 32; d++) {
         html += `<option ${
-          row.day === d ? 'selected' : ''
+          row.day == d ? 'selected' : ''
         } value="${d}">${d}</option>`;
       }
       $('#day').html(html);
@@ -286,7 +286,7 @@ async function load() {
         html = '';
         for (let d = 1; d < 30; d++) {
           html += `<option ${
-            row.day === d ? 'selected' : ''
+            row.day == d ? 'selected' : ''
           } value="${d}">${d}</option>`;
         }
         $('#day').html(html);
@@ -294,7 +294,7 @@ async function load() {
         for (let d = 1; d < 29; d++) {
           html = '';
           html += `<option ${
-            row.day === d ? 'selected' : ''
+            row.day == d ? 'selected' : ''
           } value="${d}">${d}</option>`;
         }
         $('#day').html(html);
