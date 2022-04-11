@@ -45,8 +45,6 @@ $('#month').change(() => {
 });
 
 $(document).ready(async function () {
-  await makeyear();
-  await makeday();
   await load();
 });
 
@@ -268,6 +266,8 @@ async function load() {
       } value="${e}">${e}</option>`;
     });
   } else {
+    await makeyear();
     await makemouth();
+    await makeday();
   }
 }
