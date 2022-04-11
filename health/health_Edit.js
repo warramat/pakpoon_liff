@@ -246,11 +246,18 @@ async function load() {
   ).json();
   console.log(data.data);
   if (data.total > 0) {
+    const D = new Date();
     const row = data.data[0];
     $('#cardID').val(row.cardID);
     $('#hospital').val(row.hospital);
     $('#other').val(row.other);
-    $('#year').val(row.year);
+    html = '';
+    for (let y = 2450; y >= D.getFullYear + 543; y--) {
+      html += `<option ${
+        row.year == y ? 'selected' : ''
+      } value="${y}">${y}</option>`;
+    }
+    $('#year').html(html);
     list.forEach((e) => {
       $(`input[name='${e}']`).each(function () {
         if ($(this).val() === row[e]) {
