@@ -210,7 +210,7 @@ $('form').submit(function (e) {
         ).then(function (response) {
           Swal.fire({
             icon: 'success',
-            title: 'การบันทึกข้อมูลเสร็จสิ้น',
+            title: 'บันทึกข้อมูลเสร็จสิ้น',
             showDenyButton: false,
             showCancelButton: false,
             confirmButtonText: 'ตกลง',
