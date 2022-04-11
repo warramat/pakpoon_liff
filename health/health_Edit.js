@@ -249,10 +249,8 @@ async function load() {
     const row = data.data[0];
     $('#cardID').val(row.cardID);
     $('#hospital').val(row.hospital);
-    $('#day').val(row.day);
-    $('#month').val(row.month);
-    $('#year').val(row.year);
     $('#other').val(row.other);
+    $('#year').val(row.year);
     list.forEach((e) => {
       $(`input[name='${e}']`).each(function () {
         if ($(this).val() === row[e]) {
@@ -267,6 +265,35 @@ async function load() {
       } value="${e}">${e}</option>`;
     });
     $('#month').html(html);
+    if (e.month.indexOf('ยน') != -1) {
+      html = '';
+      for (let d = 1; d < 31; d++) {
+        html += `<option ${
+          row.day === d ? 'selected' : ''
+        } value="${d}">${d}</option>`;
+      }
+    } else if (e.month.indexOf('คม') != -1) {
+      html = '';
+      for (let d = 1; d < 32; d++) {
+        html += `<option ${
+          row.day === d ? 'selected' : ''
+        } value="${d}">${d}</option>`;
+      }
+    } else {
+      if (leapyear(Number(row.year) - 543)) {
+        for (let d = 1; d < 30; d++) {
+          html += `<option ${
+            row.day === d ? 'selected' : ''
+          } value="${d}">${d}</option>`;
+        }
+      } else {
+        for (let d = 1; d < 29; d++) {
+          html += `<option ${
+            row.day === d ? 'selected' : ''
+          } value="${d}">${d}</option>`;
+        }
+      }
+    }
   } else {
     await makeyear();
     await makemouth();
