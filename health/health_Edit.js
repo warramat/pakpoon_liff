@@ -63,7 +63,7 @@ function makemouth() {
     'พฤศจิกายน',
     'ธันวาคม'
   ];
-  if ($('#year').val() === today.getFullYear() + 543) {
+  if ($('#year').val() == today.getFullYear() + 543) {
     M.forEach((e, i) => {
       if (i > today.getMonth()) {
         return;
@@ -78,7 +78,7 @@ function makemouth() {
       html += `<option value="${e}">${e}</option>`;
     });
   }
-  console.log(html)
+  console.log(html);
   $('#month').html(html);
 }
 
