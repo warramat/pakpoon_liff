@@ -44,6 +44,7 @@ $(document).ready(async () => {
     html += `<option value="${element}">${element}</option>`;
   });
   $('#choice1').append(html);
+  console.log
 });
 
 $('form').submit((e) => {
@@ -92,8 +93,8 @@ async function petition() {
   const myParam = urlParams.get('topic');
   let data = {
     type: $('#choice1').val(),
-    topic: myParam
-    // userID: await getUID()
+    topic: myParam,
+    userID: await getUID()
   };
   return data;
 }
