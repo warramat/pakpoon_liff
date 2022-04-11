@@ -266,6 +266,7 @@ async function load() {
       });
     });
     M.forEach((e, i) => {
+      html = '';
       html += `<option ${
         row.month == e ? 'selected' : ''
       } value="${e}">${e}</option>`;
