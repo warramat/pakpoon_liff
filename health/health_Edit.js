@@ -252,8 +252,7 @@ async function load() {
     $('#cardID').val(row.cardID);
     $('#hospital').val(row.hospital);
     $('#other').val(row.other);
-    html = '';
-    for (let y = 2450; y >= D.getFullYear() + 543; y--) {
+    for (let y = 2450; y >= Number(D.getFullYear() + 543); y--) {
       html += `<option ${
         row.year == y ? 'selected' : ''
       } value="${y}">${y}</option>`;
