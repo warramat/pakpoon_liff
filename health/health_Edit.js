@@ -1,3 +1,18 @@
+const M = [
+  'มกราคม',
+  'กุมภาพันธ์',
+  'มีนาคม',
+  'เมษายน',
+  'พฤษภาคม',
+  'มิถุนายน',
+  'กรกฏาคม',
+  'สิงหาคม',
+  'กันยายน',
+  'ตุลาคม',
+  'พฤศจิกายน',
+  'ธันวาคม'
+];
+
 liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
@@ -31,7 +46,6 @@ $('#month').change(() => {
 
 $(document).ready(async function () {
   await makeyear();
-  await makemouth();
   await makeday();
   await load();
 });
@@ -49,20 +63,6 @@ function makeyear() {
 function makemouth() {
   let today = new Date();
   let html = '';
-  const M = [
-    'มกราคม',
-    'กุมภาพันธ์',
-    'มีนาคม',
-    'เมษายน',
-    'พฤษภาคม',
-    'มิถุนายน',
-    'กรกฏาคม',
-    'สิงหาคม',
-    'กันยายน',
-    'ตุลาคม',
-    'พฤศจิกายน',
-    'ธันวาคม'
-  ];
   if ($('#year').val() == today.getFullYear() + 543) {
     M.forEach((e, i) => {
       if (i > today.getMonth()) {
@@ -84,20 +84,7 @@ function makemouth() {
 
 function makeday() {
   let today = new Date();
-  const M = [
-    'มกราคม',
-    'กุมภาพันธ์',
-    'มีนาคม',
-    'เมษายน',
-    'พฤษภาคม',
-    'มิถุนายน',
-    'กรกฏาคม',
-    'สิงหาคม',
-    'กันยายน',
-    'ตุลาคม',
-    'พฤศจิกายน',
-    'ธันวาคม'
-  ];
+
   if (
     $('#year').val() == today.getFullYear() + 543 &&
     today.getMonth() === M.indexOf($('#month').val())
@@ -275,5 +262,12 @@ async function load() {
         }
       });
     });
+    M.forEach((e, i) => {
+      html += `<option ${
+        row.month === e ? 'selected' : ''
+      } value="${e}">${e}</option>`;
+    });
+  } else {
+    await makemouth();
   }
 }
