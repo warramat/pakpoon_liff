@@ -265,14 +265,14 @@ async function load() {
       } value="${e}">${e}</option>`;
     });
     $('#month').html(html);
-    if (e.month.indexOf('ยน') != -1) {
+    if (row.month.indexOf('ยน') != -1) {
       html = '';
       for (let d = 1; d < 31; d++) {
         html += `<option ${
           row.day === d ? 'selected' : ''
         } value="${d}">${d}</option>`;
       }
-    } else if (e.month.indexOf('คม') != -1) {
+    } else if (row.month.indexOf('คม') != -1) {
       html = '';
       for (let d = 1; d < 32; d++) {
         html += `<option ${
