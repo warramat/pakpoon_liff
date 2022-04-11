@@ -272,6 +272,7 @@ async function load() {
           row.day === d ? 'selected' : ''
         } value="${d}">${d}</option>`;
       }
+      $('#day').html(html);
     } else if (row.month.indexOf('คม') != -1) {
       html = '';
       for (let d = 1; d < 32; d++) {
@@ -279,6 +280,7 @@ async function load() {
           row.day === d ? 'selected' : ''
         } value="${d}">${d}</option>`;
       }
+      $('#day').html(html);
     } else {
       if (leapyear(Number(row.year) - 543)) {
         html = '';
@@ -287,6 +289,7 @@ async function load() {
             row.day === d ? 'selected' : ''
           } value="${d}">${d}</option>`;
         }
+        $('#day').html(html);
       } else {
         for (let d = 1; d < 29; d++) {
           html = '';
@@ -294,6 +297,7 @@ async function load() {
             row.day === d ? 'selected' : ''
           } value="${d}">${d}</option>`;
         }
+        $('#day').html(html);
       }
     }
   } else {
