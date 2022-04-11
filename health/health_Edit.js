@@ -281,6 +281,7 @@ async function load() {
       }
     } else {
       if (leapyear(Number(row.year) - 543)) {
+        html = '';
         for (let d = 1; d < 30; d++) {
           html += `<option ${
             row.day === d ? 'selected' : ''
@@ -288,6 +289,7 @@ async function load() {
         }
       } else {
         for (let d = 1; d < 29; d++) {
+          html = '';
           html += `<option ${
             row.day === d ? 'selected' : ''
           } value="${d}">${d}</option>`;
