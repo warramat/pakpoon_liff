@@ -39,13 +39,13 @@ window.onload = async () => {
             <div class="card-body">
               <div class="row">
                 <div class="col-12">
-                  <h3>วันที่ :${toThaidate(item.updated)}</h3>
+                  <p>วันที่ :${toThaidate(item.updated)}</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                <h4>คุณอยู่ในเกณฑ์ :${item.proportion}</h4>
-                  <h5>BMI ค่าที่ได้ :${item.BMI}</h5>
+                <p>คุณอยู่ในเกณฑ์ :${item.proportion}</p>
+                  <p>BMI ค่าที่ได้ :${item.BMI}</p>
                   <a class="btn btn-outline-primary " href="./Checkhealth.html?_id=${
                     item._id
                   }" style="width: 100%;">

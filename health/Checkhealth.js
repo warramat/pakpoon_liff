@@ -45,31 +45,31 @@ window.onload = async () => {
           <div class="card-body">
             <div class="row">
               <div class="col-12">
-                <h3>วันที่ :${toThaidate(item.updated)}</h3>
+                <p>วันที่ :${toThaidate(item.updated)}</p>
               </div>
             </div>
             <div class="row">
               <div class="col-12">
-                <h5>น้ำหนัก :${item.weight}</h5>
-                <h5>ส่วนสูง :${item.height}</h5>
-                <h5>BMI :${item.BMI}</h5>
-                <h5>คุณอยู่ในเกณฑ์ :${item.proportion}</h5>
+                <p>น้ำหนัก :${item.weight}</p>
+                <p>ส่วนสูง :${item.height}</p>
+                <p>BMI :${item.BMI}</p>
+                <p>คุณอยู่ในเกณฑ์ :${item.proportion}</p>
                 <br></br>
-                <h5>ความดันโลหิตครั้งที่ 1</h5>
-                <h5>
+                <p>ความดันโลหิตครั้งที่ 1</p>
+                <p>
                   ค่าความดันโลหิตค่าบน :
                   <span style="color: green">${item.upper_blood1}</span>
-                </h5>
-                <h5>
+                </p>
+                <p>
                   ค่าความดันโลหิตค่าบน :
                   <span style="color: green">${item.lower_blood2}</span>
-                </h5>
+                </p>
                 <br></br>
-                <h5>ความดันโลหิตครั้งที่ 2</h5>
-                <h5>ค่าความดันโลหิตค่าบน :${item.upper_blood2}</h5>
-                <h5>ค่าความดันโลหิตค่าบน :${item.lower_blood2}</h5>
+                <p>ความดันโลหิตครั้งที่ 2</p>
+                <p>ค่าความดันโลหิตค่าบน :${item.upper_blood2}</p>
+                <p>ค่าความดันโลหิตค่าบน :${item.lower_blood2}</p>
                 <br></br>
-                <h5>ค่าน้ำตาลในเลือด :${item.blood_sugar}</h5>
+                <p>ค่าน้ำตาลในเลือด :${item.blood_sugar}</p>
               </div>
               <br />
             </div>
