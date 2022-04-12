@@ -45,7 +45,7 @@ window.onload = async () => {
           <div class="card-body">
             <div class="row">
               <div class="col-12">
-                <h3>วันที่ :${item.created}</h3>
+                <h3>วันที่ :${toThaidate(item.updated)}</h3>
               </div>
             </div>
             <div class="row">

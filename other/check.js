@@ -46,7 +46,7 @@ window.onload = async () => {
         item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
       }";>${item.status}</span></h4>
       <br />
-      <h4>${item.updated}</h4>
+      <h4>${toThaidate(item.updated)}</h4>
     </div>
       </div>
       </p>

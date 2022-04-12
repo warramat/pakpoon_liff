@@ -54,7 +54,7 @@ window.onload = async () => {
             <h4>สถานะ :<span style="color:${
               data.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
             }";>${data.status}</span></h4>
-            <h4>${data.updated}</h4>
+            <h4>${toThaidate(item.updated)}</h4>
           </div>
           <br />
             </div>
