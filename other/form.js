@@ -33,12 +33,11 @@ $(document).ready(async () => {
   );
   data = await data.json();
   let html = '';
-  $('#topic').text(data.topic.type);
+  $('#topic').text(data.type);
   data.type.forEach((element) => {
     html += `<option value="${element}">${element}</option>`;
   });
   $('#choice1').append(html);
-  console.log;
 });
 
 $('form').submit((e) => {
