@@ -1,4 +1,5 @@
 let sendData = {};
+let sum = 0;
 $('form').submit(function (e) {
   e.preventDefault();
   Swal.fire({
@@ -12,8 +13,6 @@ $('form').submit(function (e) {
     if (result.isConfirmed) {
       const form = $('form').serializeArray();
       const n = form.length;
-      let sum = 0;
-
       form.forEach((e) => {
         sum += Number(e.value);
         sendData[e.name] = e.value;
