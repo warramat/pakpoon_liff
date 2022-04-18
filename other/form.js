@@ -1,8 +1,7 @@
 liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri:
-        'https://tapp-smartcity.netlify.app/other/form.html'
+      redirectUri: 'https://tapp-smartcity.netlify.app/other/form.html'
     });
   } else if (!(await checkUser(await getUID()))) {
     window.location = '../register.html';
@@ -29,7 +28,7 @@ $(document).ready(async () => {
     redirect: 'follow'
   };
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=' ,
+    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=',
     requestOptions
   );
   data = await data.json();
@@ -39,7 +38,7 @@ $(document).ready(async () => {
     html += `<option value="${element}">${element}</option>`;
   });
   $('#choice1').append(html);
-  console.log
+  console.log;
 });
 
 $('form').submit((e) => {
@@ -66,7 +65,7 @@ $('form').submit((e) => {
       };
       fetch(
         // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-        'https://smartcity-pakpoon.herokuapp.com/petition/addpetition',
+        'https://smartcity-pakpoon-api.herokuapp.com/protest/addprotest',
         requestOptions
       )
         .then(() => {
