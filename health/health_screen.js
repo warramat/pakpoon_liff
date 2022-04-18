@@ -12,7 +12,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     document.getElementById('show').style.visibility = 'visible';
   }
 });
-
+var proportion = '';
 async function getFriend() {
   const friend = await liff.getFriendship();
   return friend.friendFlag;
@@ -43,7 +43,7 @@ $('form').submit(function (e) {
           data[e.name] = e.value;
         });
       data.BMI = $('#BMI').val();
-      data.proportion = $('#proportion').val();
+      data.proportion = proportion;
       console.log(data);
       fetch('https://smartcity-pakpoon-api.herokuapp.com/health/addhealth', {
         method: 'POST',
@@ -158,16 +158,20 @@ $('#waistline').change(() => {
 
 function set() {
   const BMI = $('#BMI').val();
-  const proportion = $('#proportion').val();
   if (BMI < 18.5) {
     $('#proportion').val('น้ำหนักต่ำกว่าเกณฑ์');
+    proportion = 'น้ำหนักต่ำกว่าเกณฑ์';
   } else if (BMI >= 18.5 && BMI < 22.9) {
     $('#proportion').val('สมส่วน');
+    proportion = 'สมส่วน';
   } else if (BMI >= 23 && BMI < 24.9) {
     $('#proportion').val('ท้วม');
+    proportion = 'ท้วม';
   } else if (BMI >= 25 && BMI < 29.9) {
     $('#proportion').val('โรคอ้วน');
+    proportion = 'โรคอ้วน';
   } else if (BMI > 30) {
     $('#proportion').val('โรคอ้วนอันตราย');
+    proportion = 'โรคอ้วนอันตราย';
   }
 }
