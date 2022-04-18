@@ -58,9 +58,9 @@ window.onload = async () => {
               </div>
               <div class="row">
                 <div class="col-12">
-                <p style="font-weight: bolder;color:${getcolor(
+                <p>คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
                   item.BMI
-                )}">คุณอยู่ในเกณฑ์ :${item.proportion}</p>
+                )}">${item.proportion}</span></p>
                   <p>BMI ค่าที่ได้ :${item.BMI}</p>
                   <a class="btn btn-outline-primary " href="./Checkhealth.html?_id=${
                     item._id
