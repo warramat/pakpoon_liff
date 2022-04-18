@@ -24,6 +24,7 @@ async function getUID() {
 
 window.onload = async () => {
   const UID = await getUID();
+  console.log(UID);
   let data = await fetch(
     'https://smartcity-pakpoon-api.herokuapp.com/protest/find/data/?userID=' +
       UID
@@ -34,7 +35,6 @@ window.onload = async () => {
   data = data.reverse();
   data.forEach((item, key) => {
     html += `
-    
     <div class="min-vw-100">
     <div class="card">
     <p href="./Checkhealth.html?_id=${item._id}">
@@ -51,10 +51,7 @@ window.onload = async () => {
       </div>
       </p>
     </div>
-  </div>
-   
-       
-        `;
+  </div>`;
   });
   document.getElementById('check').innerHTML = html;
 };
