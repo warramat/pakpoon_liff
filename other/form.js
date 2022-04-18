@@ -33,7 +33,7 @@ $(document).ready(async () => {
   );
   data = await data.json();
   let html = '';
-  $('#topic').text(data.topic);
+  $('#topic').text();
   data.type.forEach((element) => {
     html += `<option value="${element}">${element}</option>`;
   });
