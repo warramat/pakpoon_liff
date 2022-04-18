@@ -25,7 +25,7 @@ function toThaidate(datetime) {
   const Thaiyear = Number(date[2]) + 543;
   const day = ZellerRule(Number(date[0]), m, y, c);
   return `วัน${day}ที่ ${Number(date[0])}  ${
-    M[Number(date[1])]
+    M[Number(date[1] - 1)]
   } พ.ศ. ${Thaiyear} <br> เวลา ${time}`;
 }
 
@@ -49,7 +49,6 @@ function ZellerRule(D, M, Y, C) {
     7;
   return day[index];
 }
-
 
 function Script_checkID(id) {
   if (!IsNumeric(id)) return false;
