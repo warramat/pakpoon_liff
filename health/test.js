@@ -13,6 +13,7 @@ $('form').submit(function (e) {
     if (result.isConfirmed) {
       const form = $('form').serializeArray();
       const n = form.length;
+      sum = 0;
       form.forEach((e) => {
         sum += Number(e.value);
         sendData[e.name] = e.value;
