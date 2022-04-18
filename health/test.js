@@ -18,8 +18,7 @@ $('form').submit(function (e) {
         sum += Number(e.value);
         sendData[e.name] = e.value;
       });
-      localStorage.setItem('form', '' + sum);
-      console.log('test:', form);
+      localStorage.setItem('happyScore', '' + sum);
     }
     fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy/Total', {
       method: 'PUT',
