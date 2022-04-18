@@ -80,11 +80,9 @@ $('form').submit((e) => {
 /*************************************************** */
 
 async function petition() {
-  const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get('topic');
   let data = {
     type: $('#choice1').val(),
-    topic: myParam,
+    topic: 'other',
     userID: await getUID()
   };
   return data;
