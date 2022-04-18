@@ -26,6 +26,20 @@ async function getUID() {
   return uid;
 }
 
+function getcolor(BMI) {
+  if (BMI < 18.5) {
+    return 'lime';
+  } else if (BMI >= 18.5 && BMI < 22.9) {
+    return 'green';
+  } else if (BMI >= 23 && BMI < 24.9) {
+    return 'yellow';
+  } else if (BMI >= 25 && BMI < 29.9) {
+    return 'orange';
+  } else if (BMI > 30) {
+    return 'red';
+  }
+}
+
 window.onload = async () => {
   const UID = await getUID();
   let data = await fetch(
@@ -53,7 +67,9 @@ window.onload = async () => {
                 <p>น้ำหนัก :${item.weight}</p>
                 <p>ส่วนสูง :${item.height}</p>
                 <p>BMI :${item.BMI}</p>
-                <p>คุณอยู่ในเกณฑ์ :${item.proportion}</p>
+                <p>คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
+                  item.BMI
+                )}">${item.proportion}</span></p>
                 <br></br>
                 <p>ความดันโลหิตครั้งที่ 1</p>
                 <p>
