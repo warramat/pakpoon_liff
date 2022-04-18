@@ -33,9 +33,7 @@ $('form').submit(function (e) {
         showCancelButton: false,
         confirmButtonText: 'ตกลง',
         timer: 3000
-      }).then(async (result) => {
-        
-      });
+      }).then(async (result) => {});
     });
   });
 });
