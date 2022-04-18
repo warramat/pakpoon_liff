@@ -68,9 +68,7 @@ $('form').submit((e) => {
         requestOptions
       )
         .then(() => {
-          Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() =>
-            //location.reload()
-          );
+          Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success');
         })
         .catch((e) => {
           console.log(e);
