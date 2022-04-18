@@ -61,13 +61,6 @@ $('form').submit(function (e) {
                     </tr>
                 </table>
                 </br>
-                <div class="row">
-                    <div class="col-12 ">
-                        <a class="btn btn-outline-primary " href="./test.html" style="width: 100%;">
-                            ย้อนกลับ</a>
-                    </div>
-
-                </div>
         </div>
         </form>
     </div>
