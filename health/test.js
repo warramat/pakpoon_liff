@@ -18,7 +18,6 @@ $('form').submit(function (e) {
         sum += Number(e.value);
         sendData[e.name] = e.value;
       });
-      localStorage.setItem('happyScore', sum);
     }
     fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy/Total', {
       method: 'PUT',
@@ -35,7 +34,7 @@ $('form').submit(function (e) {
         confirmButtonText: 'ตกลง',
         timer: 3000
       }).then(async (result) => {
-        window.location = './Assessment.html';
+        
       });
     });
   });
