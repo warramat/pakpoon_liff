@@ -43,7 +43,7 @@ $('form').submit(function (e) {
           data[e.name] = e.value;
         });
       data.BMI = $('#BMI').val();
-      data.proportion = $('#proportion').text();
+      data.proportion = $('#proportion').val();
       console.log(data);
       fetch('https://smartcity-pakpoon-api.herokuapp.com/health/addhealth', {
         method: 'POST',
