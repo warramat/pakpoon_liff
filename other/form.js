@@ -83,8 +83,8 @@ async function petition() {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
   let data = {
-    // type: $('#choice1').val(),
-    type: myParam,
+    type: $('#choice1').val(),
+    topic: myParam,
     userID: await getUID()
   };
   return data;
