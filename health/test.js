@@ -32,7 +32,53 @@ $('form').submit(function (e) {
         showCancelButton: false,
         confirmButtonText: 'ตกลง',
         timer: 3000
-      }).then(async (result) => {});
+      }).then(async (result) => {
+        let pop = `<div class="card">
+        <div class="card-body ">
+            <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                คะแนนรวมของคุณ คือ <span id="happyScore"></span> ${sum} คะแนน</h3>
+            <form>
+
+                <table id="customers">
+                    <tr>
+                        <th>คะแนนรวม</th>
+                        <th>การแปรผล</th>
+                    </tr>
+                    <tr>
+                        <td class="radio">33 - 45 คะแนน</td>
+                        <td class="radio" style="color: green;">มีความสุขมากกว่าคนทั่วไป (good)</td>
+
+                    </tr>
+                    <tr>
+                        <td class="radio">27 - 32 คะแนน</td>
+                        <td class="radio" style="color: rgb(0, 21, 128);">มีความสุขเท่ากับคนทั่วไป (fair)</td>
+
+                    </tr>
+                    <tr>
+                        <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
+                        <td class="radio" style="color: rgb(184, 7, 33);">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
+
+                    </tr>
+                </table>
+                </br>
+                <div class="row">
+                    <div class="col-12 ">
+                        <a class="btn btn-outline-primary " href="./test.html" style="width: 100%;">
+                            ย้อนกลับ</a>
+                    </div>
+
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>`;
+        Swal.fire({
+          html: pop,
+          showDenyButton: false,
+          showCancelButton: false,
+          confirmButtonText: 'ตกลง'
+        });
+      });
     });
   });
 });
