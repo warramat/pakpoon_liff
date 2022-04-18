@@ -49,9 +49,9 @@ $('form').submit((e) => {
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
     denyButtonText: 'ยกเลิก'
-  }).then((result) => {
+  }).then(async (result) => {
     if (result.isConfirmed) {
-      let data = petition();
+      let data = await petition();
       let myHeaders = new Headers();
       myHeaders.append('Content-Type', 'application/json');
       const raw = JSON.stringify(data);
