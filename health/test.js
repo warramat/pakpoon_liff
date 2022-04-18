@@ -71,7 +71,7 @@ $('form').submit(function (e) {
           showDenyButton: false,
           showCancelButton: false,
           confirmButtonText: 'ตกลง'
-        });
+        }).then(() => location.reload());
       });
     });
   });
