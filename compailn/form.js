@@ -42,6 +42,7 @@ function addImage(img) {
     </li>
     `);
   $('#upload').val('');
+  $('#camera').val('');
 }
 
 function remove_img(id) {
