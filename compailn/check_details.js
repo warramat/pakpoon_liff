@@ -145,6 +145,7 @@ window.onload = async () => {
       star = renderStar(true);
     } else {
       star = renderStar(false, data.Star);
+      document.getElementById('Comment').value = data.Comment;
     }
   }
   let html = `
