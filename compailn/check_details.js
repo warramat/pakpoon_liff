@@ -32,7 +32,7 @@ function renderStar(clickable, Star = 0) {
   }
   let html = ` 
   <br>
-  <form>
+  <form onsubmit="comment()">
   <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
   <button type="button" id="star1" ${
@@ -69,7 +69,9 @@ function renderStar(clickable, Star = 0) {
 </div>
 <br>
 <h4 class="star d-flex justify-content-center" style="margin-bottom: 5px;">แสดงความคิดเห็น</h4>
-<textarea class="d-flex justify-content-center" rows="8" id="Comment"></textarea>
+<textarea class="d-flex justify-content-center" rows="8" id="Comment" ${
+    !clickable ? 'disabled' : ''
+  }></textarea>
  ${
    clickable
      ? '<br><center><input type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 50%;"></center>'
@@ -78,6 +80,50 @@ function renderStar(clickable, Star = 0) {
 </form>
 `;
   return html;
+}
+
+function comment(e) {
+  e.preventDefault();
+  let Star = document.getElementById('star').innerText;
+  let Comment = document.getElementById('Comment').value;
+  if (Star == 0) {
+    Swal.fire({
+      icon: 'warning',
+      title: 'กรุณาประเมินความพึงพอใจ',
+      timer: 3000
+    });
+  } else {
+    Swal.fire({
+      icon: 'question',
+      title: 'ยืนยันการประเมินความพึงพอใจ',
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: 'ยืนยัน',
+      denyButtonText: 'ยกเลิก'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const urlParams = new URLSearchParams(window.location.search);
+        const _id = urlParams.get('_id');
+        let url =
+          'https://smartcity-pakpoon-api.herokuapp.com/appeal/addStar/Comment?_id=' +
+          _id;
+        var requestOptions = {
+          method: 'PUT',
+          body: JSON.stringify({ Star, Comment }),
+          redirect: 'follow'
+        };
+        fetch(url, requestOptions)
+          .then(() => {
+            Swal.fire('การประเมินความพึงพอใจสำเร็จ', '', 'success').then(() =>
+              location.reload()
+            );
+          })
+          .catch((e) => {
+            console.log;
+          });
+      }
+    });
+  }
 }
 
 window.onload = async () => {
