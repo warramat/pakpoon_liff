@@ -55,6 +55,19 @@ window.onload = async () => {
               data.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
             }";>${data.status}</span></h4>
             <h4>${toThaidate(data.updated)}</h4>
+            <div class="star">
+            <button id="star1" onmouseover="hover(1)" onmouseleave="resetStar(1)" onclick="star(1)"
+                class="fa fa-star"></button>
+            <button id="star2" onmouseover="hover(2)" onmouseleave="resetStar(2)" onclick="star(2)"
+                class="fa fa-star"></button>
+            <button id="star3" onmouseover="hover(3)" onmouseleave="resetStar(3)" onclick="star(3)"
+                class="fa fa-star"></button>
+            <button id="star4" onmouseover="hover(4)" onmouseleave="resetStar(4)" onclick="star(4)"
+                class="fa fa-star"></button>
+            <button id="star5" onmouseover="hover(5)" onmouseleave="resetStar(5)" onclick="star(5)"
+                class="fa fa-star"></button>
+            <span id="star" hidden>0</span>
+        </div>
           </div>
           <br />
             </div>
