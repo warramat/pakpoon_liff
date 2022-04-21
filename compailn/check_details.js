@@ -25,9 +25,9 @@ async function getUID() {
   return uid;
 }
 
-function renderStar(clickable, star = 0) {
+function renderStar(clickable, Star = 0) {
   let selected = ['', '', '', '', ''];
-  for (let i = 0; i < star; i++) {
+  for (let i = 0; i < Star; i++) {
     selected[i] = 'checked';
   }
   let html = ` 
@@ -63,7 +63,8 @@ function renderStar(clickable, star = 0) {
       : ''
   }
       class="fa fa-star  ${selected[4]}"></button>
-  <span id="star" hidden>${star}</span>
+  <span id="star" hidden>${Star}</span>
+  <textarea id="comment"></textarea>
 </div>
 `;
   return html;
