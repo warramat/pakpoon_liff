@@ -31,8 +31,8 @@ function renderStar(clickable, star = 0) {
     selected[i] = 'checked';
   }
   let html = ` 
+  <h4>แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
-  <h4 style="lex-direction: column;">แบบประเมินความพึงพอใจ</h4>
   <button id="star1" ${
     clickable
       ? 'onmouseover="hover(1)" onmouseleave="resetStar(1)" onclick="star(1)"'
