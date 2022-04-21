@@ -32,7 +32,7 @@ function renderStar(clickable, Star = 0) {
   }
   let html = ` 
   <br>
-  <form onsubmit="comment()">
+  <form>
   <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
   <button type="button" id="star1" ${
@@ -74,7 +74,7 @@ function renderStar(clickable, Star = 0) {
   }></textarea>
  ${
    clickable
-     ? '<br><center><input type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 50%;"></center>'
+     ? '<br><center><input  onsubmit="comment()" type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 50%;"></center>'
      : ''
  }
 </form>
