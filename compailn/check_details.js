@@ -68,7 +68,7 @@ function renderStar(clickable, Star = 0) {
   <span id="star" hidden>${Star}</span>
 </div>
 <br>
-<h4 class="star d-flex justify-content-center">แสดงความคิดเห็น</h4>
+<h4 class="star d-flex justify-content-center" style="margin-buttom:5px;">แสดงความคิดเห็น</h4>
 <textarea class="d-flex justify-content-center" rows="8" id="Comment"></textarea>
  ${
    clickable
