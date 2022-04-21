@@ -71,7 +71,7 @@ function renderStar(clickable, Star = 0) {
 <textarea class="d-flex justify-content-center" rows="8" id="Comment"></textarea>
  ${
    clickable
-     ? '<input type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 20%;">'
+     ? '<br><input type="submit" value="ยืนยัน" class="btn btn-primary d-flex justify-content-center " style="width: 50%;">'
      : ''
  }
 </form>
