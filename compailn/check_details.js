@@ -140,9 +140,9 @@ window.onload = async () => {
   let star = '';
   if (data.status === 'เสร็จสิ้น') {
     if (data.Star === 0) {
-      star = renderStar(false, data.Star);
-    } else {
       star = renderStar(true);
+    } else {
+      star = renderStar(false, data.Star);
     }
   }
   let html = `
