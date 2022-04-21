@@ -102,7 +102,7 @@ function comment() {
         const urlParams = new URLSearchParams(window.location.search);
         const _id = urlParams.get('_id');
         let url =
-          'https://smartcity-pakpoon-api.herokuapp.com/appeal/addStar/Comment?_id=' +
+          'https://smartcity-pakpoon-api.herokuapp.com/appeal/addStar/Comment/' +
           _id;
         var requestOptions = {
           method: 'PUT',
