@@ -139,8 +139,8 @@ window.onload = async () => {
   console.log(data);
   let star = '';
   if (data.status === 'เสร็จสิ้น') {
-    if (data.star) {
-      star = renderStar(false, data.star);
+    if (data.Star === 0) {
+      star = renderStar(false, data.Star);
     } else {
       star = renderStar(true);
     }
