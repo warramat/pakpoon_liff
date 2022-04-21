@@ -114,7 +114,9 @@ function comment() {
         };
         fetch(url, requestOptions)
           .then(() => {
-            Swal.fire('การประเมินความพึงพอใจสำเร็จ', '', 'success');
+            Swal.fire('การประเมินความพึงพอใจสำเร็จ', '', 'success').then(() => {
+              location.reload();
+            });
           })
           .catch((e) => {
             console.log;
