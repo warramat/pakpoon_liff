@@ -141,7 +141,6 @@ window.onload = async () => {
   data.img.forEach((e) => {
     html_img += `<a  href='https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}'><img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/></a>`;
   });
-  console.log(data);
   let star = '';
   if (data.status === 'เสร็จสิ้น') {
     if (data.Star === 0) {
