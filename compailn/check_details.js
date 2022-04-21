@@ -55,7 +55,7 @@ window.onload = async () => {
               data.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
             }";>${data.status}</span></h4>
             <h4>${toThaidate(data.updated)}</h4>
-            <div class="star d-flex align-items-center">
+            <div class="star d-flex justify-content-center">
             <button id="star1" onmouseover="hover(1)" onmouseleave="resetStar(1)" onclick="star(1)"
                 class="fa fa-star"></button>
             <button id="star2" onmouseover="hover(2)" onmouseleave="resetStar(2)" onclick="star(2)"
