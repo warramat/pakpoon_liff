@@ -35,7 +35,7 @@ function renderStar(clickable, Star = 0) {
   <form>
   <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
-  <button id="star1" ${
+  <button type="button" id="star1" ${
     clickable
       ? 'onmouseover="hover(1)" onmouseleave="resetStar(1)" onclick="star(1)"'
       : ''
