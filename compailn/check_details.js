@@ -31,7 +31,7 @@ function renderStar(clickable, star = 0) {
     selected[i] = 'checked';
   }
   let html = ` 
-  <h4>แบบประเมินความพึงพอใจ</h4>
+  <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
   <button id="star1" ${
     clickable
