@@ -36,3 +36,7 @@ a {
 .checked {
     color: orange;
 }
+
+.star{
+    flex-direction: row;
+}
