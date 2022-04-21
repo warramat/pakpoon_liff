@@ -67,7 +67,7 @@ function renderStar(clickable, Star = 0) {
 </div>
 <br>
 <h4 class="star d-flex justify-content-center">แสดงความคิดเห็น</h4>
-<textarea class="d-flex justify-content-center min-vw-100" rows="8" id="Comment"></textarea>
+<textarea class="d-flex justify-content-center" rows="8" id="Comment"></textarea>
 
 `;
   return html;

@@ -42,3 +42,7 @@ a {
     flex-direction: row;
     margin-right: -0.5rem;
 }
+
+textarea{
+    min-width: 80%;
+}
