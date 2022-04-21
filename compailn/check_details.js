@@ -31,6 +31,7 @@ function renderStar(clickable, Star = 0) {
     selected[i] = 'checked';
   }
   let html = ` 
+  <form>
   <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
   <button id="star1" ${
@@ -68,7 +69,12 @@ function renderStar(clickable, Star = 0) {
 <br>
 <h4 class="star d-flex justify-content-center">แสดงความคิดเห็น</h4>
 <textarea class="d-flex justify-content-center" rows="8" id="Comment"></textarea>
-
+ ${
+   clickable
+     ? '<input type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 20%;">'
+     : ''
+ }
+</form>
 `;
   return html;
 }
