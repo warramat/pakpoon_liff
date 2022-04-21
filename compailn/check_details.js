@@ -31,6 +31,7 @@ function renderStar(clickable, Star = 0) {
     selected[i] = 'checked';
   }
   let html = ` 
+  <br>
   <form>
   <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
