@@ -101,12 +101,14 @@ function comment() {
       if (result.isConfirmed) {
         const urlParams = new URLSearchParams(window.location.search);
         const _id = urlParams.get('_id');
+
         let url =
           'https://smartcity-pakpoon-api.herokuapp.com/appeal/addStar/Comment/' +
           _id;
-        var requestOptions = {
+        console.log(url, JSON.stringify({ Star, Comment }));
+        /* var requestOptions = {
           method: 'PUT',
-          body: JSON.stringify({ Star, Comment }),
+          body: ,
           redirect: 'follow'
         };
         fetch(url, requestOptions)
@@ -115,7 +117,7 @@ function comment() {
           })
           .catch((e) => {
             console.log;
-          });
+          });*/
       }
     });
   }
