@@ -32,7 +32,6 @@ function renderStar(clickable, Star = 0) {
   }
   let html = ` 
   <br>
-  <form>
   <h4 class="d-flex justify-content-center">แบบประเมินความพึงพอใจ</h4>
   <div class="star d-flex justify-content-center">
   <button type="button" id="star1" ${
@@ -74,16 +73,14 @@ function renderStar(clickable, Star = 0) {
   }></textarea>
  ${
    clickable
-     ? '<br><center><input  onsubmit="comment()" type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 50%;"></center>'
+     ? '<br><center><input  onclick="comment()" type="submit" value="ยืนยัน" class="btn btn-primary" style="width: 50%;"></center>'
      : ''
  }
-</form>
 `;
   return html;
 }
 
-function comment(e) {
-  e.preventDefault();
+function comment() {
   let Star = document.getElementById('star').innerText;
   let Comment = document.getElementById('Comment').value;
   if (Star == 0) {
