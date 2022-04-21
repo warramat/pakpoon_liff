@@ -64,8 +64,10 @@ function renderStar(clickable, Star = 0) {
   }
       class="fa fa-star  ${selected[4]}"></button>
   <span id="star" hidden>${Star}</span>
-  <textarea id="comment"></textarea>
 </div>
+<h4>แสดงความคิดเห็น</h4>
+<div><textarea id="Comment"></textarea></div>
+
 `;
   return html;
 }
