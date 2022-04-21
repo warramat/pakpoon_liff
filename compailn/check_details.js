@@ -41,25 +41,25 @@ function renderStar(clickable, Star = 0) {
       : ''
   }
       class="fa fa-star ${selected[0]}"></button>
-  <button id="star2"  ${
+  <button type="button"  id="star2"  ${
     clickable
       ? 'onmouseover="hover(2)" onmouseleave="resetStar(2)" onclick="star(2)"'
       : ''
   }
       class="fa fa-star  ${selected[1]}"></button>
-  <button id="star3"  ${
+  <button type="button"  id="star3"  ${
     clickable
       ? 'onmouseover="hover(3)" onmouseleave="resetStar(3)" onclick="star(3)"'
       : ''
   }
       class="fa fa-star  ${selected[2]}"></button>
-  <button id="star4"  ${
+  <button type="button"  id="star4"  ${
     clickable
       ? 'onmouseover="hover(4)" onmouseleave="resetStar(4)" onclick="star(4)"'
       : ''
   }
       class="fa fa-star  ${selected[3]}"></button>
-  <button id="star5"  ${
+  <button type="button"  id="star5"  ${
     clickable
       ? 'onmouseover="hover(5)" onmouseleave="resetStar(5)" onclick="star(5)"'
       : ''
