@@ -25,6 +25,50 @@ async function getUID() {
   return uid;
 }
 
+function renderStar(clickable, star = 0) {
+  let selected = ['', '', '', '', ''];
+  for (let i = 0; i < star; i++) {
+    selected[i] = 'checked';
+  }
+  let html = ` 
+  <div class="star d-flex justify-content-center">
+  <h4>แบบประเมินความพึงพอใจ</h4>
+  <button id="star1" ${
+    clickable
+      ? 'onmouseover="hover(1)" onmouseleave="resetStar(1)" onclick="star(1)"'
+      : ''
+  }
+      class="fa fa-star ${selected[0]}"></button>
+  <button id="star2"  ${
+    clickable
+      ? 'onmouseover="hover(2)" onmouseleave="resetStar(2)" onclick="star(2)"'
+      : ''
+  }
+      class="fa fa-star  ${selected[1]}"></button>
+  <button id="star3"  ${
+    clickable
+      ? 'onmouseover="hover(3)" onmouseleave="resetStar(3)" onclick="star(3)"'
+      : ''
+  }
+      class="fa fa-star  ${selected[2]}"></button>
+  <button id="star4"  ${
+    clickable
+      ? 'onmouseover="hover(4)" onmouseleave="resetStar(4)" onclick="star(4)"'
+      : ''
+  }
+      class="fa fa-star  ${selected[3]}"></button>
+  <button id="star5"  ${
+    clickable
+      ? 'onmouseover="hover(5)" onmouseleave="resetStar(5)" onclick="star(5)"'
+      : ''
+  }
+      class="fa fa-star  ${selected[4]}"></button>
+  <span id="star" hidden>${star}</span>
+</div>
+`;
+  return html;
+}
+
 window.onload = async () => {
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
@@ -40,6 +84,14 @@ window.onload = async () => {
   data.img.forEach((e) => {
     html_img += `<a  href='https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}'><img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/></a>`;
   });
+  let star = '';
+  if (data.status === 'เสร็จสิ้น') {
+    if (data.star) {
+      star = renderStar(false, data.star);
+    } else {
+      star = renderStar(true);
+    }
+  }
   let html = `
     <div class="d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
     <h2 style="color:green">เลขที่ :${Number(key)}</h2>
@@ -52,22 +104,14 @@ window.onload = async () => {
             <h4>เรื่อง :${data.type}</h4>
             <h4>รายละเอียด :${data.details}</h4>
             <h4>สถานะ :<span style="color:${
-              data.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
+              data.status === 'รอตรวจสอบ'
+                ? 'pink'
+                : data.status === 'กำลังแก้ไข'
+                ? 'orange'
+                : 'green'
             }";>${data.status}</span></h4>
             <h4>${toThaidate(data.updated)}</h4>
-            <div class="star d-flex justify-content-center">
-            <button id="star1" onmouseover="hover(1)" onmouseleave="resetStar(1)" onclick="star(1)"
-                class="fa fa-star"></button>
-            <button id="star2" onmouseover="hover(2)" onmouseleave="resetStar(2)" onclick="star(2)"
-                class="fa fa-star"></button>
-            <button id="star3" onmouseover="hover(3)" onmouseleave="resetStar(3)" onclick="star(3)"
-                class="fa fa-star"></button>
-            <button id="star4" onmouseover="hover(4)" onmouseleave="resetStar(4)" onclick="star(4)"
-                class="fa fa-star"></button>
-            <button id="star5" onmouseover="hover(5)" onmouseleave="resetStar(5)" onclick="star(5)"
-                class="fa fa-star"></button>
-            <span id="star" hidden>0</span>
-        </div>
+            ${star}
           </div>
           <br />
             </div>
