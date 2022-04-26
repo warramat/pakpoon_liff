@@ -53,12 +53,12 @@ window.onload = async () => {
             <div class="card-body">
               <div class="row">
                 <div class="col-12">
-                  <p>วันที่ :${toThaidate(item.updated)}</p>
+                  วันที่ : ${toThaidate(item.updated)}
                 </div>
               </div>
               <div class="row">
                 <div class="col-12">
-                BMI ค่าที่ได้ :${item.BMI}
+                BMI ค่าที่ได้ :${item.BMI}<br>
               คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
                 item.BMI
               )}">${item.proportion}</span>
