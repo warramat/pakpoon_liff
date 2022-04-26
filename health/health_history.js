@@ -60,7 +60,7 @@ window.onload = async () => {
               </div>
               <div class="row">
                 <div class="col-12">
-               <b><h5>BMI ค่าที่ได้ :${item.BMI}</h5></b>
+               <h5><b>BMI ค่าที่ได้ :${item.BMI}</b></h5>
               คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
                 item.BMI
               )}">${item.proportion}</span><p></p>
