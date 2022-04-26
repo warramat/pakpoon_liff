@@ -127,6 +127,7 @@ function comment() {
 }
 
 window.onload = async () => {
+  const img_url = 'https://smartcity-pakpoon-api.herokuapp.com/userSmart/'
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
   const key = urlParams.get('key') || 0;
@@ -139,7 +140,12 @@ window.onload = async () => {
   data = data.find((e) => e._id === _id);
   let html_img = '';
   data.img.forEach((e) => {
-    html_img += `<a  href='https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}'><img style="width:100px" src="https://smartcity-pakpoon-api.herokuapp.com/userSmart/${e}"/></a>`;
+    html_img += `
+    <li class="item">
+      <a  href='${img_url}${e}'>
+        <img  class="img-row" src="${img_url}${e}"/>
+      </a>
+    </li>`;
   });
   let star = '';
   if (data.status === 'เสร็จสิ้น') {
@@ -157,7 +163,7 @@ window.onload = async () => {
           <div class="card">
             <div class="card-body">
             <div class="col-12">
-            <h2>${html_img}</h2>
+            <ul class="images" id="list_images">${html_img}</ul>
             <h4>เรื่อง :${data.type}</h4>
             <h4>รายละเอียด :${data.details}</h4>
             <h4>สถานะ :<span style="color:${
