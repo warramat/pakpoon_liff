@@ -61,7 +61,7 @@ window.onload = async () => {
                 BMI ค่าที่ได้ :${item.BMI}<br>
               คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
                 item.BMI
-              )}">${item.proportion}</span><br>
+              )}">${item.proportion}</span><p></p>
                   <a class="btn btn-outline-primary " href="./Checkhealth.html?_id=${
                     item._id
                   }" style="width: 100%;">
