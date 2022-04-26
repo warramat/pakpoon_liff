@@ -127,7 +127,7 @@ function comment() {
 }
 
 window.onload = async () => {
-  const img_url = 'https://smartcity-pakpoon-api.herokuapp.com/userSmart/'
+  const img_url = 'https://smartcity-pakpoon-api.herokuapp.com/userSmart/';
   const UID = await getUID();
   const urlParams = new URLSearchParams(window.location.search);
   const key = urlParams.get('key') || 0;
@@ -163,7 +163,7 @@ window.onload = async () => {
           <div class="card">
             <div class="card-body">
             <div class="col-12">
-            <ul class="images" id="list_images">${html_img}</ul>
+            <center><ul class="images" id="list_images">${html_img}</ul></center>
             <h4>เรื่อง :${data.type}</h4>
             <h4>รายละเอียด :${data.details}</h4>
             <h4>สถานะ :<span style="color:${
