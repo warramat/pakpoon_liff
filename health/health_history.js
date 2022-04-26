@@ -52,10 +52,10 @@ window.onload = async () => {
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-12">
-                📅 &nbsp${toThaidate(
+                <div class="col-12 ">
+               <div class="time"> 📅 &nbsp${toThaidate(
                   item.updated
-                )} &nbsp &nbsp ⏰ &nbsp${getTime(item.updated)}
+                )} &nbsp &nbsp ⏰ &nbsp${getTime(item.updated)}</div>
                 </div>
               </div>
               <div class="row">
