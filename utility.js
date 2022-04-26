@@ -26,7 +26,7 @@ function toThaidate(datetime) {
   const day = ZellerRule(Number(date[0]), m, y, c);
   return `วัน${day}ที่ ${Number(date[0])}  ${
     M[Number(date[1]) - 1]
-  } พ.ศ. ${Thaiyear}<pre>    </pre>🕐 ${time}`;
+  } พ.ศ. ${Thaiyear}<pre>  </pre>🕐 ${time}`;
 }
 
 function ZellerRule(D, M, Y, C) {
