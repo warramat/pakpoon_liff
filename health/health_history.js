@@ -58,10 +58,10 @@ window.onload = async () => {
               </div>
               <div class="row">
                 <div class="col-12">
-                <p>คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
-                  item.BMI
-                )}">${item.proportion}</span></p>
-                  <p>BMI ค่าที่ได้ :${item.BMI}</p>
+                BMI ค่าที่ได้ :${item.BMI}
+              คุณอยู่ในเกณฑ์ :<span style="font-weight: bolder;color:${getcolor(
+                item.BMI
+              )}">${item.proportion}</span>
                   <a class="btn btn-outline-primary " href="./Checkhealth.html?_id=${
                     item._id
                   }" style="width: 100%;">
