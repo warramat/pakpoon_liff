@@ -76,13 +76,13 @@ async function prepareData() {
     notify: $('#notify').val(),
     details: $('#details').val(),
     phone: $('#phone').val(),
-    topic: myParam,
+    topic: myParam
     // userID: await getUID(),
-    img: img,
-    gps: {
-      lat: lat,
-      lng: lng
-    }
+    // img: img,
+    // gps: {
+    //   lat: lat,
+    //   lng: lng
+    // }
   };
   return data;
 }
