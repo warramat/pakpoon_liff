@@ -44,7 +44,7 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        // 'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
+        'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
         requestOptions
       )
         .then(() => {
@@ -77,7 +77,7 @@ async function prepareData() {
     details: $('#details').val(),
     phone: $('#phone').val(),
     topic: myParam,
-    userID: await getUID(),
+    // userID: await getUID(),
     img: img,
     gps: {
       lat: lat,
