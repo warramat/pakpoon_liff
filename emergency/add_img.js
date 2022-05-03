@@ -58,7 +58,7 @@ $(document).ready(async () => {
   data = await data.json();
   let html = '';
   $('#topic').text(data.type);
-  console.log(data.type , 'data:')
+  console.log(data.type)
   data.details.forEach((element) => {
     html += `<option value="${element}">${element}</option>`;
   });
