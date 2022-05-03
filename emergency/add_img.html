@@ -13,19 +13,22 @@
 </head>
 
 <body>
-
-    <div class="card">
-        <div class="card-body ">
+    <div id="show" style="visibility: hidden;">
+        <div class="card">
+             <div class="card-body ">
             <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
                 <img src="../img/logo.jpg" width="100" height="100" />
                 <br />
-                <h4 id="topic">แจ้งเหตุฉุกเฉิน</h4>
+                <h4>เรื่อง : <span id="topic"></span></h4>
             </div>
             <form>
                 <div class="form-group">
-                    <label for="notify">แจ้งเหตุ</label>
-                    <input id="notify" name="notify" class="form-control" type="text" required
-                        placeholder="กรุณากรอกแจ้งเหตุ" aria-label="default input example">
+                    <label for="fname">เรื่อง</label>
+                    <select id="choice" class="form-select" required>
+                        <option value="" selected disabled hidden>
+                            กรุณาเลือกเรื่อง
+                        </option>
+                    </select>
                 </div>
                 <br />
                 <div class="form-group">
@@ -33,53 +36,51 @@
                     <textarea value="" class="form-control " id="details" rows="4" required
                         placeholder="กรุณากรอกรายละเอียด"></textarea>
                 </div>
-                <br />
-                <div class="form-group">
-                    <label for="phone">เบอร์โทรศัพท์ <text
-                            style="color: red; font-size: small;">สามารถติดต่อได้จริง</text></label>
-                    <input id="phone" name="phone" class="form-control" type="number" required
-                        placeholder="กรุณากรอกเบอร์โทรศัพท์" aria-label="default input example">
-                </div>
                 <br>
-                <ul class="images" id="list_images"></ul>
-                <br>
-                <div class="form-group ">
-                    <div class="row">
-                        <div class="col-6">
-                            <label for="upload" class="btn btn-outline-primary " style="width: 100%">ถ่ายรูป<span>&nbsp;
-                                    <img src="./img/camera1.jpg" width="20" height="20" /></span></label>
-                        </div>
-                        <div class=" col-6">
-                            <input type="file" id="upload" accept="image/*" name="img" onchange="loadFile(event)"
-                                hidden />
-                            <label for="upload" class="btn btn-outline-secondary" style="width: 100%">แนบรูป
-                                <span>&nbsp; <img src="../img/gallory.jpg" width="20" height="20" /></span></label>
+                    <ul class="images" id="list_images"></ul>
+                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-6">
+                                <input type="file" id="camera" accept="image/*" capture="" onchange="loadFile(event)"
+                                    hidden>
+                                <label for="upload" class="btn btn-outline-primary "
+                                    style="width: 100%">ถ่ายรูป<span>&nbsp;
+                                        <img src="../img/gallory.jpg" width="20" height="20" /></span></label>
+                            </div>
+                            <div class=" col-6">
+                                <input type="file" id="upload" accept="image/*" name="img" onchange="loadFile(event)"
+                                    hidden />
+                                <label for="upload" class="btn btn-outline-secondary" style="width: 100%">แนบรูป
+                                    <span>&nbsp; <img src="../img/gallory.jpg" width="20" height="20" /></span></label>
+                            </div>
                         </div>
                     </div>
-
-                </div>
-                <br>
+                </br>
                 <div class="row">
-                    <div class="col-12 ">
+                    <div class="col-6">
+                        <a class="btn btn-outline-primary " href="./emergency.html" style="width: 100%;">
+                            ย้อนกลับ</a>
+                    </div>
+                    <div class="col-6 ">
                         <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 100%;">
                     </div>
                 </div>
-
             </form>
         </div>
     </div>
-    </div>
 </body>
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script src="../checkUser.js"></script>
 <script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-<script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-
-<script src="../redirect.js"></script>
-<script> redirectPage('?page=emergency') </script>
 <script src="./add_img.js"></script>
-
+<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+    // VConsole will be exported to `window.VConsole` by default.
+    var vConsole = new window.VConsole();
+</script>
 </html>

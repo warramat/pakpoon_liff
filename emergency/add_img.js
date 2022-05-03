@@ -1,3 +1,30 @@
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri:
+        'https://tapp-smartcity.netlify.app/compailn/form.html?topic=' + myParam
+    });
+  } else if (!(await checkUser(await getUID()))) {
+    window.location = '../register.html';
+  } else if (!(await getFriend())) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
+});
+
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
+
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
@@ -9,17 +36,33 @@ function loadFile(event) {
 function addImage(img) {
   const id = Math.round(Math.random() * 10000);
   $('#list_images').append(`
-      <li class="item" id="${id}">
-        <img class="img-row" src="${img}">
-        <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
-      </li>
-      `);
+    <li class="item" id="${id}">
+      <img class="img-row" src="${img}">
+      <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
+    </li>
+    `);
   $('#upload').val('');
+  $('#camera').val('');
 }
 
 function remove_img(id) {
   $('#' + id).remove();
 }
+
+$(document).ready(async () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  let data = await fetch(
+    'https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=' + myParam
+  );
+  data = await data.json();
+  let html = '';
+  $('#topic').text(data.type);
+  data.details.forEach((element) => {
+    html += `<option value="${element}">${element}</option>`;
+  });
+  $('#choice').append(html);
+});
 
 $('form').submit((e) => {
   e.preventDefault();
@@ -44,6 +87,7 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
+        // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
         requestOptions
       )
@@ -73,16 +117,17 @@ async function prepareData() {
     lng = position.coords.longitude;
   });
   let data = {
-    notify: $('#notify').val(),
-    details: $('#details').val(),
-    phone: $('#phone').val(),
-    topic: myParam
-    // userID: await getUID(),
-    // img: img,
-    // gps: {
-    //   lat: lat,
-    //   lng: lng
-    // }
+    type: $('#choice').val(),
+    details: $('#detail').val(),
+    topic: myParam,
+    userID: await getUID(),
+    img: img,
+    gps: {
+      lat: lat,
+      lng: lng
+    }
   };
   return data;
 }
+
+$('#take_image').click(async () => {});
