@@ -55,6 +55,7 @@ $(document).ready(async () => {
   let data = await fetch(
     'https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=' + myParam
   );
+  console.log(data)
   data = await data.json();
   let html = '';
   $('#topic').text(data.type);
