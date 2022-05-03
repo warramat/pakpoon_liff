@@ -53,13 +53,12 @@ $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=emergency' +
-      myParam
+    'https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=' + myParam
   );
   data = await data.json();
   let html = '';
   $('#topic').text(data.type);
-  console.log(data.type);
+  console.log(data);
   data.details.forEach((element) => {
     html += `<option value="${element}">${element}</option>`;
   });
@@ -89,7 +88,6 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
         requestOptions
       )
