@@ -62,9 +62,7 @@ window.onload = async () => {
           item._id
         }&key=${c - key}" style="width: 100%;">
         ดูรายละเอียด</a>
-  
           </div>
-           
         </div>
       </div>
       `;
