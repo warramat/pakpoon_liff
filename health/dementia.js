@@ -34,36 +34,44 @@ $('form').submit(function (e) {
         confirmButtonText: 'ตกลง',
         timer: 3000
       }).then(async (result) => {
+        let texts = [
+          `<tr>
+          <td class="radio">33 - 45 คะแนน</td>
+          <td class="radio" style="color: green;">มีความสุขมากกว่าคนทั่วไป (good)</td>
+      </tr>`,
+
+          `<tr>
+          <td class="radio">27 - 32 คะแนน</td>
+          <td class="radio" style="color: rgb(0, 21, 128);">มีความสุขเท่ากับคนทั่วไป (fair)</td>
+      </tr>`,
+
+          `<tr>
+          <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
+          <td class="radio" style="color: rgb(184, 7, 33);">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
+      </tr>`
+        ];
+        let index = () => {
+          if (sum >= 33) {
+            return 0;
+          } else if (sum >= 27) {
+            return 1;
+          } else {
+            return 2;
+          }
+        };
         let pop = `<div class="card">
         <div class="card-body ">
             <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
                 คะแนนรวมของคุณ คือ <span id="happyScore"></span> ${sum} คะแนน</h3>
-            <form>
-
                 <table id="customers">
                     <tr>
                         <th>คะแนนรวม</th>
                         <th>การแปรผล</th>
                     </tr>
-                    <tr>
-                        <td class="radio">33 - 45 คะแนน</td>
-                        <td class="radio" style="color: green;">มีความสุขมากกว่าคนทั่วไป (good)</td>
-
-                    </tr>
-                    <tr>
-                        <td class="radio">27 - 32 คะแนน</td>
-                        <td class="radio" style="color: rgb(0, 21, 128);">มีความสุขเท่ากับคนทั่วไป (fair)</td>
-
-                    </tr>
-                    <tr>
-                        <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
-                        <td class="radio" style="color: rgb(184, 7, 33);">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
-
-                    </tr>
                 </table>
+                ${texts[index]}
                 </br>
         </div>
-        </form>
     </div>
     </div>`;
         Swal.fire({
