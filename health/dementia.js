@@ -69,7 +69,7 @@ $('form').submit(function (e) {
                         <th>การแปรผล</th>
                     </tr>
                 </table>
-                ${texts[index]}
+                ${texts[index()]}
                 </br>
         </div>
     </div>
