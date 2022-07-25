@@ -68,8 +68,8 @@ $('form').submit(function (e) {
                         <th>คะแนนรวม</th>
                         <th>การแปรผล</th>
                     </tr>
+                    ${texts[index()]}
                 </table>
-                ${texts[index()]}
                 </br>
         </div>
     </div>
