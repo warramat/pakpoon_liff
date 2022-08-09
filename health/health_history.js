@@ -55,7 +55,7 @@ window.onload = async () => {
                 <div class="col-12 ">
                📅 &nbsp${toThaidate(
                  item.updated
-               )} &nbsp &nbsp ⏰ &nbsp${getTime(item.updated)}</div>
+               )} &nbsp &nbsp ⏰ &nbsp${getTime(item.updated)} น.</div>
               </div>
               <div class="row">
                 <div class="col-12">
