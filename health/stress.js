@@ -42,13 +42,13 @@ $('form').submit(function (e) {
       `,
           `<tr>
           <td class="radio">42 - 61 คะแนน</td>
-          <td class="radio" style="color: #003300;">มีความเครียดในระดับสูง</td>
+          <td class="radio" style="color: #006600;">มีความเครียดในระดับสูง</td>
       </tr>
       `,
 
           `<tr>
           <td class="radio">24 - 41 คะแนน</td>
-          <td class="radio" style="color: #000099;">มีความเครียดในระดับปานกลาง</td>
+          <td class="radio" style="color: #003399;">มีความเครียดในระดับปานกลาง</td>
       </tr>`,
 
           `<tr>
