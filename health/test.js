@@ -47,17 +47,17 @@ $('form').submit(function (e) {
                     </tr>
                     <tr>
                         <td class="radio">33 - 45 คะแนน</td>
-                        <td class="radio" style="color: green;">มีความสุขมากกว่าคนทั่วไป (good)</td>
+                        <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
 
                     </tr>
                     <tr>
                         <td class="radio">27 - 32 คะแนน</td>
-                        <td class="radio" style="color: rgb(0, 21, 128);">มีความสุขเท่ากับคนทั่วไป (fair)</td>
+                        <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
 
                     </tr>
                     <tr>
                         <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
-                        <td class="radio" style="color: rgb(184, 7, 33);">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
+                        <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
 
                     </tr>
                 </table>
