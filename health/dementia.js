@@ -4,7 +4,7 @@ $('form').submit(function (e) {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
-    title: 'ยืนยันการแจ้งเรื่อง',
+    title: 'ยืนยันการบันทึกข้อมูล',
     showDenyButton: true,
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
@@ -37,21 +37,21 @@ $('form').submit(function (e) {
         let texts = [
           `<tr>
           <td class="radio">40 - 56 คะแนน</td>
-          <td class="radio" style="color: yellow;">สมมรถภาพทางสมองต่ำ ควรพบแพทย์</td>
+          <td class="radio" style="color: #FF9900;">สมมรถภาพทางสมองต่ำ ควรพบแพทย์</td>
       </tr>`,
 
           `<tr>
           <td class="radio">30 - 39 คะแนน</td>
-          <td class="radio" style="color: green ;">สมมรถภาพทางสมองอยู่ในระดับค่อนข้างต่ำ ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
+          <td class="radio" style="color: #003300 ;">สมมรถภาพทางสมองอยู่ในระดับค่อนข้างต่ำ ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
       </tr>`,
 
           `<tr>
           <td class="radio">20 - 29 คะแนน</td>
-          <td class="radio" style="color:rgb(0, 21, 128);">สมมรถภาพทางสมองอยู่ในระดับฑ์ปานกลาง ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
+          <td class="radio" style="color: #000099;">สมมรถภาพทางสมองอยู่ในระดับฑ์ปานกลาง ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
       </tr>`,
           `<tr>
           <td class="radio">14 - 19 คะแนน</td>
-          <td class="radio" style="color: rgb(184, 7, 33);">สมมรถภาพทางสมองอยู่ในระดับดีมาก</td>
+          <td class="radio" style="color: #FF0000;">สมมรถภาพทางสมองอยู่ในระดับดีมาก</td>
       </tr>`
         ];
         let index = () => {
