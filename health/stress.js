@@ -1,3 +1,27 @@
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+  if (!liff.isLoggedIn()) {
+    liff.login({
+      redirectUri: 'https://tapp-smartcity.netlify.app/health/stress.html'
+    });
+  } else if (!(await checkUser(await getUID()))) {
+    window.location = '../register.html';
+  } else if (!(await getFriend())) {
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
+  } else {
+    document.getElementById('show').style.visibility = 'visible';
+  }
+});
+var proportion = '';
+async function getFriend() {
+  const friend = await liff.getFriendship();
+  return friend.friendFlag;
+}
+async function getUID() {
+  const data = await liff.getProfile();
+  const uid = await data.userId;
+  return uid;
+}
+
 let sendData = {};
 let sum = 0;
 $('form').submit(function (e) {
@@ -11,6 +35,8 @@ $('form').submit(function (e) {
     denyButtonText: 'ยกเลิก'
   }).then(async (result) => {
     if (result.isConfirmed) {
+      var UID = await getUID();
+      sendData.userID = UID;
       const form = $('form').serializeArray();
       const n = form.length;
       sum = 0;
