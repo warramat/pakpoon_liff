@@ -43,7 +43,7 @@ $('form').submit(function (e) {
         sendData[e.name] = e.value;
       });
     }
-    fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy/Total', {
+    fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy', {
       method: 'PUT',
       body: JSON.stringify(sendData),
       headers: {
