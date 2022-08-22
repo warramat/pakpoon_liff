@@ -39,7 +39,7 @@ $('form').submit(function (e) {
       let data = {};
       var UID = await getUID();
       data.userID = UID;
-      console.log(data, 'data>>>');
+
       const form = $('form').serializeArray();
       const n = form.length;
       sum = 0;
@@ -48,7 +48,7 @@ $('form').submit(function (e) {
         sendData[e.name] = e.value;
       });
     }
-
+    console.log(data, 'data>>>');
     fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy', {
       method: 'PUT',
       body: JSON.stringify(sendData),
