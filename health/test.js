@@ -36,10 +36,6 @@ $('form').submit(function (e) {
     denyButtonText: 'ยกเลิก'
   }).then(async (result) => {
     if (result.isConfirmed) {
-      let data = {};
-      var UID = await getUID();
-      data.userID = UID;
-
       const form = $('form').serializeArray();
       const n = form.length;
       sum = 0;
@@ -47,9 +43,9 @@ $('form').submit(function (e) {
         sum += Number(e.value);
         sendData[e.name] = e.value;
       });
-      console.log( 'data>>>' ซ );
+      console.log('data>>>', data);
     }
-    
+
     fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy', {
       method: 'PUT',
       body: JSON.stringify(sendData),
