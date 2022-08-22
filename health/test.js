@@ -36,6 +36,7 @@ $('form').submit(function (e) {
     denyButtonText: 'ยกเลิก'
   }).then(async (result) => {
     if (result.isConfirmed) {
+      let data = {};
       var UID = await getUID();
       data.userID = UID;
       const form = $('form').serializeArray();
