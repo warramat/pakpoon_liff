@@ -43,7 +43,6 @@ $('form').submit(function (e) {
         sum += Number(e.value);
         sendData[e.name] = e.value;
       });
-      console.log('data>>>', data);
     }
 
     fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy', {
