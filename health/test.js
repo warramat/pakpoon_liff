@@ -24,6 +24,7 @@ async function getUID() {
 
 let sendData = {};
 let sum = 0;
+
 $('form').submit(function (e) {
   e.preventDefault();
   Swal.fire({
@@ -43,7 +44,6 @@ $('form').submit(function (e) {
         sendData[e.name] = e.value;
       });
     }
-    console.log('data>>', form);
 
     fetch('https://smartcity-pakpoon-api.herokuapp.com/happy/addhappy', {
       method: 'PUT',
