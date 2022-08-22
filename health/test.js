@@ -39,7 +39,7 @@ $('form').submit(function (e) {
       let data = {};
       var UID = await getUID();
       data.userID = UID;
-      console.log(UID, 'UID>>>');
+      console.log(data, 'data>>>');
       const form = $('form').serializeArray();
       const n = form.length;
       sum = 0;
