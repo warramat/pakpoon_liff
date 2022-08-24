@@ -254,6 +254,9 @@ async function prepareData() {
   let data = {
     type: $('#choice').val(),
     details: $('#detail').val(),
+    day: $('#day').val(),
+    month: $('#month').val(),
+    year: $('#year').val(),
     topic: myParam,
     userID: await getUID(),
     img: img,
