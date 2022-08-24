@@ -1,18 +1,3 @@
-const M = [
-  'มกราคม',
-  'กุมภาพันธ์',
-  'มีนาคม',
-  'เมษายน',
-  'พฤษภาคม',
-  'มิถุนายน',
-  'กรกฏาคม',
-  'สิงหาคม',
-  'กันยายน',
-  'ตุลาคม',
-  'พฤศจิกายน',
-  'ธันวาคม'
-];
-
 liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
@@ -41,149 +26,6 @@ async function getUID() {
   return uid;
 }
 
-$('#year').change(() => {
-  makemouth();
-});
-$('#month').change(() => {
-  makeday();
-});
-
-$(document).ready(async function () {
-  await load();
-});
-
-function makeyear() {
-  let today = new Date();
-  let year = today.getFullYear() + 543;
-  let html = '';
-  for (year; year > 2449; year--) {
-    html += `  <option value="${year}">${year}</option>`;
-  }
-  $('#year').html(html);
-}
-
-function makemouth() {
-  let today = new Date();
-  let html = '';
-  if ($('#year').val() == today.getFullYear() + 543) {
-    M.forEach((e, i) => {
-      if (i > today.getMonth()) {
-        return;
-      } else if (i === today.getMonth()) {
-        html += `  <option selected value="${e}">${e}</option>`;
-      } else {
-        html += `  <option value="${e}">${e}</option>`;
-      }
-    });
-  } else {
-    M.forEach((e, i) => {
-      html += `<option value="${e}">${e}</option>`;
-    });
-  }
-  console.log(html);
-  $('#month').html(html);
-}
-
-function makeday() {
-  let today = new Date();
-
-  if (
-    $('#year').val() == today.getFullYear() + 543 &&
-    today.getMonth() === M.indexOf($('#month').val())
-  ) {
-    renderday(true);
-  } else {
-    renderday(false);
-  }
-}
-
-function leapyear(year) {
-  return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
-}
-
-function renderday(t) {
-  let today = new Date();
-  let html = '';
-  if (leapyear(Number($('#year').val()) - 543)) {
-    if ($('#month').val() === 'กุมภาพันธ์') {
-      for (let i = 1; i != 30; i++) {
-        if (t && today.getDate() === i) {
-          html += `<option selected value="${i}">${i}</option>`;
-          break;
-        }
-        html += `<option value="${i}">${i}</option>`;
-      }
-    } else if ($('#month').val().indexOf('ยน') != -1) {
-      for (let i = 1; i != 31; i++) {
-        if (t && today.getDate() === i) {
-          html += `<option selected value="${i}">${i}</option>`;
-          break;
-        }
-        html += `<option value="${i}">${i}</option>`;
-      }
-    } else {
-      for (let i = 1; i != 32; i++) {
-        if (t && today.getDate() === i) {
-          html += `<option selected value="${i}">${i}</option>`;
-          break;
-        }
-        html += `<option value="${i}">${i}</option>`;
-      }
-    }
-  } else {
-    if ($('#month').val() === 'กุมภาพันธ์') {
-      for (let i = 1; i != 29; i++) {
-        if (t && today.getDate() === i) {
-          html += `<option selected value="${i}">${i}</option>`;
-          break;
-        }
-        html += `<option value="${i}">${i}</option>`;
-      }
-    } else if ($('#month').val().indexOf('ยน') != -1) {
-      for (let i = 1; i != 31; i++) {
-        if (t && today.getDate() === i) {
-          html += `<option selected value="${i}">${i}</option>`;
-          break;
-        }
-        html += `<option value="${i}">${i}</option>`;
-      }
-    } else {
-      for (let i = 1; i != 32; i++) {
-        if (t && today.getDate() === i) {
-          html += `<option selected  value="${i}">${i}</option>`;
-          break;
-        }
-        html += `<option value="${i}">${i}</option>`;
-      }
-    }
-  }
-  $('#day').html(html);
-}
-
-function loadFile(event) {
-  let reader = new FileReader();
-  reader.onload = function () {
-    addImage(reader.result);
-  };
-  reader.readAsDataURL(event.target.files[0]);
-}
-
-function addImage(img) {
-  const id = Math.round(Math.random() * 10000);
-  $('#list_images').append(`
-      <li class="item" id="${id}">
-        <img class="img-row" src="${img}">
-        <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
-      </li>
-      `);
-  $('#upload').val('');
-  $('#camera').val('');
-}
-
-function remove_img(id) {
-  $('#' + id).remove();
-}
-
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
@@ -200,7 +42,6 @@ $(document).ready(async () => {
 });
 
 $('form').submit((e) => {
-  const today = new Date();
   e.preventDefault();
   navigator.geolocation.getCurrentPosition(function (position) {});
   Swal.fire({
