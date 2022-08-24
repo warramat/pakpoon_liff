@@ -23,14 +23,35 @@
                 </div>
                 <form>
                     <div class="form-group">
-                        <label for="fname">เรื่อง</label>
+                        <label for="fname">โรงพยาบาลที่ต้องการนัดหมาย</label>
                         <select id="choice" class="form-select" required>
                             <option value="" selected disabled hidden>
-                                กรุณาเลือกเรื่อง
+                                กรุณาเลือกโรงพยาบาลที่ต้องการนัดหมาย
                             </option>
                         </select>
                     </div>
                     <br />
+
+                    <div class="form-group">
+                        <div class=" d-flex align-items-center" style="margin-top: 2rem; flex-direction: column;">
+                            วันเดือนปีเกิด
+                        </div>
+
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="year">ปี (พ.ศ.)</label>
+                                <select id="year" name="year" class="form-select" required></select>
+                            </div>
+                            <div class="col-4">
+                                <label for="month">เดือน</label>
+                                <select id="month" name="month" class="form-select" required></select>
+                            </div>
+                            <div class="col-4">
+                                <label for="fname">วัน</label>
+                                <select id="day" name="day" class="form-select" required></select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="form-group">
                         <label for="lname">อาการ</label>
                         <textarea value="" class="form-control " id="detail" rows="3" required
@@ -78,6 +99,7 @@
 </body>
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script src="../checkUser.js"></script>
+<script src="../cardID.js"></script>
 <script src=" https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
