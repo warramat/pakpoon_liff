@@ -104,48 +104,77 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="lname">ระบุอาการ</label>
-                        <textarea value="" class="form-control " id="detail" rows="3" required
-                            placeholder="กรุณากรอกอาการ"></textarea></textarea>
-                    </div>
-                    <br>
-                    <ul class="images" id="list_images"></ul>
-                    <br>
-                    <div class="form-group ">
+                        <div class="row">
+                            <div class="col-4">
+                                <label for="fname">เวลาที่หมอนัดหมาย</label>
+                                <select id="time" name="time" class="form-select" required>
+                                    <option value="1">08.00</option>
+                                    <option value="1">08.30</option>
+                                    <option value="1">09.00</option>
+                                    <option value="1">09.30</option>
+                                    <option value="1">10.00</option>
+                                    <option value="1">10.30</option>
+                                    <option value="1">11.00</option>
+                                    <option value="1">11.30</option>
+                                    <option value="1">12.00</option>
+                                    <option value="1">12.30</option>
+                                    <option value="1">13.00</option>
+                                    <option value="1">13.30</option>
+                                    <option value="1">14.00</option>
+                                    <option value="1">14.30</option>
+                                    <option value="1">15.00</option>
+                                    <option value="1">15.30</option>
+                                    <option value="1">16.00</option>
+                                    <option value="1">16.30</option>
+                                    <option value="1">17.00</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">ระบุอาการ</label>
+                            <textarea value="" class="form-control " id="detail" rows="3" required
+                                placeholder="กรุณากรอกอาการ"></textarea></textarea>
+                        </div>
+                        <br>
+                        <ul class="images" id="list_images"></ul>
+                        <br>
+                        <div class="form-group ">
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="file" id="camera" accept="image/*" capture=""
+                                        onchange="loadFile(event)" hidden>
+                                    <label for="upload" class="btn btn-outline-primary "
+                                        style="width: 100%">ถ่ายรูป<span>&nbsp;
+                                            <img src="../img/gallory.jpg" width="20" height="20" /></span></label>
+                                </div>
+                                <div class=" col-6">
+                                    <input type="file" id="upload" accept="image/*" name="img"
+                                        onchange="loadFile(event)" hidden />
+                                    <label for="upload" class="btn btn-outline-secondary" style="width: 100%">แนบรูป
+                                        <span>&nbsp; <img src="../img/gallory.jpg" width="20"
+                                                height="20" /></span></label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
+                        <br>
                         <div class="row">
                             <div class="col-6">
-                                <input type="file" id="camera" accept="image/*" capture="" onchange="loadFile(event)"
-                                    hidden>
-                                <label for="upload" class="btn btn-outline-primary "
-                                    style="width: 100%">ถ่ายรูป<span>&nbsp;
-                                        <img src="../img/gallory.jpg" width="20" height="20" /></span></label>
+                                <a class="btn btn-outline-primary " href="./main_compailn.html" style="width: 100%;">
+                                    ย้อนกลับ</a>
                             </div>
-                            <div class=" col-6">
-                                <input type="file" id="upload" accept="image/*" name="img" onchange="loadFile(event)"
-                                    hidden />
-                                <label for="upload" class="btn btn-outline-secondary" style="width: 100%">แนบรูป
-                                    <span>&nbsp; <img src="../img/gallory.jpg" width="20" height="20" /></span></label>
+                            <div class="col-6 ">
+                                <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 100%;">
                             </div>
-                        </div>
 
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                    <div class="row">
-                        <div class="col-6">
-                            <a class="btn btn-outline-primary " href="./main_compailn.html" style="width: 100%;">
-                                ย้อนกลับ</a>
                         </div>
-                        <div class="col-6 ">
-                            <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 100%;">
-                        </div>
-
                     </div>
+                </form>
             </div>
-            </form>
         </div>
-    </div>
 
 </body>
 <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>

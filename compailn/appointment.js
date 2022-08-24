@@ -99,6 +99,7 @@ async function prepareData() {
     day: $('#day').val(),
     month: $('#month').val(),
     year: $('#year').val(),
+    time: $('#time').val(),
     topic: myParam,
     userID: await getUID(),
     img: img,
