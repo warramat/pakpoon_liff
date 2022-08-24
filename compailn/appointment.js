@@ -200,6 +200,7 @@ $(document).ready(async () => {
 });
 
 $('form').submit((e) => {
+  const today = new Date();
   e.preventDefault();
   navigator.geolocation.getCurrentPosition(function (position) {});
   Swal.fire({
