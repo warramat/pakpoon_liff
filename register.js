@@ -115,7 +115,7 @@ $('form').submit((e) => {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
-    title: 'ยืนยันการแจ้งเรื่อง',
+    title: 'ยืนยันการบันทึกข้อมูล',
     showDenyButton: true,
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
