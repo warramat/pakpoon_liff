@@ -27,7 +27,7 @@ $('form').submit(function (e) {
   e.preventDefault();
   Swal.fire({
     icon: 'question',
-    title: 'ยืนยันการแจ้งเรื่อง',
+    title: 'ยืนยันการบันทึกข้อมูล',
     showDenyButton: true,
     showCancelButton: false,
     confirmButtonText: 'ยืนยัน',
@@ -54,7 +54,7 @@ $('form').submit(function (e) {
       }).then(function (response) {
         Swal.fire({
           icon: 'success',
-          title: 'การบันทึกข้อมูลเสร็จสิ้น',
+          title: 'บันทึกข้อมูลเสร็จสิ้น',
           showDenyButton: false,
           showCancelButton: false,
           confirmButtonText: 'ตกลง',

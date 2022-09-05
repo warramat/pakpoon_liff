@@ -163,7 +163,7 @@ $('form').submit(function (e) {
   if (Script_checkID($('#cardID').val())) {
     Swal.fire({
       icon: 'question',
-      title: 'ยืนยันการแจ้งเรื่อง',
+      title: 'ยืนยันการบันทึกข้อมูล',
       showDenyButton: true,
       showCancelButton: false,
       confirmButtonText: 'ยืนยัน',
