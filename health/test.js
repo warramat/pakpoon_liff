@@ -65,7 +65,7 @@ $('form').submit(function (e) {
         let pop = `<div class="card">
         <div class="card-body ">
             <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
-                คะแนนรวมของคุณ คือ <span id="happyScore"></span> ${sum} คะแนน</h3>
+                คะแนนรวมของคุณ <span id="happyScore"></span> ${sum} คะแนน</h3>
             <form>
 
                 <table id="customers">
