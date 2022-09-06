@@ -26,6 +26,31 @@ async function getUID() {
   return uid;
 }
 
+
+function loadFile(event) {
+  let reader = new FileReader();
+  reader.onload = function () {
+    addImage(reader.result);
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
+
+function addImage(img) {
+  const id = Math.round(Math.random() * 10000);
+  $('#list_images').append(`
+    <li class="item" id="${id}">
+      <img class="img-row" src="${img}">
+      <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
+    </li>
+    `);
+  $('#upload').val('');
+  $('#camera').val('');
+}
+
+function remove_img(id) {
+  $('#' + id).remove();
+}
+
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const myParam = urlParams.get('topic');
