@@ -29,7 +29,7 @@ $('form').submit(async (e) => {
       text: 'เข้าสู่ระบบเรียบร้อย',
       icon: 'success',
       confirmButtonText: 'OK',
-      timer: 3000
+      timer: 10000
     }).then((result) => {
       window.location.href = './home_officer.html';
     });
@@ -39,7 +39,7 @@ $('form').submit(async (e) => {
       text: error.message,
       icon: 'error',
       confirmButtonText: 'OK',
-      timer: 3000
+      timer: 10000
     });
   }
 });
