@@ -19,7 +19,7 @@ $('form').submit(async (e) => {
     redirect: 'follow'
   };
   const res = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/User-admin/Cre-employee',
+    'https://smartcity-pakpoon-api.herokuapp.com/User-admin/login',
     requestOptions
   );
   if (res.status === 201) {
