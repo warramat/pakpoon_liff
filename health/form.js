@@ -11,7 +11,7 @@
 //       document.getElementById('show').style.visibility = 'visible';
 //     }
 //   });
-  
+
 //   async function getFriend() {
 //     const friend = await liff.getFriendship();
 //     return friend.friendFlag;
@@ -22,8 +22,8 @@
 //     const uid = await data.userId;
 //     return uid;
 //   }
-  
-  /*var form = document.getElementById('form-head')
+
+/*var form = document.getElementById('form-head')
   form.addEventListener('submit',function(e){
     e.preventDefault()
     var prefix = document.getElementById('prefix').value
@@ -49,9 +49,86 @@
     })
   })
   */
-  /******************************************************************************************* */
+/******************************************************************************************* */
 
-  $('#twh1').submit(e=>{
-    e.preventDefault();
-    console.log($(this).serializeArray())
-  })
+function Disable(c) {
+  const a = $(`.${c}`);
+  if ($(`.${c}`)[0].checked) {
+    for (let i = 0; i < a.length; i++) {
+      if (i !== 0) {
+        a[i].disabled = true;
+        a[i].checked = false;
+      }
+    }
+    if (c === "congenital") {
+      $(".congenital-txt").attr("disabled", true);
+      $(".congenital-txt").val("");
+    } else if (c === "sick") {
+      $(".sick-txt").attr("disabled", true);
+      $(".sick-txt").val("");
+    } else if (c === "accident") {
+      $(".accident-txt").attr("disabled", true);
+      $(".accident-txt").val("");
+    }
+  } else {
+    for (let i = 0; i < a.length; i++) {
+      if (i !== 0) {
+        a[i].disabled = false;
+      }
+    }
+    if (c === "congenital") {
+      $(".congenital-txt").attr("disabled", false);
+    } else if (c === "sick") {
+      $(".sick-txt").attr("disabled", false);
+    } else if (c === "accident") {
+      $(".accident-txt").attr("disabled", false);
+    }
+  }
+}
+
+$(".department").change((e) => {
+  if ($(".department")[0].checked) {
+    $("#ot").attr("disabled", false);
+  } else {
+    $("#ot").attr("disabled", true);
+    $("#ot").val("");
+  }
+});
+
+$(".drinking_alcohol").change((e) => {
+  const a = $(".drinking_alcohol2");
+  if (!$(".drinking_alcohol")[0].checked) {
+    for (let i = 0; i < a.length; i++) {
+      a[i].disabled = false;
+    }
+  } else {
+    for (let i = 0; i < a.length; i++) {
+      a[i].disabled = true;
+      a[i].checked = false
+    }
+  }
+});
+
+
+$(".smoke_often1").change((e) => {
+  if (!$(".smoke_often1")[0].checked) {
+    $("#smoke_often1").attr("disabled", false);
+  } else {
+    $("#smoke_often1").attr("disabled", true);
+    $("#smoke_often1").val("");
+  }
+});
+
+$(".debt_information").change((e) => {
+  if (!$(".debt_information")[0].checked) {
+    $("#debt_information").attr("disabled", false);
+  } else {
+    $("#debt_information").attr("disabled", true);
+    $("#debt_information").val("");
+  }
+});
+
+$("#TWH01").submit(e=>{
+  e.preventDefault();
+  console.log( $( this ).serializeArray() );
+})
