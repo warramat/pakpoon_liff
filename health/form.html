@@ -123,8 +123,7 @@
         </div>
         <br />
         <form
-          id="sheetdb-form"
-          action="https://sheetdb.io/api/v1/l7jm8gg67yrqc"
+          id="form"
           method="post"
         >
           <div class="form-group">
@@ -133,7 +132,7 @@
             <label for="affiliation">สังกัด</label>
             <select
               id="affiliation"
-              name="data[affiliation]"
+              name="affiliation"
               class="form-select"
             >
               <option value="" selected disabled hidden>
@@ -155,7 +154,7 @@
             <label for="position">ตำแหน่ง</label>
             <input
               id="position"
-              name="data[position]"
+              name="position"
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
@@ -166,7 +165,7 @@
             <label for="division">กอง</label>
             <input
               id="division"
-              name="data[division]"
+              name="division"
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
@@ -177,7 +176,7 @@
             <label for="cotton">ฝ่าย</label>
             <input
               id="cotton"
-              name="data[cotton]"
+              name="cotton"
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
@@ -190,7 +189,7 @@
             <label for="prefix">คำนำหน้า</label>
             <select
               id="prefix"
-              name="data[prefix]"
+              name="prefix"
               class="form-select"
               
             >
@@ -207,7 +206,7 @@
             <label for="name">ชื่อ</label>
             <input
               id="name"
-              name="data[name]"
+              name="name"
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
@@ -220,7 +219,7 @@
             <label for="lastname">นามสกุล</label>
             <input
               id="lastname"
-              name="data[lastname]"
+              name="lastname"
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
@@ -242,7 +241,7 @@
             <label for="age">อายุ (ปี)</label>
             <input
               id="age"
-              name="data[age]"
+              name="age"
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
@@ -269,7 +268,7 @@
             <label for="height">ส่วนสูง (เซนติเมตร)</label>
             <input
               id="height"
-              name="data[height]"
+              name="height"
               class="form-control"
               type="number"
               placeholder="กรุณากรอก"
@@ -282,7 +281,7 @@
             <label for="waistline">รอบเอว (เซนติเมตร)</label>
             <input
               id="waistline"
-              name="data[waistline]"
+              name="waistline"
               class="form-control"
               type="number"
               placeholder="กรุณากรอก"
@@ -293,98 +292,29 @@
           <br />
           <div class="form-group">
             <label for="congenital_disease">โรคประจำตัว</label>
-            <div class="form-check">
-              <input
-                onchange="Disable('congenital')"
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="ไม่มีโรคประจำตัว (ข้ามไปข้อถัดไป)"
-                
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                ไม่มีโรคประจำตัว (ข้ามไปข้อถัดไป)
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="เบาหวาน"
-                
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                เบาหวาน
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="ความดันโลหิตสูง"
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                ความดันโลหิตสูง
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="โรคถุงลมโป่งพอง"
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                โรคถุงลมโป่งพอง
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="โรคไขมันในเลือดสูง"
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                โรคไขมันในเลือดสูง
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="โรคหัวใจและหลอดเลือด"
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                โรคหัวใจและหลอดเลือด
-              </label>
-            </div>
-            <div class="form-check">
-              <input
-                class="form-check-input congenital"
-                name="congenital_disease"
-                type="checkbox"
-                value="โรคอัมพฤกษ์/อัมพาต"
-              />
-              <label class="form-check-label" for="flexCheckChecked">
-                โรคอัมพฤกษ์/อัมพาต
-              </label>
-            </div>
+            <input
+            id="height"
+            name="height"
+            class="form-control"
+            type="number"
+            placeholder="กรุณากรอก"
+            
+            aria-label="default input example"
+          />
             <br />
-            <div class="form-group">
-              <label for="other_congenital_disease">อื่นๆ (โปรดระบุ)</label>
-              <input
-                id="other_congenital_disease "
-                name="other_congenital_disease"
-                class="form-control congenital-txt"
-                type="text"
-                placeholder="กรุณากรอก"
-                aria-label="default input example"
-              />
-            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="congenital_disease">โรคประจำตัว</label>
+            <input
+            id="sick"
+            name="sick"
+            class="form-control"
+            type="number"
+            placeholder="กรุณากรอก"
+            
+            aria-label="default input example"
+          />
             <br />
           </div>
 

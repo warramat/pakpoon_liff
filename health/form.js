@@ -145,3 +145,67 @@ form.addEventListener('submit', e => {
     window.open('d.html','_blank')
   })
 })
+
+
+
+$('form').submit(function (e) {
+  const today = new Date();
+  e.preventDefault();
+  if (Script_checkID($('#cardID').val())) {
+    Swal.fire({
+      icon: 'question',
+      title: 'ยืนยันการบันทึกข้อมูล',
+      showDenyButton: true,
+      showCancelButton: false,
+      confirmButtonText: 'ยืนยัน',
+      denyButtonText: 'ยกเลิก'
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        let data = {};
+  
+        $('form')
+          .serializeArray()
+          .forEach((e) => {
+            data[e.name] = e.value;
+            data[e.name] = e.value;
+            data[e.name] = e.value;
+            data[e.name] = e.value;
+            data[e.name] = e.value;
+            data[e.name] = e.value;
+            data[e.name] = e.value;
+          });
+        console.log(data);
+        fetch(
+          'https://smartcity-pakpoon-api.herokuapp.com/employee/addemployee',
+          {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: {
+              'Content-Type': 'application/json; charset=UTF-8'
+            }
+          }
+        ).then(function (response) {
+          Swal.fire({
+            icon: 'success',
+            title: 'บันทึกข้อมูลเสร็จสิ้น',
+            showDenyButton: false,
+            showCancelButton: false,
+            confirmButtonText: 'ตกลง',
+            timer: 3000
+          }).then(async (result) => {
+            location.reload();
+          });
+        });
+      }
+    });
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง',
+      showDenyButton: false,
+      showCancelButton: false,
+      confirmButtonText: 'ตกลง',
+      timer: 3000
+    });
+  }
+});
