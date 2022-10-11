@@ -244,7 +244,7 @@
               id="age"
               name="age"
               class="form-control"
-              type="text"
+              type="number"
               placeholder="กรุณากรอก"
               
               aria-label="default input example"
@@ -293,15 +293,98 @@
           <br />
           <div class="form-group">
             <label for="congenital_disease">โรคประจำตัว</label>
-            <input
-            id="sick"
-            name="sick"
-            class="form-control"
-            type="text"
-            placeholder="กรุณากรอก"
-            
-            aria-label="default input example"
-          />
+            <div class="form-check">
+              <input
+                onchange="Disable('congenital')"
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="ไม่มีโรคประจำตัว (ข้ามไปข้อถัดไป)"
+                
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                ไม่มีโรคประจำตัว (ข้ามไปข้อถัดไป)
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="เบาหวาน"
+                
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                เบาหวาน
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="ความดันโลหิตสูง"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                ความดันโลหิตสูง
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="โรคถุงลมโป่งพอง"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                โรคถุงลมโป่งพอง
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="โรคไขมันในเลือดสูง"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                โรคไขมันในเลือดสูง
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="โรคหัวใจและหลอดเลือด"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                โรคหัวใจและหลอดเลือด
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input congenital"
+                name="congenital_disease"
+                type="checkbox"
+                value="โรคอัมพฤกษ์/อัมพาต"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                โรคอัมพฤกษ์/อัมพาต
+              </label>
+            </div>
+         
+            <div class="form-group">
+              <label for="other_congenital_disease">โรคอื่นๆ (โปรดระบุ)</label>
+              <input
+                id="other_congenital_disease "
+                name="other_congenital_disease"
+                class="form-control congenital-txt"
+                type="text"
+                placeholder="กรุณากรอก"
+                aria-label="default input example"
+              />
+            </div>
             <br />
           </div>
 
@@ -490,8 +573,8 @@
             <div class="form-group">
               <label for="other_accident">อื่นๆ (โปรดระบุ)</label>
               <input
-                id="name"
-                name="name"
+                id="other_accident"
+                name="other_accident"
                 class="form-control accident-txt"
                 type="text"
                 placeholder="กรุณากรอก"
@@ -759,7 +842,7 @@
               </tr>
             </table>
 
-
+            <br/>
             <h5>ข้อมูลพฤติกรรมการดื่มแอลกอฮอล์</h5>
             <div
               class="d-flex align-items-center"
@@ -882,7 +965,7 @@
                   value="ไม่สูบ (ข้ามไปข้อต่อไป)"
                 />
                 <label class="form-check-label" for="flexCheckDefault">
-                  ไม่สูบ (ข้ามไปข้อต่อไป)
+                  ไม่สูบ
                 </label>
               </div>
               <div class="form-check">
@@ -905,7 +988,7 @@
                   >จำนวนมวนที่สูบต่อวัน (มวนต่อวัน)</label
                 >
                 <input
-                  id="smoke_often2"
+                  id="smoke_often1"
                   name="smoke_often2"
                   class="form-control"
                   type="number"
@@ -1743,8 +1826,8 @@
                   aria-label="default input example"
                 />
               </div>
-            </div> -->
-            <br /> -->
+            </div> 
+            <br /> 
 
             <div class="row">
               <div class="col-12">
