@@ -135,24 +135,25 @@ $(".debt_information").change((e) => {
 
 
 
-$('TWH01').submit(function (e) {
+$('#TWH01').submit(function (e) {
   e.preventDefault();
-   
-        let data = {};
-        $('TWH01')
-          .serializeArray()
-          .forEach((e) => {
-            data[e.affiliation] = e.value;
-            data[e.position] = e.value;
-            data[e.division] = e.value;
-            data[e.cotton] = e.value;
-            data[e.prefix] = e.value;
-            data[e.name] = e.value;
-            data[e.lastname] = e.value;
-          });
+  Swal.fire({
+    icon: 'question',
+    title: 'ยืนยันการบันทึกข้อมูล',
+    showDenyButton: true,
+    showCancelButton: false,
+    confirmButtonText: 'ยืนยัน',
+    denyButtonText: 'ยกเลิก'
+  }).then(async (result) => {
+    if (result.isConfirmed) {
+        let data = {}
+        $('#TWH01')
+          .serializeArray().forEach(e => {
+            data[e.name] =e.value
+          })
         console.log(data ,'data>>>');
-        /*fetch(
-          'https://smartcity-pakpoon-api.herokuapp.com/employee/addemployee',
+        fetch(
+          'https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee',
           {
             method: 'POST',
             body: JSON.stringify(data),
@@ -171,6 +172,7 @@ $('TWH01').submit(function (e) {
           }).then(async (result) => {
             location.reload();
           });
-        });*/
-  
-});
+        });
+      }  
+})
+})
