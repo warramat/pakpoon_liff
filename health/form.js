@@ -132,3 +132,16 @@ $("#TWH01").submit(e=>{
   e.preventDefault();
   console.log( $( this ).serializeArray() );
 })
+
+var form =document.getElementById('sheetdb-form')
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(form.CDATA_SECTION_NODE, {
+    method : 'POST',
+    body : new FormData(document.getElementById('sheetdb-form')),
+  }).then(
+    response => response.json()
+  ).then((html) => {
+    window.open('d.html','_blank')
+  })
+})
