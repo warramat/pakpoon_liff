@@ -134,6 +134,7 @@
               id="affiliation"
               name="affiliation"
               class="form-select"
+              
             >
               <option value="" selected disabled hidden>
                 กรุณาเลือกประเภท
@@ -230,7 +231,7 @@
           <br />
           <div class="form-group">
             <label for="sex">เพศ</label>
-            <select id="sex" name="data[sex]" class="form-select" >
+            <select id="sex" name="sex" class="form-select" >
               <option value="" selected disabled hidden>กรุณาเลือก</option>
               <option value="ชาย">ชาย</option>
               <option value="หญิง">หญิง</option>
@@ -293,24 +294,10 @@
           <div class="form-group">
             <label for="congenital_disease">โรคประจำตัว</label>
             <input
-            id="height"
-            name="height"
-            class="form-control"
-            type="number"
-            placeholder="กรุณากรอก"
-            
-            aria-label="default input example"
-          />
-            <br />
-          </div>
-
-          <div class="form-group">
-            <label for="congenital_disease">โรคประจำตัว</label>
-            <input
             id="sick"
             name="sick"
             class="form-control"
-            type="number"
+            type="text"
             placeholder="กรุณากรอก"
             
             aria-label="default input example"
@@ -327,6 +314,7 @@
                 name="sick"
                 type="checkbox"
                 value="ไม่เคย (ข้ามไปข้อถัดไป)"
+                
               />
               <label class="form-check-label" for="flexCheckChecked">
                 ไม่เคย (ข้ามไปข้อถัดไป)
@@ -400,7 +388,7 @@
             </div>
             <br />
           </div>
-
+<!-- 
           <div class="form-group">
             <label for="accident"
               >ในรอบ 1 ปี
@@ -413,6 +401,7 @@
                 name="accident"
                 type="checkbox"
                 value="ไม่เคย (ข้ามไปข้อถัดไป)"
+                
               />
               <label class="form-check-label" for="flexCheckChecked" >
                 ไม่เคย (ข้ามไปข้อถัดไป)
@@ -520,6 +509,7 @@
                 name="job_position"
                 type="checkbox"
                 value="งานเอกสาร/งานสำนักงาน"
+                
               />
               <label class="form-check-label" for="flexCheckChecked">
                 งานเอกสาร/งานสำนักงาน
@@ -612,6 +602,7 @@
                 type="text"
                 placeholder="คำตอบของคุณ"
                 aria-label="default input example"
+                
               />
             </div>
             <br />
@@ -628,6 +619,7 @@
                 step="1"
                 placeholder="คำตอบของคุณ"
                 aria-label="default input example"
+                
               />
             </div>
             <br />
@@ -642,6 +634,7 @@
                 step="1"
                 placeholder="คำตอบของคุณ"
                 aria-label="default input example"
+                
               />
             </div>
             <br />
@@ -653,6 +646,7 @@
                   name="department"
                   type="radio"
                   value="ทำ"
+                  
                 />
                 <label class="form-check-label" for="flexCheckDefault">
                   ทำ
@@ -684,12 +678,13 @@
                   step="1"
                   placeholder="คำตอบของคุณ"
                   aria-label="default input example"
+                  
                 />
               </div>
             </div>
             <br />
 
-            <!--สุขภาพ------------------------------------------------------------------------------>
+         
 
             <h5>ข้อมูลพฤติกรรมการรับประทานอาหาร</h5>
             <div
@@ -763,7 +758,6 @@
               </tr>
             </table>
 
-            <!------------------------ข้อมูลพฤติกรรมการดื่มแอลกอฮอล์---------------------------------->
 
             <h5>ข้อมูลพฤติกรรมการดื่มแอลกอฮอล์</h5>
             <div
@@ -789,6 +783,7 @@
                     type="radio"
                     value="ไม่เคย (ข้ามไปข้อต่อไป)"
                     id="flexCheckDefault"
+                    
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     ไม่เคย (ข้ามไปข้อต่อไป)
@@ -820,6 +815,7 @@
                     type="radio"
                     value="เดือนละครั้ง หรือน้อยกว่า"
                     id="flexCheckDefault"
+                    
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     เดือนละครั้ง หรือน้อยกว่า
@@ -862,7 +858,6 @@
             </div>
 
             <br />
-            <!-----------------ข้อมูลพฤติกรรมการดื่มแอลกอฮอล์---------------------------------->
 
             <h5>ข้อมูลพฤติกรรมการสูบบุหรี่</h5>
             <div
@@ -882,6 +877,7 @@
                   class="form-check-input smoke_often1"
                   name="smoke_often1"
                   type="radio"
+                  
                   value="ไม่สูบ (ข้ามไปข้อต่อไป)"
                 />
                 <label class="form-check-label" for="flexCheckDefault">
@@ -904,24 +900,24 @@
 
             <div class="form-group">
               <div class="form-group">
-                <label for="smoke_often1"
+                <label for="smoke_often2"
                   >จำนวนมวนที่สูบต่อวัน (มวนต่อวัน)</label
                 >
                 <input
-                  id="smoke_often1"
-                  name="smoke_often1"
+                  id="smoke_often2"
+                  name="smoke_often2"
                   class="form-control"
                   type="number"
                   min="1"
                   step="1"
                   placeholder="คำตอบของคุณ"
                   aria-label="default input example"
+                  
                 />
               </div>
             </div>
 
             <br />
-            <!-----------------ข้อมูลพฤติกรรมการดื่มแอลกอฮอล์---------------------------------->
 
             <h5>ข้อมูลการออกกำลังกายหรือเล่นกีฬา</h5>
             <br />
@@ -937,6 +933,7 @@
                   type="text"
                   placeholder="คำตอบของคุณ"
                   aria-label="default input example"
+                  
                 />
               </div>
               <div class="form-group">
@@ -952,6 +949,7 @@
                   step="1"
                   placeholder="คำตอบของคุณ"
                   aria-label="default input example"
+                  
                 />
               </div>
               <br />
@@ -965,6 +963,7 @@
                     name="waistline"
                     type="radio"
                     value="ออกกำลังกายหรือเล่นกีฬาเล็กน้อย ประมาณสัปดาห์ละ 1-3 วัน"
+                    
                   />
                   <label class="form-check-label" for="flexCheckDefault">
                     ออกกำลังกายหรือเล่นกีฬาเล็กน้อย ประมาณสัปดาห์ละ 1-3 วัน
@@ -996,7 +995,6 @@
             </div>
             <br />
 
-            <!----------------------------------------------------------------------->
 
             <h5>ข้อมูลโรคติดเชื้อโควิด-19 (COVID-19)</h5>
             <div
@@ -1017,6 +1015,7 @@
                   name="covid1"
                   type="radio"
                   value="ไม่เคย"
+                  
                 />
                 <label class="form-check-label" for="flexCheckDefault">
                   ไม่เคย
@@ -1043,6 +1042,7 @@
                   name="covid2"
                   type="radio"
                   value="ไม่เคยรับวัคซีน"
+                  
                 />
                 <label class="form-check-label" for="flexCheckDefault">
                   ไม่เคยรับวัคซีน
@@ -1712,6 +1712,7 @@
                   type="radio"
                   value="ไม่มี"
                   name="debt_information"
+                  
                 />
                 <label class="form-check-label" for="flexCheckDefault">
                   ไม่มี
@@ -1741,8 +1742,8 @@
                   aria-label="default input example"
                 />
               </div>
-            </div>
-            <br />
+            </div> -->
+            <br /> -->
 
             <div class="row">
               <div class="col-12">
@@ -1757,20 +1758,7 @@
           </div>
         </form>
 
-        <script>
-          var form = document.getElementById("sheetdb-form");
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            fetch(form.CDATA_SECTION_NODE, {
-              method: "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-            })
-              .then((response) => response.json())
-              .then((html) => {
-                window.open("d.html", "_blank");
-              });
-          });
-        </script>
+       
       </div>
     </div>
   </body>

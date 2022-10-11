@@ -128,41 +128,30 @@ $(".debt_information").change((e) => {
   }
 });
 
-$("#TWH01").submit(e=>{
-  e.preventDefault();
-  console.log( $( this ).serializeArray() );
-})
+// $("#TWH01").submit(e=>{
+//   console.log( $( "#TWH01" ).serializeArray())
+//   e.preventDefault();
+// })
 
 
 
 $('TWH01').submit(function (e) {
-  const today = new Date();
   e.preventDefault();
-  if (Script_checkID($('#cardID').val())) {
-    Swal.fire({
-      icon: 'question',
-      title: 'ยืนยันการบันทึกข้อมูล',
-      showDenyButton: true,
-      showCancelButton: false,
-      confirmButtonText: 'ยืนยัน',
-      denyButtonText: 'ยกเลิก'
-    }).then(async (result) => {
-      if (result.isConfirmed) {
+   
         let data = {};
-  
-        $('form')
+        $('TWH01')
           .serializeArray()
           .forEach((e) => {
+            data[e.affiliation] = e.value;
+            data[e.position] = e.value;
+            data[e.division] = e.value;
+            data[e.cotton] = e.value;
+            data[e.prefix] = e.value;
             data[e.name] = e.value;
-            data[e.name] = e.value;
-            data[e.name] = e.value;
-            data[e.name] = e.value;
-            data[e.name] = e.value;
-            data[e.name] = e.value;
-            data[e.name] = e.value;
+            data[e.lastname] = e.value;
           });
-        console.log(data);
-        fetch(
+        console.log(data ,'data>>>');
+        /*fetch(
           'https://smartcity-pakpoon-api.herokuapp.com/employee/addemployee',
           {
             method: 'POST',
@@ -182,17 +171,6 @@ $('TWH01').submit(function (e) {
           }).then(async (result) => {
             location.reload();
           });
-        });
-      }
-    });
-  } else {
-    Swal.fire({
-      icon: 'error',
-      title: 'กรุณากรอกเลขบัตรประชาชนให้ถูกต้อง',
-      showDenyButton: false,
-      showCancelButton: false,
-      confirmButtonText: 'ตกลง',
-      timer: 3000
-    });
-  }
+        });*/
+  
 });
