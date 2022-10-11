@@ -133,22 +133,9 @@ $("#TWH01").submit(e=>{
   console.log( $( this ).serializeArray() );
 })
 
-var form =document.getElementById('sheetdb-form')
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(form.CDATA_SECTION_NODE, {
-    method : 'POST',
-    body : new FormData(document.getElementById('sheetdb-form')),
-  }).then(
-    response => response.json()
-  ).then((html) => {
-    window.open('d.html','_blank')
-  })
-})
 
 
-
-$('form').submit(function (e) {
+$('TWH01').submit(function (e) {
   const today = new Date();
   e.preventDefault();
   if (Script_checkID($('#cardID').val())) {
