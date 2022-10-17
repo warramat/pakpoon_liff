@@ -44,18 +44,16 @@ $("#choice_topic").change(async (e) => {
 });
 
 $(document).ready(async () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get("topic");
-  let data = await fetch(
-    "https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=" + myParam
+  $("#year").html(
+    `<option selected value="${new Date().getFullYear() + 543}">${
+      new Date().getFullYear() + 543
+    }</option>`
   );
-  data = await data.json();
-  let html = "";
-  $("#topic").text(data.type);
-  data.details.forEach((element) => {
-    html += `<option value="${element}">${element}</option>`;
-  });
-  $("#choice").append(html);
+  $("#year").append(
+    `<option selected value="${new Date().getFullYear() + 544}">${
+      new Date().getFullYear() + 544
+    }</option>`
+  );
 });
 
 $("form").submit((e) => {
