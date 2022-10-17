@@ -32,6 +32,16 @@
                     </div>
                     <br />
                     <div class="form-group">
+                        <label for="fname">โรงพยาบาลที่ต้องการนัดหมาย</label>
+                        <select id="choice" class="form-select" required>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือกโรงพยาบาลที่ต้องการนัดหมาย
+                            </option>
+                        </select>
+
+                    </div>
+                    <br>
+                    <div class="form-group">
                         <label for="lname">รายละเอียด</label>
                         <textarea value="" class="form-control " id="detail" rows="3" required
                             placeholder="กรุณากรอกรายละเอียด"></textarea></textarea>
@@ -61,10 +71,6 @@
                     <br>
                     <br>
                     <div class="row">
-                        <div class="col-6">
-                            <a class="btn btn-outline-primary " href="./main_compailn.html" style="width: 100%;">
-                                ย้อนกลับ</a>
-                        </div>
                         <div class="col-6 ">
                             <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 100%;">
                         </div>
@@ -84,11 +90,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-<script src="./form.js"></script>
+<script src="./index.js"></script>
 <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
-<script>
-    // VConsole will be exported to `window.VConsole` by default.
-    var vConsole = new window.VConsole();
-</script>
-
 </html>
