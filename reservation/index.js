@@ -31,6 +31,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     const type =   $("#choice_topic").val()
     const data = await(await fetch('https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic='+type)).json()
     let html = ''
+    $('#choice_hospital').html('')
     data.details.forEach((element) => {
         html += `<option value="${element}">${element}</option>`;
       });
