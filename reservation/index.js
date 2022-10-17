@@ -43,6 +43,12 @@ $("#choice_topic").change(async (e) => {
   $("#choice_hospital").append(html);
 });
 
+$("#year").change(e=>{
+    if(new Date().getFullYear() + 543 === Number($("#year").val())){
+        
+    }
+})
+
 $(document).ready(async () => {
   $("#year").html(
     `<option selected value="${new Date().getFullYear() + 543}">${
