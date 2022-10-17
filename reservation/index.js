@@ -115,7 +115,7 @@ async function prepareData() {
     lng = position.coords.longitude;
   });
   let data = {
-    type: $("#choice").val(),
+    type: $("#choice_topic").val(),
     details: $("#detail").val(),
     day: $("#day").val(),
     month: $("#month").val(),
