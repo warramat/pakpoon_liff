@@ -50,6 +50,17 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   function remove_img(id) {
     $('#' + id).remove();
   }
+
+
+  $(".choice_topic").change((e) => {
+    if (!$(".choice_topic")[0].checked) {
+      $("#choice").attr("disabled", false);
+    } else {
+      $("#choice").attr("disabled", true);
+      $("#choice").val("");
+    }
+  });
+  
   
   $(document).ready(async () => {
     const urlParams = new URLSearchParams(window.location.search);
