@@ -121,7 +121,7 @@ async function prepareData() {
     month: $("#month").val(),
     year: $("#year").val(),
     time: $("#time").val(),
-    topic: myParam,
+    topic: $("#choice_hospital").val(),
     userID: await getUID(),
     img: img,
     gps: {
