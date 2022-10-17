@@ -4,7 +4,8 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     if (!liff.isLoggedIn()) {
       liff.login({
         redirectUri:
-          'https://tapp-smartcity.netlify.app/compailn/form.html?topic=' + myParam
+          'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
+          myParam
       });
     } else if (!(await checkUser(await getUID()))) {
       window.location = '../register.html';
@@ -24,6 +25,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     const uid = await data.userId;
     return uid;
   }
+  
   
   function loadFile(event) {
     let reader = new FileReader();
@@ -69,7 +71,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     navigator.geolocation.getCurrentPosition(function (position) {});
     Swal.fire({
       icon: 'question',
-      title: 'ยืนยันการแจ้งเรื่อง',
+      title: 'ยืนยันการนัดหมาย',
       showDenyButton: true,
       showCancelButton: false,
       confirmButtonText: 'ยืนยัน',
@@ -92,7 +94,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
           requestOptions
         )
           .then(() => {
-            Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success').then(() =>
+            Swal.fire('ยืนยันการนัดหมายสำเร็จ', '', 'success').then(() =>
               location.reload()
             );
           })
@@ -119,6 +121,10 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     let data = {
       type: $('#choice').val(),
       details: $('#detail').val(),
+      day: $('#day').val(),
+      month: $('#month').val(),
+      year: $('#year').val(),
+      time: $('#time').val(),
       topic: myParam,
       userID: await getUID(),
       img: img,
