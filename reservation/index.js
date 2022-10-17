@@ -45,7 +45,7 @@ $("#choice_topic").change(async (e) => {
 
 $("#year").change(e=>{
     if(new Date().getFullYear() + 543 === Number($("#year").val())){
-        
+
     }
 })
 
@@ -115,8 +115,7 @@ async function prepareData() {
     lng = position.coords.longitude;
   });
   let data = {
-    type: $("#choice").val(),
-    story: $("choice_topic").val(),
+    type: $("#choice_topic").val(),
     details: $("#detail").val(),
     day: $("#day").val(),
     month: $("#month").val(),
