@@ -23,6 +23,16 @@
                 </div>
                 <form>
                     <div class="form-group">
+                        <label for="fname">เรื่อง</label>
+                        <select id="choice_topic" class="form-select" required>
+                            <option value="" selected disabled hidden>
+                                กรุณาเลือกเรื่อง
+                            </option>
+                            
+                        </select>
+                    </div>
+                    <br/>
+                    <div class="form-group">
                         <label for="fname">โรงพยาบาลที่ต้องการนัดหมาย</label>
                         <select id="choice" class="form-select" required>
                             <option value="" selected disabled hidden>
@@ -34,17 +44,6 @@
                               <option value="โรงพยาบาลเมืองปากพูน บ้านศาลาบางปู">
                                 โรงพยาบาลเทศบาลเมืองปากพูน สาขาบ้านศาลาบางปู
                               </option>
-                        </select>
-
-                    </div>
-                    <br>
-                    <div class="form-group">
-                        <label for="fname">เรื่อง</label>
-                        <select id="choice_topic" class="form-select" required>
-                            <option value="" selected disabled hidden>
-                                กรุณาเลือกเรื่อง
-                            </option>
-                            
                         </select>
                     </div>
                     <br/>
@@ -156,7 +155,7 @@
                         <br>
                         <ul class="images" id="list_images"></ul>
                         <br>
-                        <div class="form-group ">
+                        <!-- <div class="form-group ">
                             <div class="row">
                                 <div class="col-6">
                                     <input type="file" id="camera" accept="image/*" capture=""
@@ -174,10 +173,9 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> -->
                         <br>
-                        <br>
-                        <br>
+                     
                         <div class="row">
                             <div class="col-12">
                                 <input type="submit" value="แจ้งเรื่อง" class="btn btn-primary" style="width: 100%;">
