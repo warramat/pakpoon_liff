@@ -28,7 +28,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   
   
   $("#choice_topic").change((e) => {
-    console.log($(this).val());
+    console.log($("#choice_topic").val());
   });
   
   
