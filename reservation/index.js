@@ -103,7 +103,7 @@ $("form").submit((e) => {
 
 async function prepareData() {
   const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get("topic");
+  const myParam = urlParams.get("choice_hospital");
   let lat = 0;
   let lng = 0;
   let img = [];
