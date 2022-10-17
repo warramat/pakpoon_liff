@@ -120,6 +120,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     });
     let data = {
       type: $('#choice').val(),
+      story: $('choice_topic').val(),
       details: $('#detail').val(),
       day: $('#day').val(),
       month: $('#month').val(),
