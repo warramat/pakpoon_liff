@@ -82,7 +82,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     navigator.geolocation.getCurrentPosition(function (position) {});
     Swal.fire({
       icon: 'question',
-      title: 'ยืนยันการนัดหมาย',
+      title: 'ยืนยันกาจองคิว',
       showDenyButton: true,
       showCancelButton: false,
       confirmButtonText: 'ยืนยัน',
@@ -105,7 +105,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
           requestOptions
         )
           .then(() => {
-            Swal.fire('ยืนยันการนัดหมายสำเร็จ', '', 'success').then(() =>
+            Swal.fire('ยืนยันการจองคิวสำเร็จ', '', 'success').then(() =>
               location.reload()
             );
           })
