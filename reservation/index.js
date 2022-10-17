@@ -27,10 +27,12 @@ async function getUID() {
 }
 
 $("#choice_topic").change(async (e) => {
-  const type = $("#choice_topic").val();
+    const urlParams = new URLSearchParams(window.location.search);
+    const myParam = urlParams.get('topic');
+
   const data = await (
     await fetch(
-      "https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=" + type
+      "https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=" + myParam
     )
   ).json();
   let html = "";
@@ -121,7 +123,7 @@ async function prepareData() {
     month: $("#month").val(),
     year: $("#year").val(),
     time: $("#time").val(),
-    topic: $("#choice_hospital").val(),
+    topic: myParam,
     userID: await getUID(),
     img: img,
     gps: {
