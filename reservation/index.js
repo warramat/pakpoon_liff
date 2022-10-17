@@ -27,38 +27,8 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   }
   
   
-  function loadFile(event) {
-    let reader = new FileReader();
-    reader.onload = function () {
-      addImage(reader.result);
-    };
-    reader.readAsDataURL(event.target.files[0]);
-  }
-  
-  function addImage(img) {
-    const id = Math.round(Math.random() * 10000);
-    $('#list_images').append(`
-      <li class="item" id="${id}">
-        <img class="img-row" src="${img}">
-        <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
-      </li>
-      `);
-    $('#upload').val('');
-    $('#camera').val('');
-  }
-  
-  function remove_img(id) {
-    $('#' + id).remove();
-  }
-
-
-  $(".choice_topic").change((e) => {
-    if (!$(".choice_topic")[0].checked) {
-      $("#choice").attr("disabled", false);
-    } else {
-      $("#choice").attr("disabled", true);
-      $("#choice").val("");
-    }
+  $("#choice_topic").change((e) => {
+    console.log($(this).val());
   });
   
   
