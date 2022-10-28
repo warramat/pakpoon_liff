@@ -22,7 +22,6 @@ async function getUID() {
   return uid;
 }
 
-
 let sendData = {};
 let sum = 0;
 $('form').submit(function (e) {
