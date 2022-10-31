@@ -128,7 +128,6 @@ $(".debt_information").change((e) => {
   }
 });
 
-
 $('#weight').change(() => {
   if ($('#weight').val() < 1) {
     $('#weight').val(1);
@@ -163,8 +162,6 @@ $('#height').change(() => {
   }
 });
 
-
-
 function set() {
   const BMI = $('#BMI').val();
   if (BMI < 18.5) {
@@ -189,9 +186,6 @@ function set() {
     $('#proportion').css('color', 'red');
   }
 }
-
-
-
 
 
 $('#TWH01').submit(function (e) {
