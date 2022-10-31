@@ -128,11 +128,6 @@ $(".debt_information").change((e) => {
   }
 });
 
-// $("#TWH01").submit(e=>{
-//   console.log( $( "#TWH01" ).serializeArray())
-//   e.preventDefault();
-// })
-
 
 $('#TWH01').submit(function (e) {
   e.preventDefault();
