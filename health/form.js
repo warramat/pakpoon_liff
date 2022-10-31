@@ -211,6 +211,7 @@ $('#TWH01').submit(function (e) {
             data[e.name] =e.value
           })
           data.BMI = $('#BMI').val();
+          data.proportion = proportion;
         console.log(data ,'data>>>');
         fetch(
           'https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee',
