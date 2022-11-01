@@ -1,18 +1,18 @@
-liff.init({ liffId: "1656902981-0g1VVnpN" }).then(async () => {
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get("topic");
+  const myParam = urlParams.get('topic');
   if (!liff.isLoggedIn()) {
     liff.login({
       redirectUri:
-        "https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=" +
-        myParam,
+        'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
+        myParam
     });
   } else if (!(await checkUser(await getUID()))) {
-    window.location = "../register.html";
+    window.location = '../register.html';
   } else if (!(await getFriend())) {
-    window.location = "https://line.me/R/ti/p/@172nwynm";
+    window.location = 'https://line.me/R/ti/p/@172nwynm';
   } else {
-    document.getElementById("show").style.visibility = "visible";
+    document.getElementById('show').style.visibility = 'visible';
   }
 });
 
@@ -26,73 +26,75 @@ async function getUID() {
   return uid;
 }
 
-$("#choice_topic").change(async (e) => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const myParam = urlParams.get('topic');
 
-  const data = await (
-    await fetch(
-      "https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=" + myParam
-    )
-  ).json();
-  let html = "";
-  $("#choice_hospital").html("");
-  data.details.forEach((element, i) => {
-    html += `<option ${
-      i == 0 ? "selected" : ""
-    } value="${element}">${element}</option>`;
-  });
-  $("#choice_hospital").append(html);
-});
+function loadFile(event) {
+  let reader = new FileReader();
+  reader.onload = function () {
+    addImage(reader.result);
+  };
+  reader.readAsDataURL(event.target.files[0]);
+}
 
-$("#year").change(e=>{
-    if(new Date().getFullYear() + 543 === Number($("#year").val())){
+function addImage(img) {
+  const id = Math.round(Math.random() * 10000);
+  $('#list_images').append(`
+    <li class="item" id="${id}">
+      <img class="img-row" src="${img}">
+      <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
+    </li>
+    `);
+  $('#upload').val('');
+  $('#camera').val('');
+}
 
-    }
-})
+function remove_img(id) {
+  $('#' + id).remove();
+}
 
 $(document).ready(async () => {
-  $("#year").html(
-    `<option selected value="${new Date().getFullYear() + 543}">${
-      new Date().getFullYear() + 543
-    }</option>`
+  const urlParams = new URLSearchParams(window.location.search);
+  const myParam = urlParams.get('topic');
+  let data = await fetch(
+    'https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=' + myParam
   );
-  $("#year").append(
-    `<option selected value="${new Date().getFullYear() + 544}">${
-      new Date().getFullYear() + 544
-    }</option>`
-  );
+  data = await data.json();
+  let html = '';
+  $('#topic').text(data.type);
+  data.details.forEach((element) => {
+    html += `<option value="${element}">${element}</option>`;
+  });
+  $('#choice').append(html);
 });
 
-$("form").submit((e) => {
+$('form').submit((e) => {
   e.preventDefault();
   navigator.geolocation.getCurrentPosition(function (position) {});
   Swal.fire({
-    icon: "question",
-    title: "ยืนยันกาจองคิว",
+    icon: 'question',
+    title: 'ยืนยันการนัดหมาย',
     showDenyButton: true,
     showCancelButton: false,
-    confirmButtonText: "ยืนยัน",
-    denyButtonText: "ยกเลิก",
+    confirmButtonText: 'ยืนยัน',
+    denyButtonText: 'ยกเลิก'
   }).then(async (result) => {
     if (result.isConfirmed) {
       let data = await prepareData();
       let myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append('Content-Type', 'application/json');
       const raw = JSON.stringify(data);
       var requestOptions = {
-        method: "POST",
+        method: 'POST',
         headers: myHeaders,
         body: raw,
-        redirect: "follow",
+        redirect: 'follow'
       };
       fetch(
         // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-        "https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal",
+        'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappointment',
         requestOptions
       )
         .then(() => {
-          Swal.fire("ยืนยันการจองคิวสำเร็จ", "", "success").then(() =>
+          Swal.fire('ยืนยันการนัดหมายสำเร็จ', '', 'success').then(() =>
             location.reload()
           );
         })
@@ -105,33 +107,33 @@ $("form").submit((e) => {
 
 async function prepareData() {
   const urlParams = new URLSearchParams(window.location.search);
-  const myParam = urlParams.get("topic");
+  const myParam = urlParams.get('topic');
   let lat = 0;
   let lng = 0;
   let img = [];
-  $(".img-row").each(function (i, obj) {
-    img.push($(this).attr("src"));
+  $('.img-row').each(function (i, obj) {
+    img.push($(this).attr('src'));
   });
   navigator.geolocation.getCurrentPosition(function (position) {
     lat = position.coords.latitude;
     lng = position.coords.longitude;
   });
   let data = {
-    type: $("#choice_topic").val(),
-    details: $("#detail").val(),
-    day: $("#day").val(),
-    month: $("#month").val(),
-    year: $("#year").val(),
-    time: $("#time").val(),
+    type: $('#choice').val(),
+    details: $('#detail').val(),
+    day: $('#day').val(),
+    month: $('#month').val(),
+    year: $('#year').val(),
+    time: $('#time').val(),
     topic: myParam,
     userID: await getUID(),
     img: img,
     gps: {
       lat: lat,
-      lng: lng,
-    },
+      lng: lng
+    }
   };
   return data;
 }
 
-$("#take_image").click(async () => {});
+$('#take_image').click(async () => {});
