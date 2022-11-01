@@ -6,7 +6,7 @@
    if (!liff.isLoggedIn()) {
      liff.login({
        redirectUri:
-         'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
+         'https://tapp-smartcity.netlify.app/reservation/index.html?topic=' +
          myParam
      });
    } else if (!(await checkUser(await getUID()))) {
