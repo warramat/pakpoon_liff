@@ -1,5 +1,33 @@
 
 
+ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+   const urlParams = new URLSearchParams(window.location.search);
+   const myParam = urlParams.get('topic');
+   if (!liff.isLoggedIn()) {
+     liff.login({
+       redirectUri:
+         'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
+         myParam
+     });
+   } else if (!(await checkUser(await getUID()))) {
+     window.location = '../register.html';
+   } else if (!(await getFriend())) {
+     window.location = 'https://line.me/R/ti/p/@172nwynm';
+   } else {
+     document.getElementById('show').style.visibility = 'visible';
+   }
+ });
+
+ async function getFriend() {
+   const friend = await liff.getFriendship();
+   return friend.friendFlag;
+ }
+ async function getUID() {
+   const data = await liff.getProfile();
+   const uid = await data.userId;
+   return uid;
+ }
+
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
@@ -8,21 +36,6 @@ function loadFile(event) {
   reader.readAsDataURL(event.target.files[0]);
 }
 
-function addImage(img) {
-  const id = Math.round(Math.random() * 10000);
-  $('#list_images').append(`
-    <li class="item" id="${id}">
-      <img class="img-row" src="${img}">
-      <button class="btn btn-danger" onclick="remove_img(${id})">x</button>
-    </li>
-    `);
-  $('#upload').val('');
-  $('#camera').val('');
-}
-
-function remove_img(id) {
-  $('#' + id).remove();
-}
 
 $(document).ready(async () => {
   const urlParams = new URLSearchParams(window.location.search);
