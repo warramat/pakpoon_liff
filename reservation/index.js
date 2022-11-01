@@ -1,6 +1,4 @@
-
-
- liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
+liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
    const urlParams = new URLSearchParams(window.location.search);
    const myParam = urlParams.get('topic');
    if (!liff.isLoggedIn()) {
