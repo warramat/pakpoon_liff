@@ -1853,205 +1853,152 @@
 
             </div>
             <br>
-            <h5>แบบประเมินและวิเคราะห์ความเครียด (Strain)</h5>
-            <div
-              class="d-flex align-items-center"
-              style="flex-direction: column"
-            >
-              <img src="../img/strain.jpg" width="280" height="150" />
+            <div class="card-body ">
+              <h1>ดัชนีวัดความสุขคนไทยฉบับ 15 ข้อ</h1>
+              <p><mark>ไม่เลย</mark> หมายถึง ไม่เคยมีเหตุการณ์ อาการ ความรู้สึก หรือไม่เห็นด้วยกับเรื่องนั้นๆ</p>
+              <p><mark>เล็กน้อย</mark> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกเรื่องนั้นๆ
+                  เพียงเล็กน้อยหรือเห็นด้วยกับเรื่องนั้น
+                  เพียงเล็กน้อย</p>
               <p>
-                คำถาม : ในระยะ 6 เดือน
-                ที่ผ่านมามีเหตุการณ์ข้อใดเกิดขึ้นกับคุณบ้าง
-                และคุณรู้สึกอย่างไรต่อเหตุการณ์นั้น
+                  <mark>มาก</mark> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้นๆมาก หรือเห็นด้วยกับเรื่องนั้นๆมาก
               </p>
-              <table id="customers">
-                <tr>
-                    <th rowspan="2">คำถามในระยะ 6 เดือนที่ผ่านมา</th>
-                    <th colspan="5">คะแนน</th>
-                </tr>
-                <tr>
-                    <th>ไม่เลย</th>
-                    <th>เล็กน้อย</th>
-                    <th>ปานกลาง</th>
-                    <th>มาก</th>
-                    <th>มากที่สุด</th>
-                </tr>
-                <tr>
-                    <td class="textcustom">1. กลัวทำงานผิดพลาด</td>
-                    <td class="radio"><input type="radio" name="stress1" id="stress1" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress1" id="stress1" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress1" id="stress1" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress1" id="stress1" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress1" id="stress1" required value="4"></td>
-                </tr>
-                <tr>
-                    <td class="textcustom">2. ไปไม่ถึงเป้าหมายที่วางไว้</td>
-                    <td class="radio"><input type="radio" name="stress2" id="stress2" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress2" id="stress2" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress2" id="stress2" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress2" id="stress2" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress2" id="stress2" required value="4"></td>
-                </tr>
-                <tr>
-                    <td class="textcustom">3.ครอบครัวมีความขัดแย้งกันในเรื่องเงินและเรื่องงานในบ้าน
-                    </td>
-                    <td class="radio"><input type="radio" name="stress3" id="stress3" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress3" id="stress3" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress3" id="stress3" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress3" id="stress3" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress3" id="stress3" required value="4"></td>
-
-                </tr>
-                <tr>
-                    <td class="textcustom">4.เป็นกังวลกับเรื่องสารพิษหรือมลภาวะในอากาศ น้ำ เสียง และดิน</td>
-                    <td class="radio"><input type="radio" name="stress4" id="stress4" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress4" id="stress4" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress4" id="stress4" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress4" id="stress4" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress4" id="stress4" required value="4"></td>
-
-                </tr>
-                <tr>
-                    <td class="textcustom">5.รู้สึกว่าต้องแข่งขันหรือเปรียบเทียบ</td>
-                    <td class="radio"><input type="radio" name="stress5" id="stress5" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress5" id="stress5" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress5" id="stress5" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress5" id="stress5" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress5" id="stress5" required value="4"></td>
-
-                </tr>
-                <tr>
-                    <td class="textcustom">6.เงินไม่พอใช้จ่าย</td>
-                    <td class="radio"><input type="radio" name="stress6" id="stress6" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress6" id="stress6" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress6" id="stress6" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress6" id="stress6" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress6" id="stress6" required value="4"></td>
-
-                </tr>
-                <tr>
-                    <td class="textcustom">7.กล้ามเนื้อตึงหรือปวด</td>
-                    <td class="radio"><input type="radio" name="stress7" id="stress7" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress7" id="stress7" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress7" id="stress7" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress7" id="stress7" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress7" id="stress7" required value="4"></td>
-
-                </tr>
-                <tr>
-                    <td class="textcustom">8.ปวดหัวจากความเครียด</td>
-                    <td class="radio"><input type="radio" name="stress8" id="stress8" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress8" id="stress8" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress8" id="stress8" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress8" id="stress8" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress8" id="stress8" required value="4"></td>
-
-                </tr>
-                <tr>
-                    <td class="textcustom">9.ปวดหลัง</td>
-                    <td class="radio"><input type="radio" name="stress9" id="stress9" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress9" id="stress9" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress9" id="stress9" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress9" id="stress9" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress9" id="stress9" required value="4"></td>
-                </tr>
-                <tr>
-                    <td class="textcustom">10.ความอยากอาหารเปลี่ยนแปลง</td>
-                    <td class="radio"><input type="radio" name="stress10" id="stress10" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress10" id="stress10" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress10" id="stress10" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress10" id="stress10" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress10" id="stress10" required value="4"></td>
-                </tr>
-                <tr>
-                    <td class="textcustom">11.ปวดศีรษะข้างเดียว</td>
-                    <td class="radio"><input type="radio" name="stress11" id="stress11" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress11" id="stress11" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress11" id="stress11" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress11" id="stress11" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress11" id="stress11" required value="4"></td>
-                </tr>
-                <tr>
-                    <td class="textcustom">12.รู้สึกวิตกกังวล</td>
-                    <td class="radio"><input type="radio" name="stress12" id="stress12" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress12" id="stress12" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress12" id="stress12" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress12" id="stress12" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress12" id="stress12" required value="4"></td>
-                </tr>
-                <tr>
-                    <td class="textcustom">13.รู้สึกคับข้องใจ</td>
-                    <td class="radio"><input type="radio" name="stress13" id="stress13" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress13" id="stress13" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress13" id="stress13" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress13" id="stress13" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress13" id="stress13" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">14.รู้สึกโกรธ หรือหงุดหงิด</td>
-                    <td class="radio"><input type="radio" name="stress14" id="stress14" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress14" id="stress14" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress14" id="stress14" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress14" id="stress14" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress14" id="stress14" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">15.รู้สึกเศร้า</td>
-                    <td class="radio"><input type="radio" name="stress15" id="stress15" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress15" id="stress15" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress15" id="stress15" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress15" id="stress15" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress15" id="stress15" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">16.ความจำไม่ดี</td>
-                    <td class="radio"><input type="radio" name="stress16" id="stress16" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress16" id="stress16" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress16" id="stress16" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress16" id="stress16" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress16" id="stress16" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">17.รู้สึกสับสน</td>
-                    <td class="radio"><input type="radio" name="stress17" id="stress17" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress17" id="stress17" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress17" id="stress17" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress17" id="stress17" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress17" id="stress17" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">18.ตั้งสมาธิลำบาก</td>
-                    <td class="radio"><input type="radio" name="stress18" id="stress18" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress18" id="stress18" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress18" id="stress18" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress18" id="stress18" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress18" id="stress18" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">19.รู้สึกเหนื่อยง่าย</td>
-                    <td class="radio"><input type="radio" name="stress19" id="stress19" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress19" id="stress19" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress19" id="stress19" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress19" id="stress19" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress19" id="stress19" required value="4"></td>
-                </tr>
-
-                <tr>
-                    <td class="textcustom">20.เป็นหวัดบ่อย</td>
-                    <td class="radio"><input type="radio" name="stress20" id="stress20" required value="0"></td>
-                    <td class="radio"><input type="radio" name="stress20" id="stress20" required value="1"></td>
-                    <td class="radio"><input type="radio" name="stress20" id="stress20" required value="2"></td>
-                    <td class="radio"><input type="radio" name="stress20" id="stress20" required value="3"></td>
-                    <td class="radio"><input type="radio" name="stress20" id="stress20" required value="4"></td>
-                </tr>
-            </table>
-            </div>
+              <p><mark>มากที่สุด</mark> หมายถึง เคยมีเหตุการณ์ อาการ ความรู้สึกในเรื่องนั้นๆมากที่สุด
+                  หรือเห็นด้วยกับเรื่องนั้นๆมากที่สุด</p>
+              <form>
+                  <table id="customers">
+                      <tr>
+                          <th rowspan="2">คำถาม</th>
+                          <th colspan="4">คะแนน</th>
+                      </tr>
+                      <tr>
+                          <th>ไม่เลย</th>
+                          <th>เล็กน้อย</th>
+                          <th>มาก</th>
+                          <th>มากที่สุด</th>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">1. ท่านรู้สึกว่าชิวิตของท่านมีความสุข</td>
+                          <td class="radio"><input type="radio" name="happy1" id="happy1" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy1" id="happy1" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy1" id="happy1" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy1" id="happy1" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">2. ท่านรู้สึกภูมิใจในตนเอง</td>
+                          <td class="radio"><input type="radio" name="happy2" id="happy2" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy2" id="happy2" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy2" id="happy2" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy2" id="happy2" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">3.ท่านต้องไปรับการรักษาพยาบาลเสมอๆ เพื่อให้สามารถดำเนินชีวิตและทำงานได้
+                          </td>
+                          <td class="radio"><input type="radio" name="happy3" id="happy3" required value="3"></td>
+                          <td class="radio"><input type="radio" name="happy3" id="happy3" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy3" id="happy3" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy3" id="happy3" required value="0"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">4.ท่านพึงพอใจในรูปร่างหน้าตาของท่าน</td>
+                          <td class="radio"><input type="radio" name="happy4" id="happy4" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy4" id="happy4" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy4" id="happy4" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy4" id="happy4" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">5.ท่านมีสัมพันธภาพที่ดีกับเพื่อนบ้าน</td>
+                          <td class="radio"><input type="radio" name="happy5" id="happy5" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy5" id="happy5" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy5" id="happy5" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy5" id="happy5" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">6.ท่านรู้สึกประสบคามสำเร็จและความก้าวหน้าในชีวิต </td>
+                          <td class="radio"><input type="radio" name="happy6" id="happy6" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy6" id="happy6" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy6" id="happy6" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy6" id="happy6" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">7.ท่านมั่นใจที่จะเผชิญกับเหตุการณ์ร้ายแรงที่เกิดขึ้นในชีวิต </td>
+                          <td class="radio"><input type="radio" name="happy7" id="happy7" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy7" id="happy7" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy7" id="happy7" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy7" id="happy7" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">8.ถ้าสิ่งต่างๆ ไม่เป็นไปตามที่คาดหวัง ท่านจะรู้สึกหงุดหงิด </td>
+                          <td class="radio"><input type="radio" name="happy8" id="happy8" required value="3"></td>
+                          <td class="radio"><input type="radio" name="happy8" id="happy8" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy8" id="happy8" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy8" id="happy8" required value="0"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">9.ท่านสามารถปฏิบัติกิจวัตรประจำวันต่างๆ ได้ด้วยตนเอง </td>
+                          <td class="radio"><input type="radio" name="happy9" id="happy9" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy9" id="happy9" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy9" id="happy9" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy9" id="happy9" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">10.ท่านรู้สึกเป็นสุขในการช่วยเหลือผู้อื่นที่มีปัญหา </td>
+                          <td class="radio"><input type="radio" name="happy10" id="happy10" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy10" id="happy10" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy10" id="happy10" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy10" id="happy10" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">11.ท่านมีความสุขกับการริเริ่มงานใหม่ๆ และมุ่งมั่นที่จะทำให้สำเร็จ </td>
+                          <td class="radio"><input type="radio" name="happy11" id="happy11" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy11" id="happy11" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy11" id="happy11" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy11" id="happy11" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">12.ท่านรู้สึกว่าชวิตของท่านไร้ค่า ไม่มีประโยชน์ </td>
+                          <td class="radio"><input type="radio" name="happy12" id="happy12" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy12" id="happy12" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy12" id="happy12" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy12" id="happy12" required value="3"></td>
+                      </tr>
+                      <tr>
+                          <td class="textcustom">13.ท่านมีเพื่อนหรือญาติพี่น้องคอยช่วยเหลือท่านในยามที่ท่านต้องการ </td>
+                          <td class="radio"><input type="radio" name="happy13" id="happy13" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy13" id="happy13" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy13" id="happy13" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy13" id="happy13" required value="3"></td>
+                      </tr>
+  
+                      <tr>
+                          <td class="textcustom">14.ท่านมั่นใจว่าชุมชนที่ท่านอาศัยอยู่มีความปลอดภัยต่อท่าน </td>
+                          <td class="radio"><input type="radio" name="happy14" id="happy14" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy14" id="happy14" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy14" id="happy14" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy14" id="happy14" required value="3"></td>
+                      </tr>
+  
+                      <tr>
+                          <td class="textcustom">15.ท่านมีโอกาสได้พักผ่อนคลายเครียด </td>
+                          <td class="radio"><input type="radio" name="happy15" id="happy15" required value="0"></td>
+                          <td class="radio"><input type="radio" name="happy15" id="happy15" required value="1"></td>
+                          <td class="radio"><input type="radio" name="happy15" id="happy15" required value="2"></td>
+                          <td class="radio"><input type="radio" name="happy15" id="happy15" required value="3"></td>
+                      </tr>
+  
+  
+                  </table>
+                  </br>
+                  <div class="row">
+                      <div class="col-6">
+                          <a class="btn btn-outline-primary " href="./index.html" style="width: 100%;">
+                              ย้อนกลับ</a>
+                      </div>
+                      <div class="col-6 ">
+                          <input id="postSubmit" type="submit" value="บันทึก" class="btn btn-primary"
+                              style="width: 100%;">
+                      </div>
+                  </div>
+          </div>
 
 
 
