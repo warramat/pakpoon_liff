@@ -110,6 +110,7 @@ async function prepareData() {
     year: $('#year').val(),
     time: $('#time').val(),
     topic: myParam,
+    userID: await getUID(),
     img: img,
     gps: {
       lat: lat,
