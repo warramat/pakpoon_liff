@@ -90,7 +90,7 @@ $('form').submit((e) => {
       };
       fetch(
         // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-        'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappointment',
+        'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
         requestOptions
       )
         .then(() => {
