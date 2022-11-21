@@ -221,89 +221,15 @@
           <div class="card-body ">
               <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
                   คะแนนรวมของคุณ <span id="happyScore"></span> ${sum} คะแนน</h3>
-              <form>
                   <table id="customers">
                       <tr>
                           <th>คะแนนรวม</th>
                           <th>การแปรผล</th>
                       </tr>
-                      <tr>
-                          <td class="radio">33 - 45 คะแนน</td>
-                          <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">27 - 32 คะแนน</td>
-                          <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
-                          <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
-  
-                      </tr>
+                      ${texts[index()]}
                   </table>
                   </br>
           </div>
-
-          <div class="card-body ">
-              <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
-                  คะแนนรวมของคุณ <span id="happyScore"></span> ${sum} คะแนน</h3>
-              <form>
-                  <table id="customers">
-                      <tr>
-                          <th>คะแนนรวม</th>
-                          <th>การแปรผล</th>
-                      </tr>
-                      <tr>
-                          <td class="radio">33 - 45 คะแนน</td>
-                          <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">27 - 32 คะแนน</td>
-                          <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
-                          <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
-  
-                      </tr>
-                  </table>
-                  </br>
-          </div>
-
-
-          <div class="card-body ">
-              <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
-                  คะแนนรวมของคุณ <span id="happyScore"></span> ${sum} คะแนน</h3>
-              <form>
-                  <table id="customers">
-                      <tr>
-                          <th>คะแนนรวม</th>
-                          <th>การแปรผล</th>
-                      </tr>
-                      <tr>
-                          <td class="radio">33 - 45 คะแนน</td>
-                          <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">27 - 32 คะแนน</td>
-                          <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
-                          <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
-  
-                      </tr>
-                  </table>
-                  </br>
-          </div>
-          </form>
-      </div>
       </div>`;
           Swal.fire({
             html: pop,
