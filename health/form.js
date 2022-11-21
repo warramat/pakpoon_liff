@@ -206,12 +206,17 @@ $('#TWH01').submit(function (e) {
           })
           data.BMI = $('#BMI').val();
           data.proportion = proportion;
+          sum = 0;
+          form.forEach((e) => {
+            sum += Number(e.value);
+            sendData[e.name] = e.value;
+          });
         console.log(data ,'data>>>');
         fetch(
           'https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee',
           {
             method: 'POST',
-            body: JSON.stringify(data),
+            body: JSON.stringify(sendData),
             headers: {
               'Content-Type': 'application/json; charset=UTF-8'
             }
