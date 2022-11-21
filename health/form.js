@@ -227,21 +227,22 @@
                           <th>คะแนนรวม</th>
                           <th>การแปรผล</th>
                       </tr>
-                      <tr>
-                          <td class="radio">33 - 45 คะแนน</td>
-                          <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">27 - 32 คะแนน</td>
-                          <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
-  
-                      </tr>
-                      <tr>
-                          <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
-                          <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
-  
-                      </tr>
+                   <tr>
+                      <td class="radio">62 คะแนนขึ้นไป</td>
+                      <td class="radio" style="color: #FF0000;">มีความเครียดในระดับรุนแรง</td>
+                   </tr>
+                  <tr>
+                       <td class="radio">42 - 61 คะแนน</td>
+                        <td class="radio" style="color: #FF6600;">มีความเครียดในระดับสูง</td>
+                  </tr>
+                  <tr>
+                      <td class="radio">24 - 41 คะแนน</td>
+                       <td class="radio" style="color: #0033FF;">มีความเครียดในระดับปานกลาง</td>
+                   </tr>
+                   <tr>
+                         <td class="radio">0 - 23 คะแนน</td>
+                         <td class="radio" style="color: #006600;">มีความเครียดในระดับน้อยและหายไปได้ในระยะเวลาสั้นๆ</td>
+                   </tr>
                   </table>
                   </br>
           </div>
