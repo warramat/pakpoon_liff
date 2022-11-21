@@ -217,6 +217,42 @@
              }
            }
          ).then(async (result) => {
+          let texts = [
+            `<tr>
+            <td class="radio">62 คะแนนขึ้นไป</td>
+            <td class="radio" style="color: #FF0000;">มีความเครียดในระดับรุนแรง</td>
+        </tr>
+        `,
+            `<tr>
+            <td class="radio">42 - 61 คะแนน</td>
+            <td class="radio" style="color: #FF6600;">มีความเครียดในระดับสูง</td>
+        </tr>
+        `,
+  
+            `<tr>
+            <td class="radio">24 - 41 คะแนน</td>
+            <td class="radio" style="color: #0033FF;">มีความเครียดในระดับปานกลาง</td>
+        </tr>`,
+  
+            `<tr>
+            <td class="radio">0 - 23 คะแนน</td>
+            <td class="radio" style="color: #006600;">มีความเครียดในระดับน้อยและหายไปได้ในระยะเวลาสั้นๆ</td>
+        </tr>
+        <pre>ท่านมีความเครียดอยู่ในระดับที่น้อยและหายไปได้ในระยะเวลาสั้นๆ เป็นความเครียดที่เกิดขึ้นได้ในชีวิตประจำวันและสามารถปรับตัวกับสถานการณ์ต่างๆ 
+        ได้อย่างเหมาะสม ความเครียดในระดับนี้ถือว่ามีประโยชน์ในการดำเนินชีวิตประจำวัน เป็นแรงจูงใจในที่นำไปสู่ความสำเร็จในชีวิตได้</pre>
+        `
+          ];
+          let index = () => {
+            if (sum >= 62) {
+              return 0;
+            } else if (sum >= 42) {
+              return 1;
+            } else if (sum >= 24) {
+              return 2;
+            } else {
+              return 3;
+            }
+          };
           let pop = `<div class="card">
           <div class="card-body ">
               <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
@@ -230,6 +266,7 @@
                   </table>
                   </br>
           </div>
+      </div>
       </div>`;
           Swal.fire({
             html: pop,
