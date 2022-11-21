@@ -239,10 +239,7 @@
                       <td class="radio">24 - 41 คะแนน</td>
                        <td class="radio" style="color: #0033FF;">มีความเครียดในระดับปานกลาง</td>
                    </tr>
-                   <tr>
-                         <td class="radio">0 - 23 คะแนน</td>
-                         <td class="radio" style="color: #006600;">มีความเครียดในระดับน้อยและหายไปได้ในระยะเวลาสั้นๆ</td>
-                   </tr>
+          
                   </table>
                   </br>
           </div>
