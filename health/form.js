@@ -248,7 +248,7 @@
               <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
                   คะแนนรวมของคุณ <span id="happyScore"></span> ${sum} คะแนน</h3>
               <form>
-                  <table id="customers1">
+                  <table id="customers">
                       <tr>
                           <th>คะแนนรวม</th>
                           <th>การแปรผล</th>
@@ -277,7 +277,7 @@
               <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
                   คะแนนรวมของคุณ <span id="happyScore"></span> ${sum} คะแนน</h3>
               <form>
-                  <table id="customers2">
+                  <table id="customers">
                       <tr>
                           <th>คะแนนรวม</th>
                           <th>การแปรผล</th>
