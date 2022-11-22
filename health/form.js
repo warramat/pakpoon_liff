@@ -174,16 +174,24 @@ $('#TWH01').submit(function (e) {
   }).then(async (result) => {
     if (result.isConfirmed) {
         let data = {}
+        let sumStrain =0
+        let sumHappy = 0
+        let sumMemory =0
         $('#TWH01')
           .serializeArray().forEach(e => {
             data[e.name] =e.value
           })
-          console.log( $('#TWH01')
-          .serializeArray());
+          for(let i=1;i<=20;i++){
+            sumStrain += data[`Strain${i}`]
+          }
+          for(let i=1;i<=15;i++){
+            sumHappy += data[`happy${i}`]
+          }
+          for(let i=1;i<=14;i++){
+            sumMemory += data[`memory${i}`]
+          }
           data.BMI = $('#BMI').val();
           data.proportion = proportion;
-         
-        console.log(data ,'data>>>');
         fetch(
           'https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee',
           {
@@ -202,7 +210,105 @@ $('#TWH01').submit(function (e) {
             confirmButtonText: 'ตกลง',
             timer: 3000
           }).then((e)=>{
-
+            let pop = `<div class="card">
+            <div class="card-body ">
+                <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                    คะแนนรวมของคุณ  ${sumStrain} คะแนน</h3>
+    
+                    <table id="customers">
+                        <tr>
+                            <th>คะแนนรวม</th>
+                            <th>การแปรผล</th>
+                        </tr>
+                        <tr>
+                            <td class="radio">33 - 45 คะแนน</td>
+                            <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
+    
+                        </tr>
+                        <tr>
+                            <td class="radio">27 - 32 คะแนน</td>
+                            <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
+    
+                        </tr>
+                        <tr>
+                            <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
+                            <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
+    
+                        </tr>
+                    </table>
+                    </br>
+            </div>
+        </div>
+        </div>
+        <br>
+        <div class="card">
+            <div class="card-body ">
+                <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                    คะแนนรวมของคุณ  ${sumHappy} คะแนน</h3>
+    
+                    <table id="customers">
+                        <tr>
+                            <th>คะแนนรวม</th>
+                            <th>การแปรผล</th>
+                        </tr>
+                        <tr>
+                            <td class="radio">33 - 45 คะแนน</td>
+                            <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
+    
+                        </tr>
+                        <tr>
+                            <td class="radio">27 - 32 คะแนน</td>
+                            <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
+    
+                        </tr>
+                        <tr>
+                            <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
+                            <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
+    
+                        </tr>
+                    </table>
+                    </br>
+            </div>
+        </div>
+        </div>
+    
+        <br>
+        <div class="card">
+            <div class="card-body ">
+                <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                    คะแนนรวมของคุณ  ${sumMemory} คะแนน</h3>
+    
+                    <table id="customers">
+                        <tr>
+                            <th>คะแนนรวม</th>
+                            <th>การแปรผล</th>
+                        </tr>
+                        <tr>
+                            <td class="radio">33 - 45 คะแนน</td>
+                            <td class="radio" style="color: #006600;">มีความสุขมากกว่าคนทั่วไป (good)</td>
+    
+                        </tr>
+                        <tr>
+                            <td class="radio">27 - 32 คะแนน</td>
+                            <td class="radio" style="color: #0033FF;">มีความสุขเท่ากับคนทั่วไป (fair)</td>
+    
+                        </tr>
+                        <tr>
+                            <td class="radio">26 คะแนน หรือน้อยกว่านั้น</td>
+                            <td class="radio" style="color: #FF0000;">มีความสุขน้อยกว่าคนทั่วไป (poor)</td>
+    
+                        </tr>
+                    </table>
+                    </br>
+            </div>
+        </div>
+        </div>`;
+            Swal.fire({
+              html: pop,
+              showDenyButton: false,
+              showCancelButton: false,
+              confirmButtonText: 'ตกลง'
+            })
           })
         });
       }  
