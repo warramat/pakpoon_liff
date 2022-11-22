@@ -178,6 +178,8 @@ $('#TWH01').submit(function (e) {
           .serializeArray().forEach(e => {
             data[e.name] =e.value
           })
+          console.log( $('#TWH01')
+          .serializeArray());
           data.BMI = $('#BMI').val();
           data.proportion = proportion;
          
@@ -199,6 +201,8 @@ $('#TWH01').submit(function (e) {
             showCancelButton: false,
             confirmButtonText: 'ตกลง',
             timer: 3000
+          }).then((e)=>{
+
           })
         });
       }  
