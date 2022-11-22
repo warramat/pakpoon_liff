@@ -199,7 +199,14 @@ $('#TWH01').submit(function (e) {
             showCancelButton: false,
             confirmButtonText: 'ตกลง',
             timer: 3000
-          })
+          }).then(async (result) => {
+            Swal.fire({
+              html: pop,
+              showDenyButton: false,
+              showCancelButton: false,
+              confirmButtonText: 'ตกลง'
+            }).then(() => (window.location = './index.html'));
+          });
         });
       }  
 })
