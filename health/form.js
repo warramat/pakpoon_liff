@@ -180,7 +180,7 @@ $('#TWH01').submit(function (e) {
         let sumMemory =0
         $('#TWH01')
           .serializeArray().forEach(e => {
-            if(isNumber.find(e.name)){
+            if(isNumber.find(k=> k==e.name)){
               data[e.name] = Number(e.value)
             }else{
               data[e.name] =e.value
