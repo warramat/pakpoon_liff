@@ -189,7 +189,7 @@ $('#TWH01').submit(function (e) {
         fetch(
           'https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee',
           {
-            method: 'PUT',
+            method: 'POST',
             body: JSON.stringify(sendData),
             headers: {
               'Content-Type': 'application/json; charset=UTF-8'
