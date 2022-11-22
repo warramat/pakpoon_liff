@@ -182,13 +182,13 @@ $('#TWH01').submit(function (e) {
             data[e.name] =e.value
           })
           for(let i=1;i<=20;i++){
-            sumStrain += data[`Strain${i}`]
+            sumStrain += Number(data[`Strain${i}`])
           }
           for(let i=1;i<=15;i++){
-            sumHappy += data[`happy${i}`]
+            sumHappy += Number(data[`happy${i}`])
           }
           for(let i=1;i<=14;i++){
-            sumMemory += data[`memory${i}`]
+            sumMemory += Number(data[`memory${i}`])
           }
           data.BMI = $('#BMI').val();
           data.proportion = proportion;
