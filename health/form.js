@@ -308,6 +308,8 @@ $('#TWH01').submit(function (e) {
               showDenyButton: false,
               showCancelButton: false,
               confirmButtonText: 'ตกลง'
+            }).then(e=>{
+              location.reload()
             })
           })
         });
