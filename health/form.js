@@ -163,6 +163,7 @@ function set() {
 
 
 $('#TWH01').submit(function (e) {
+  let isNumber =['age']
   e.preventDefault();
   Swal.fire({
     icon: 'question',
@@ -179,7 +180,12 @@ $('#TWH01').submit(function (e) {
         let sumMemory =0
         $('#TWH01')
           .serializeArray().forEach(e => {
-            data[e.name] =e.value
+            if(isNumber.find(e.name)){
+              data[e.name] = Number(e.value)
+            }else{
+              data[e.name] =e.value
+            }
+            
           })
           for(let i=1;i<=20;i++){
             sumStrain += Number(data[`Strain${i}`])
@@ -190,7 +196,10 @@ $('#TWH01').submit(function (e) {
           for(let i=1;i<=14;i++){
             sumMemory += Number(data[`memory${i}`])
           }
-          data.BMI = $('#BMI').val();
+          data.BMI = Number ($('#BMI').val());
+          data.sumStrain =sumStrain
+          data.sumHappy = sumHappy
+          data.sumMemory = sumMemory
           data.proportion = proportion;
         fetch(
           'https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee',
