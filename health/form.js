@@ -193,9 +193,9 @@ $("#TWH01").submit(function (e) {
         sumMemory += Number(data[`memory${i}`]);
       }
       data.BMI = Number($("#BMI").val());
-      data.sumStrain = sumStrain;
-      data.sumHappy = sumHappy;
-      data.sumMemory = sumMemory;
+      // data.sumStrain = sumStrain;
+      // data.sumHappy = sumHappy;
+      // data.sumMemory = sumMemory;
       data.proportion = proportion;
       fetch(
         "https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee",
