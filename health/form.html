@@ -180,7 +180,6 @@
         >
           <div class="form-group">
             <h5>ส่วนที่ 1 ข้อมูลทั่วไป</h5>
-
             <label for="affiliation">สังกัด</label>
             <select
               id="affiliation"
@@ -215,7 +214,7 @@
               aria-label="default input example"
             />
             <br />
-            <label for="division">กอง</label>
+            <!-- <label for="division">กอง</label>
             <input
               id="division"
               name="division"
@@ -224,7 +223,27 @@
               placeholder="กรุณากรอก"
               
               aria-label="default input example"
-            />
+            /> -->
+            <div class="form-group">
+              <label for="prefix">กอง</label>
+              <select
+                id="division"
+                name="division"
+                class="form-select"
+                
+              >
+                <option value="" selected disabled hidden>กรุณาเลือกกอง</option>
+                <option value="กองการศึกษา">กองการศึกษา</option>
+                <option value="กองคลัง">กองคลัง</option>
+                <option value="กองช่าง">กองช่าง</option>
+                <option value="กองประปา">กองประปา</option>
+                <option value="กองสวัสดิการสังคม">กองสวัสดิการสังคม</option>
+                <option value="คณะผู้บริหาร">คณะผู้บริหาร</option>
+                <option value="ตรวจสอบภายใน">ตรวจสอบภายใน</option>
+                <option value="สาธารณสุขและสิ่งแวดล้อม">สาธารณสุขและสิ่งแวดล้อม</option>
+                <option value="สำนักปลัดเทศบาล">สำนักปลัดเทศบาล</option>
+              </select>
+            </div>
             <br />
             <label for="cotton">ฝ่าย</label>
             <input
