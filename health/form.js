@@ -217,7 +217,7 @@ $("#TWH01").submit(function (e) {
         }).then((e) => {
           let pop = `<div class="card">
                         <div class="card-body ">
-                            <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                            <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                 คะแนนความเครียด ${sumStrain} คะแนน</h3>
                                 <table id="customers">
                                     <tr>
@@ -246,7 +246,7 @@ $("#TWH01").submit(function (e) {
              
                       <div class="card">
                           <div class="card-body">
-                              <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                              <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                   คะแนนความสุข  ${sumHappy} คะแนน</h3>
                                   <table id="customers">
                                       <tr>
@@ -271,7 +271,7 @@ $("#TWH01").submit(function (e) {
                
                       <div class="card">
                         <div class="card-body">
-                            <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
+                            <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                 คะแนนความจำ  ${sumMemory} คะแนน</h3>
                                 <table id="customers">
                                     <tr>
