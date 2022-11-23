@@ -243,7 +243,7 @@ $("#TWH01").submit(function (e) {
                                 </table>
                         </div>
                      </div>
-                <br>
+             
                       <div class="card">
                           <div class="card-body">
                               <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
@@ -268,7 +268,7 @@ $("#TWH01").submit(function (e) {
                                   </table>
                           </div>
                       </div>
-                 <br>
+               
                       <div class="card">
                         <div class="card-body">
                             <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
@@ -279,20 +279,20 @@ $("#TWH01").submit(function (e) {
                                         <th>การแปรผล</th>
                                     </tr>
                                     <tr>
-                                        <td class="radio">40 - 56 คะแนน</td>
-                                        <td class="radio" style="color: #FF0000;">สมมรถภาพทางสมองต่ำ ควรพบแพทย์</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="radio">30 - 39 คะแนน</td>
-                                        <td class="radio" style="color: #ffcc00 ;">สมมรถภาพทางสมองอยู่ในระดับค่อนข้างต่ำ ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
+                                        <td class="radio">14 - 19 คะแนน</td>
+                                        <td class="radio" style="color: #006600;">สมมรถภาพทางสมองอยู่ในระดับดีมาก</td>
                                     </tr>
                                     <tr>
                                         <td class="radio">20 - 29 คะแนน</td>
                                         <td class="radio" style="color: #0033FF;">สมมรถภาพทางสมองอยู่ในระดับฑ์ปานกลาง ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
                                     </tr>
                                     <tr>
-                                        <td class="radio">14 - 19 คะแนน</td>
-                                        <td class="radio" style="color: #006600;">สมมรถภาพทางสมองอยู่ในระดับดีมาก</td>
+                                        <td class="radio">30 - 39 คะแนน</td>
+                                        <td class="radio" style="color: #ffcc00 ;">สมมรถภาพทางสมองอยู่ในระดับค่อนข้างต่ำ ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="radio">40 - 56 คะแนน</td>
+                                        <td class="radio" style="color: #FF0000;">สมมรถภาพทางสมองต่ำ ควรพบแพทย์</td>
                                     </tr>
                                 </table>
                         </div>
