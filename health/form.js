@@ -219,7 +219,6 @@ $("#TWH01").submit(function (e) {
                         <div class="card-body ">
                             <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
                                 คะแนนความเครียด ${sumStrain} คะแนน</h3>
-                
                                 <table id="customers">
                                     <tr>
                                         <th>คะแนนรวม</th>
@@ -274,7 +273,6 @@ $("#TWH01").submit(function (e) {
                         <div class="card-body">
                             <h3 class="d-flex align-items-center" style="color: blue; margin-top: 2rem; flex-direction: column;">
                                 คะแนนความจำ  ${sumMemory} คะแนน</h3>
-                
                                 <table id="customers">
                                     <tr>
                                         <th>คะแนนรวม</th>
