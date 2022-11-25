@@ -40,7 +40,7 @@ function getcolor(BMI) {
 window.onload = async () => {
   const UID = await getUID();
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/health/find/data?userID=' + UID
+    'https://smartcity.onrender.com/health/find/data?userID=' + UID
   );
   let html = '';
   data = await data.json();

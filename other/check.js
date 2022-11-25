@@ -26,7 +26,7 @@ window.onload = async () => {
   const UID = await getUID();
   console.log(UID);
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/protest/find/data/?userID=' +
+    'https://smartcity.onrender.com/protest/find/data/?userID=' +
       UID
   );
   let html = '';

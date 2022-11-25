@@ -55,7 +55,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const myParam = urlParams.get('topic');
     let data = await fetch(
-      'https://smartcity-pakpoon-api.herokuapp.com/apply/search?topic=' + myParam
+      'https://smartcity.onrender.com/apply/search?topic=' + myParam
     );
     data = await data.json();
     let html = '';
@@ -90,7 +90,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
         };
         fetch(
           // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-          'https://smartcity-pakpoon-api.herokuapp.com/appeal/addappeal',
+          'https://smartcity.onrender.com/appeal/addappeal',
           requestOptions
         )
           .then(() => {

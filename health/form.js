@@ -198,7 +198,7 @@ $("#TWH01").submit(function (e) {
       // data.sumMemory = sumMemory;
       data.proportion = proportion;
       fetch(
-        "https://smartcity-pakpoon-api.herokuapp.com/employee/addeemployee",
+        "https://smartcity.onrender.com/employee/addeemployee",
         {
           method: "POST",
           body: JSON.stringify(data),

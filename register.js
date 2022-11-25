@@ -149,7 +149,7 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        'https://smartcity-pakpoon-api.herokuapp.com/userSmart/Creuser',
+        'https://smartcity.onrender.com/userSmart/Creuser',
         requestOptions
       ).then(() => {
         Swal.fire('แจ้งเรื่องสำเร็จ', '', 'success')

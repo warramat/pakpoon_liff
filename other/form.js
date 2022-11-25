@@ -28,7 +28,7 @@ $(document).ready(async () => {
     redirect: 'follow'
   };
   let data = await fetch(
-    'https://smartcity-pakpoon-api.herokuapp.com/petition/search?topic=',
+    'https://smartcity.onrender.com/petition/search?topic=',
     requestOptions
   );
   data = await data.json();
@@ -64,7 +64,7 @@ $('form').submit((e) => {
       };
       fetch(
         // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
-        'https://smartcity-pakpoon-api.herokuapp.com/protest/addprotest',
+        'https://smartcity.onrender.com/protest/addprotest',
         requestOptions
       )
         .then(() => {

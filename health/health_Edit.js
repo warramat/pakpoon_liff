@@ -185,7 +185,7 @@ $('form').submit(function (e) {
         }
         console.log(data);
         fetch(
-          'https://smartcity-pakpoon-api.herokuapp.com/disease/adddisease',
+          'https://smartcity.onrender.com/disease/adddisease',
           {
             method: 'PUT',
             body: JSON.stringify(data),
@@ -240,7 +240,7 @@ async function load() {
   const UID = await getUID();
   const data = await (
     await fetch(
-      'https://smartcity-pakpoon-api.herokuapp.com/disease/find/data?userID=' +
+      'https://smartcity.onrender.com/disease/find/data?userID=' +
         UID
     )
   ).json();
