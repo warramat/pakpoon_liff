@@ -235,7 +235,7 @@ $("#TWH01").submit(function (e) {
                                     <tr>
                                         <td class="radio">42 - 61 คะแนน</td>
                                         <td class="radio" style="color: #FF6600;">มีความเครียดในระดับสูง</td>
-                                  </tr>
+                                  </tr>1
                                     <tr>
                                         <td class="radio">62 คะแนนขึ้นไป</td>
                                         <td class="radio" style="color: #FF0000;">มีความเครียดในระดับรุนแรง</td>
@@ -289,7 +289,7 @@ $("#TWH01").submit(function (e) {
                                     <tr>
                                         <td class="radio">30 - 39 คะแนน</td>
                                         <td class="radio" style="color: #ffcc00 ;">สมมรถภาพทางสมองอยู่ในระดับค่อนข้างต่ำ ควรเข้ารับคำแนะนำเพื่อเพิ่มสมรรถภาพทางสมอง</td>
-                                    </tr>
+                                    </tr>311
                                     <tr>
                                         <td class="radio">40 - 56 คะแนน</td>
                                         <td class="radio" style="color: #FF0000;">สมมรถภาพทางสมองต่ำ ควรพบแพทย์</td>
