@@ -67496,7 +67496,7 @@ const thailand = [
     let subDistricts =[]
     thailand.forEach(e=>{
         if(province === e.province && district === e.amphoe){
-            subDistrict.push(e.district)
+            subDistricts.push(e.district)
         }
     })
     return [...new Set(subDistricts)]
