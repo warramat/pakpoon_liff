@@ -67474,7 +67474,7 @@ const thailand = [
     }
 ]
 
-async function getProvinces() {
+ function getProvinces() {
     let provinces =[]
     thailand.forEach(e=>{
         provinces.push(e.province)
@@ -67482,7 +67482,7 @@ async function getProvinces() {
     return [...new Set(provinces)]
 }
 
-async function getDistrict(province) {
+ function getDistrict(province) {
     let districts =[]
     thailand.forEach(e=>{
         if(province === e.province){
@@ -67492,7 +67492,7 @@ async function getDistrict(province) {
     return [...new Set(districts)]
 }
 
-async function getSubDistrict(province, district) {
+ function getSubDistrict(province, district) {
     let subDistricts =[]
     thailand.forEach(e=>{
         if(province === e.province && district === e.amphoe){
@@ -67503,7 +67503,7 @@ async function getSubDistrict(province, district) {
 }
 
 
-async function getZipcode(province, district) {
+ function getZipcode(province, district) {
     let zipcodes = []
     thailand.forEach(e=>{
         if(province === e.province && district === e.amphoe){
