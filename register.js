@@ -152,8 +152,9 @@ $('form').submit((e) => {
         'https://smartcity.onrender.com/userSmart/Creuser',
         requestOptions
       ).then(() => {
-        Swal.fire('[บันทึกข้อมูลสำเร็จ', '', 'success')
+        Swal.fire('บันทึกข้อมูลสำเร็จ', '', 'success')
           .then(() => {
+            console.log(liff.getOS());
             if (liff.getOS() === 'web') {
               window.location = './index.html';
             } else {
