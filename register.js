@@ -129,7 +129,11 @@ $('form').submit((e) => {
             if (liff.getOS() === 'web') {
               window.location = './index.html';
             } else {
-              liff.closeWindow();
+              if(!liff.isInClient()){
+                window.location = './index.html';
+              }else{
+                liff.closeWindow();
+              }
             }
           })
           .catch((e) => {
