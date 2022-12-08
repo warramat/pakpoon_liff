@@ -67479,7 +67479,7 @@ async function getProvinces() {
     thailand.forEach(e=>{
         provinces.push(e.province)
     })
-    return provinces
+    return [...new Set(provinces)]
 }
 
 async function getDistrict(province) {
@@ -67489,7 +67489,7 @@ async function getDistrict(province) {
             districts.push(e.amphoe)
         }
     })
-    return districts
+    return [...new Set(districts)]
 }
 
 async function getSubDistrict(province, district) {
@@ -67499,7 +67499,7 @@ async function getSubDistrict(province, district) {
             subDistrict.push(e.district)
         }
     })
-    return subDistricts
+    return [...new Set(subDistricts)]
 }
 
 
@@ -67510,6 +67510,6 @@ async function getZipcode(province, district) {
             zipcodes.push(e.zipcode) 
         }
     })
-    return zipcodes
+    return [...new Set(zipcodes)]
 }
 
