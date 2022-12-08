@@ -22,30 +22,7 @@ async function getUID() {
   return uid;
 }
 
-var ThaiAPI = 'https://thaiaddressapi-thaikub.herokuapp.com/v1/';
-async function getProvinces() {
-  let data = await fetch(`${ThaiAPI}thailand/provinces`);
-  return await data.json();
-}
 
-async function getDistrict(provinces) {
-  let data = await fetch(`${ThaiAPI}thailand/provinces/${provinces}/district`);
-  return await data.json();
-}
-
-async function getSubDistrict(provinces, district) {
-  let data = await fetch(
-    `${ThaiAPI}thailand/provinces/${provinces}/district/${district}`
-  );
-  return await data.json();
-}
-
-async function getZipcode(provinces, district) {
-  let data = await fetch(
-    `https://worraphon-services.000webhostapp.com/Thailandzipcode/?district=${district}&provice=${provinces}`
-  );
-  return await data.json();
-}
 
 function makeList(id, data, clear = true) {
   let html = '';
@@ -69,23 +46,19 @@ $(document).ready(async () => {
     window.location = './index.html';
   }
 
-  let provinces = await getProvinces();
-  provinces = provinces.data.map(({ province }) => province);
+  let provinces = getProvinces();
   makeList('province', provinces, false);
 });
 
 /***************************************** */
 $('#province').change(async () => {
-  let district = await getDistrict($('#province').val());
-  district = district.data;
+  let district =  getDistrict($('#province').val());
   makeList('district', district);
-  let subDistrict = await getSubDistrict(
+  let subDistrict = getSubDistrict(
     $('#province').val(),
     $('#district').val()
   );
-  let zipcode = await getZipcode($('#province').val(), $('#district').val());
-  subDistrict = subDistrict.data;
-  zipcode = zipcode.zipcode;
+  let zipcode =  getZipcode($('#province').val(), $('#district').val());
   makeList('subdistrict', subDistrict);
   makeList('zipcode', zipcode);
   $('#district').prop('disabled', false);
@@ -94,13 +67,11 @@ $('#province').change(async () => {
 });
 
 $('#district').change(async () => {
-  let subDistrict = await getSubDistrict(
+  let subDistrict = getSubDistrict(
     $('#province').val(),
     $('#district').val()
   );
-  let zipcode = await getZipcode($('#province').val(), $('#district').val());
-  subDistrict = subDistrict.data;
-  zipcode = zipcode.zipcode;
+  let zipcode =  getZipcode($('#province').val(), $('#district').val());
   makeList('zipcode', zipcode);
   makeList('subdistrict', subDistrict);
 });
