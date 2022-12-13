@@ -87,7 +87,6 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         'https://smartcity.onrender.com/appeal/addappeal',
         requestOptions
       )

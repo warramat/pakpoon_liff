@@ -26,7 +26,6 @@ async function getUID() {
   return uid;
 }
 
-
 function loadFile(event) {
   let reader = new FileReader();
   reader.onload = function () {
@@ -89,7 +88,6 @@ $('form').submit((e) => {
         redirect: 'follow'
       };
       fetch(
-        // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
         'https://smartcity.onrender.com/appeal/addappeal',
         requestOptions
       )

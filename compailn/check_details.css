@@ -38,11 +38,11 @@ a {
     color: orange;
 }
 
-.star{
+.star {
     flex-direction: row;
     margin-right: -0.5rem;
 }
 
-textarea{
+textarea {
     min-width: 100%;
 }

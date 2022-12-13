@@ -26,7 +26,6 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
     return uid;
   }
   
-  
   function loadFile(event) {
     let reader = new FileReader();
     reader.onload = function () {
@@ -89,7 +88,6 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
           redirect: 'follow'
         };
         fetch(
-          // 'https://smartcity-pakpoon.herokuapp.com/appeal/addappeal',
           'https://smartcity.onrender.com/appeal/addappeal',
           requestOptions
         )

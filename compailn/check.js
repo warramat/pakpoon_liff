@@ -51,7 +51,6 @@ window.onload = async () => {
           <h4>สถานะ :<span style="color:${
             item.status === 'รอตรวจสอบ' ? 'skyblue' : 'pink'
           }";>${item.status}</span></h4>
-        
         </div>
         </div>
         <br>
