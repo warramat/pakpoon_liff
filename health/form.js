@@ -276,7 +276,7 @@ $("#TWH01").submit(function (e) {
                                 <table id="customers">
                                     <tr>
                                         <th>คะแนนรวม</th>
-                                        <th>การแปรผล</th>
+                                        <th>การแปรผล</th> 
                                     </tr>
                                     <tr>
                                         <td class="radio">14 - 19 คะแนน</td>
