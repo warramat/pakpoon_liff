@@ -1,7 +1,7 @@
 liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
   if (!liff.isLoggedIn()) {
     liff.login({
-      redirectUri: 'https://tapp-smartcity.netlify.app/register.html'
+      redirectUri: 'https://grand-begonia-c4bb96.netlify.app/register.html'
     });
   } else if (await checkUser(await getUID())) {
     window.location = './index.html';

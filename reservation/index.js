@@ -4,7 +4,7 @@ liff.init({ liffId: '1656902981-0g1VVnpN' }).then(async () => {
    if (!liff.isLoggedIn()) {
      liff.login({
        redirectUri:
-         'https://tapp-smartcity.netlify.app/reservation/index.html?topic=' +
+         'https://grand-begonia-c4bb96.netlify.app/reservation/index.html?topic=' +
          myParam
      });
    } else if (!(await checkUser(await getUID()))) {
@@ -130,7 +130,7 @@ $('#take_image').click(async () => {});
 //   if (!liff.isLoggedIn()) {
 //     liff.login({
 //       redirectUri:
-//         'https://tapp-smartcity.netlify.app/compailn/appointment.html?topic=' +
+//         'https://grand-begonia-c4bb96.netlify.app/compailn/appointment.html?topic=' +
 //         myParam
 //     });
 //   } else if (!(await checkUser(await getUID()))) {
