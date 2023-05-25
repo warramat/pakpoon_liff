@@ -164,16 +164,16 @@
         for (let i = 1; i <= 15; i++) {
             sumIdentity += Number(data[`identity${i}`]);
         }
-        for (let i = 1; i <= 23; i++) {
+        for (let i = 1; i <= 8; i++) {
             sumFamily += Number(data[`family${i}`]);
         }
-        for (let i = 1; i <= 34; i++) {
+        for (let i = 1; i <= 11; i++) {
             sumIntellect += Number(data[`intellect${i}`]);
         }
-        for (let i = 1; i <= 40; i++) {
+        for (let i = 1; i <= 6; i++) {
             sumFriend += Number(data[`friend${i}`]);
         }
-        for (let i = 1; i <= 48; i++) {
+        for (let i = 1; i <= 8; i++) {
             sumCommunity += Number(data[`community${i}`]);
         }
         // data.BMI = Number($("#BMI").val());
