@@ -109,30 +109,30 @@
 //     }
 //   });
   
-  function set() {
-    const BMI = $("#BMI").val();
-    if (BMI < 18.5) {
-      $("#proportion").val("น้ำหนักต่ำกว่าเกณฑ์");
-      proportion = "น้ำหนักต่ำกว่าเกณฑ์";
-      $("#proportion").css("color", "lime");
-    } else if (BMI >= 18.5 && BMI < 22.9) {
-      $("#proportion").val("สมส่วน");
-      proportion = "สมส่วน";
-      $("#proportion").css("color", "green");
-    } else if (BMI >= 23 && BMI < 24.9) {
-      $("#proportion").val("ท้วม");
-      proportion = "ท้วม";
-      $("#proportion").css("color", "yellow");
-    } else if (BMI >= 25 && BMI < 29.9) {
-      $("#proportion").val("โรคอ้วน");
-      proportion = "โรคอ้วน";
-      $("#proportion").css("color", "orange");
-    } else if (BMI > 30) {
-      $("#proportion").val("โรคอ้วนอันตราย");
-      proportion = "โรคอ้วนอันตราย";
-      $("#proportion").css("color", "red");
-    }
-  }
+//   function set() {
+//     const BMI = $("#BMI").val();
+//     if (BMI < 18.5) {
+//       $("#proportion").val("น้ำหนักต่ำกว่าเกณฑ์");
+//       proportion = "น้ำหนักต่ำกว่าเกณฑ์";
+//       $("#proportion").css("color", "lime");
+//     } else if (BMI >= 18.5 && BMI < 22.9) {
+//       $("#proportion").val("สมส่วน");
+//       proportion = "สมส่วน";
+//       $("#proportion").css("color", "green");
+//     } else if (BMI >= 23 && BMI < 24.9) {
+//       $("#proportion").val("ท้วม");
+//       proportion = "ท้วม";
+//       $("#proportion").css("color", "yellow");
+//     } else if (BMI >= 25 && BMI < 29.9) {
+//       $("#proportion").val("โรคอ้วน");
+//       proportion = "โรคอ้วน";
+//       $("#proportion").css("color", "orange");
+//     } else if (BMI > 30) {
+//       $("#proportion").val("โรคอ้วนอันตราย");
+//       proportion = "โรคอ้วนอันตราย";
+//       $("#proportion").css("color", "red");
+//     }
+//   }
   
   $("#TWH01").submit(function (e) {
     let isNumber = ["age"];
@@ -176,7 +176,7 @@
         for (let i = 1; i <= 8; i++) {
             sumCommunity += Number(data[`community${i}`]);
         }
-        data.BMI = Number($("#BMI").val());
+        // data.BMI = Number($("#BMI").val());
         // data.sumStrain = sumStrain;
         // data.sumHappy = sumHappy;
         // data.sumMemory = sumMemory;
