@@ -231,27 +231,27 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนรวม (พลังพลังครอบครัว)  ${sumFamily} คะแนน</h3>
+                                    คะแนนรวม (พลังครอบครัว)  ${sumFamily} คะแนน</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
-                                            <th>ระดับพลังชีวิต (พลังพลังครอบครัว)</th>
+                                            <th>ระดับพลังชีวิต (พลังครอบครัว)</th>
                                         </tr>
                                         <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังครอบครัวอยู่ในเกณฑ์ดีมาก</td>
                                          </tr>
                                         <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังครอบครัวอยู่ในเกณฑ์ดี</td>
                                        </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังพลังครอบครัวเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังครอบครัวอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังครอบครัวเพิ่มเติม</td>
                                     </tr>
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังพลังครอบครัวให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังครอบครัวอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังครอบครัวให้มากขึ้น</td>
                                     </tr>
                                     </table>
                             </div>
