@@ -148,7 +148,7 @@
       if (result.isConfirmed) {
         let data = {};
         let sumIdentity = 0;
-        let sumFamily = 0;
+        let sumFamily = 1;
         let sumIntellect = 0;
         let sumFriend = 0;
         let sumCommunity = 0;
