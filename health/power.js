@@ -164,16 +164,16 @@
         for (let i = 1; i <= 15; i++) {
             sumIdentity += Number(data[`identity${i}`]);
         }
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i <= 23; i++) {
             sumFamily += Number(data[`family${i}`]);
         }
-        for (let i = 1; i <= 11; i++) {
+        for (let i = 1; i <= 34; i++) {
             sumIntellect += Number(data[`intellect${i}`]);
         }
-        for (let i = 1; i <= 6; i++) {
+        for (let i = 1; i <= 40; i++) {
             sumFriend += Number(data[`friend${i}`]);
         }
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i <= 48; i++) {
             sumCommunity += Number(data[`community${i}`]);
         }
         // data.BMI = Number($("#BMI").val());
@@ -202,7 +202,7 @@
             let pop = `<div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  รวมคะแนน (พลังตัวตน) ${sumFamily} คะแนน</h3>
+                                  รวมคะแนน (พลังตัวตน) ${sumIdentity} คะแนน</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
