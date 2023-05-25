@@ -180,7 +180,7 @@
         // data.sumStrain = sumStrain;
         // data.sumHappy = sumHappy;
         // data.sumMemory = sumMemory;
-        data.proportion = proportion;
+        // data.proportion = proportion;
         fetch(
           "https://smartcity.onrender.com/lifesurvey/addlifesurvey",
           {
