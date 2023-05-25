@@ -168,7 +168,7 @@
             sumFamily += Number(data[`family${i}`]);
         }
         for (let i = 1; i <= 11; i++) {
-            sumnIntellect += Number(data[`intellect${i}`]);
+            sumIntellect += Number(data[`intellect${i}`]);
         }
         for (let i = 1; i <= 6; i++) {
             sumFriend += Number(data[`friend${i}`]);
