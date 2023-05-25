@@ -231,60 +231,60 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนรวม (พลังพลังสร้างปัญญา)  ${sumIdentity} คะแนน</h3>
+                                    คะแนนรวม (พลังพลังครอบครัว)  ${sumIntellect} คะแนน</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
-                                            <th>ระดับพลังชีวิต (พลังพลังสร้างปัญญา)</th>
+                                            <th>ระดับพลังชีวิต (พลังพลังครอบครัว)</th>
                                         </tr>
                                         <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">ระดับพลังพลังสร้างปัญญาอยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ดีมาก</td>
                                          </tr>
                                         <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">ระดับพลังพลังสร้างปัญญาอยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ดี</td>
                                        </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">ระดับพลังพลังสร้างปัญญาอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังพลังสร้างปัญญาเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังพลังครอบครัวเพิ่มเติม</td>
                                     </tr>1
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">ระดับพลังพลังสร้างปัญญาอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังพลังสร้างปัญญาให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังพลังครอบครัวอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังพลังครอบครัวให้มากขึ้น</td>
                                     </tr>
                                     </table>
                             </div>
                         </div>
 
-                        <div class="card">
-                          <div class="card-body ">
-                              <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  รวมคะแนน (พลังตัวตน) ${sumIntellect} คะแนน</h3>
-                                  <table id="customers1">
-                                      <tr>
-                                          <th>ร้อยละของคะแนน</th>
-                                          <th>ระดับพลังชีวิต (พลังตัวตน)</th>
-                                      </tr>
-                                      <tr>
-                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">ระดับพลังตัวตนอยู่ในเกณฑ์ดีมาก</td>
-                                      </tr>
-                                      <tr>
-                                          <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">ระดับพลังตัวตนอยู่ในเกณฑ์ดี</td>
-                                      </tr>
-                                      <tr>
-                                          <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">ระดับพลังตัวตนอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังตัวตนเพิ่มเติม</td>
-                                    </tr>1
-                                      <tr>
-                                          <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">ระดับพลังตัวตนอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังตัวตนให้มากขึ้น</td>
-                                    </tr>
-                                  </table>
-                          </div>
-                       </div>
+                         <div class="card">
+                           <div class="card-body ">
+                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
+                                   รวมคะแนน (พลังสร้างปัญญา) ${sumIntellect} คะแนน</h3>
+                                   <table id="customers1">
+                                       <tr>
+                                           <th>ร้อยละของคะแนน</th>
+                                           <th>ระดับพลังชีวิต (พลังสร้างปัญญา)</th>
+                                       </tr>
+                                       <tr>
+                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                           <td class="radio" style="color: #006600;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ดีมาก</td>
+                                       </tr>
+                                       <tr>
+                                           <td class="radio">70 - 80 คะแนน</td>
+                                           <td class="radio" style="color: #0033FF;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ดี</td>
+                                       </tr>
+                                       <tr>
+                                           <td class="radio">60 - 70 คะแนน</td>
+                                           <td class="radio" style="color: #FF6600;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังสร้างปัญญาเพิ่มเติม</td>
+                                     </tr>1
+                                       <tr>
+                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
+                                           <td class="radio" style="color: #FF0000;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังสร้างปัญญาให้มากขึ้น</td>
+                                     </tr>
+                                   </table>
+                           </div>
+                        </div>
 
                         <div class="card">
                           <div class="card-body">
