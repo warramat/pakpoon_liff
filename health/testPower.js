@@ -134,7 +134,7 @@
 //     }
 //   }
   
-  $("#TWH01").submit(function (e) {
+$("#TWH01").submit(function (e) {
     let isNumber = ["age"];
     e.preventDefault();
     Swal.fire({
@@ -202,7 +202,7 @@
             let pop = `<div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังตัวตน 77.78 %
+                                  คะแนนพลังตัวตน ${sumIdentity} คะแนน
                                   </h3>
                                   <table id="customers1">
                                       <tr>
@@ -211,19 +211,19 @@
                                       </tr>
                                       <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังตัวตนอยู่ในเกณฑ์ดีมาก</td>
                                       </tr>
                                       <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังตัวตนอยู่ในเกณฑ์ดี</td>
                                       </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังตัวตนเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังตัวตนอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังตัวตนเพิ่มเติม</td>
                                     </tr>
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">อยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังตัวตนให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังตัวตนอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังตัวตนให้มากขึ้น</td>
                                     </tr>
                                   </table>
                           </div>
@@ -232,27 +232,27 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนรวมพลังครอบครัว 70.83 %</h3>
+                                    คะแนนรวม (พลังครอบครัว)  ${sumFamily} คะแนน</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
-                                            <th>ระดับต้นทุนชีวิตพลังครอบครัว</th>
+                                            <th>ระดับพลังชีวิต (พลังครอบครัว)</th>
                                         </tr>
                                         <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังครอบครัวอยู่ในเกณฑ์ดีมาก</td>
                                          </tr>
                                         <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังครอบครัวอยู่ในเกณฑ์ดี</td>
                                        </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังครอบครัวเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังครอบครัวอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังครอบครัวเพิ่มเติม</td>
                                     </tr>
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">อยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังครอบครัวให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังครอบครัวอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังครอบครัวให้มากขึ้น</td>
                                     </tr>
                                     </table>
                             </div>
@@ -261,27 +261,27 @@
                          <div class="card">
                            <div class="card-body ">
                                <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                   คะแนนพลังสร้างปัญญา 87.88 %</h3>
+                                   รวมคะแนน (พลังสร้างปัญญา) ${sumIntellect} คะแนน</h3>
                                    <table id="customers1">
                                        <tr>
                                            <th>ร้อยละของคะแนน</th>
-                                           <th>ระดับต้นทุนชีวิตพลังสร้างปัญญา</th>
+                                           <th>ระดับพลังชีวิต (พลังสร้างปัญญา)</th>
                                        </tr>
                                        <tr>
                                            <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                           <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
+                                           <td class="radio" style="color: #006600;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ดีมาก</td>
                                        </tr>
                                        <tr>
                                            <td class="radio">70 - 80 คะแนน</td>
-                                           <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
+                                           <td class="radio" style="color: #0033FF;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ดี</td>
                                        </tr>
                                        <tr>
                                            <td class="radio">60 - 70 คะแนน</td>
-                                           <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังสร้างปัญญาเพิ่มเติม</td>
+                                           <td class="radio" style="color: #FF6600;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังสร้างปัญญาเพิ่มเติม</td>
                                      </tr>
                                        <tr>
                                            <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                           <td class="radio" style="color: #FF0000;">อยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังสร้างปัญญาให้มากขึ้น</td>
+                                           <td class="radio" style="color: #FF0000;">ระดับพลังสร้างปัญญาอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังสร้างปัญญาให้มากขึ้น</td>
                                      </tr>
                                    </table>
                            </div>
@@ -290,27 +290,27 @@
                         <div class="card">
                           <div class="card-body">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังเพื่อนและกิจกรรม 66.67 %</h3>
+                                  คะแนนรวม (พลังเพื่อนและกิจกรรม) ${sumFriend} คะแนน</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
-                                          <th>ระดับต้นทุนชีวิตพลังเพื่อนและกิจกรรม</th> 
+                                          <th>ระดับพลังชีวิต (พลังเพื่อนและกิจกรรม)</th> 
                                       </tr>
                                       <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังพลังพลังเพื่อนและกิจกรรมอยู่ในเกณฑ์ดีมาก</td>
                                          </tr>
                                         <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังพลังเพื่อนและกิจกรรมอยู่ในเกณฑ์ดี</td>
                                        </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังเพื่อนและกิจกรรมเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังพลังเพื่อนและกิจกรรมอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังพลังเพื่อนและกิจกรรมเพิ่มเติม</td>
                                     </tr>
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">อยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังเพื่อนและกิจกรรมให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังพลังเพื่อนและกิจกรรมอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังพลังเพื่อนและกิจกรรมให้มากขึ้น</td>
                                     </tr>
                                   </table>
                           </div>
@@ -318,27 +318,27 @@
                       <div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังชุมชน 83.33 %</h3>
+                                  รวมคะแนน (พลังชุมชน) ${sumCommunity} คะแนน</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
-                                          <th>ระดับต้นทุนชีวิตพลังชุมชน</th>
+                                          <th>ระดับพลังชีวิต (พลังชุมชน)</th>
                                       </tr>
                                       <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังชุมชนอยู่ในเกณฑ์ดีมาก</td>
                                       </tr>
                                       <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังชุมชนอยู่ในเกณฑ์ดี</td>
                                       </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังชุมชนเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังชุมชนอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังชุมชนเพิ่มเติม</td>
                                     </tr>
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">อยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังชุมชนให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังชุมชนอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังชุมชนให้มากขึ้น</td>
                                     </tr>
                                   </table>
                           </div>
@@ -347,27 +347,27 @@
                        <div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                              คะแนนรวม ระดับพลังชีวิต 78.47 %</h3>
+                                  ระดับพลังชีวิต คะแนนรวม 78.47 คะแนน</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
-                                          <th>ระดับต้นทุนชีวิต</th>
+                                          <th>ระดับพลังชีวิต </th>
                                       </tr>
                                       <tr>
                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
-                                          <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังชีวิตอยู่ในเกณฑ์ดีมาก</td>
                                       </tr>
                                       <tr>
                                           <td class="radio">70 - 80 คะแนน</td>
-                                          <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังชีวิตอยู่ในเกณฑ์ดี</td>
                                       </tr>
                                       <tr>
                                           <td class="radio">60 - 70 คะแนน</td>
-                                          <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างต้นทุนชีวิตเพิ่มเติม</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังชีวิตอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังชีวิตเพิ่มเติม</td>
                                     </tr>
                                       <tr>
                                           <td class="radio">น้อยกว่า 60 คะแนน</td>
-                                          <td class="radio" style="color: #FF0000;">อยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างต้นทุนชีวิตให้มากขึ้น</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังชีวิตอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังชีวิตให้มากขึ้น</td>
                                     </tr>
                                   </table>
                           </div>
