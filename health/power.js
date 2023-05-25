@@ -203,7 +203,7 @@
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                   รวมคะแนน (พลังตัวตน) ${sumIdentity} คะแนน</h3>
-                                  <table id="customers">
+                                  <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
                                           <th>ระดับพลังชีวิต (พลังตัวตน)</th>
@@ -232,7 +232,7 @@
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                     คะแนนรวม (พลังพลังสร้างปัญญา)  ${sumFamily} คะแนน</h3>
-                                    <table id="customers">
+                                    <table id="customers2">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
                                             <th>ระดับพลังชีวิต (พลังพลังสร้างปัญญา)</th>
@@ -261,7 +261,7 @@
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                   รวมคะแนน (พลังตัวตน) ${sumnIntellect} คะแนน</h3>
-                                  <table id="customers">
+                                  <table id="customers3">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
                                           <th>ระดับพลังชีวิต (พลังตัวตน)</th>
@@ -290,7 +290,7 @@
                           <div class="card-body">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                   คะแนนรวม (พลังเพื่อนและกิจกรรม) ${sumFriend} คะแนน</h3>
-                                  <table id="customers">
+                                  <table id="customers4">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
                                           <th>ระดับพลังชีวิต (พลังเพื่อนและกิจกรรม)</th> 
@@ -318,7 +318,7 @@
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                   รวมคะแนน (พลังชุมชน) ${sumCommunity} คะแนน</h3>
-                                  <table id="customers">
+                                  <table id="customers5">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
                                           <th>ระดับพลังชีวิต (พลังชุมชน)</th>
