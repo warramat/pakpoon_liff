@@ -341,7 +341,37 @@
                                     </tr>
                                   </table>
                           </div>
-                       </div>`;
+                       </div>
+                       
+                       <div class="card">
+                          <div class="card-body ">
+                              <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
+                                  พลังชีวิตคะแนนรวม) ${sumCommunity} คะแนน</h3>
+                                  <table id="customers1">
+                                      <tr>
+                                          <th>ร้อยละของคะแนน</th>
+                                          <th>ระดับพลังชีวิต </th>
+                                      </tr>
+                                      <tr>
+                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                          <td class="radio" style="color: #006600;">ระดับพลังชีวิตอยู่ในเกณฑ์ดีมาก</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="radio">70 - 80 คะแนน</td>
+                                          <td class="radio" style="color: #0033FF;">ระดับพลังชีวิตอยู่ในเกณฑ์ดี</td>
+                                      </tr>
+                                      <tr>
+                                          <td class="radio">60 - 70 คะแนน</td>
+                                          <td class="radio" style="color: #FF6600;">ระดับพลังชีวิตอยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังชีวิตเพิ่มเติม</td>
+                                    </tr>1
+                                      <tr>
+                                          <td class="radio">น้อยกว่า 60 คะแนน</td>
+                                          <td class="radio" style="color: #FF0000;">ระดับพลังชีวิตอยู่ในเกณฑ์ค่อนข้างน้อย และควรเพิ่มหรือเสริมสร้างพลังชีวิตให้มากขึ้น</td>
+                                    </tr>
+                                  </table>
+                          </div>
+                       </div>
+                       `;
             Swal.fire({
               html: pop,
               showDenyButton: false,
