@@ -149,7 +149,7 @@
         let data = {};
         let sumIdentity = 0;
         let sumFamily = 0;
-        let sumnIntellect = 0;
+        let sumIntellect = 0;
         let sumFriend = 0;
         let sumCommunity = 0;
         $("#TWH01")
@@ -231,7 +231,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนรวม (พลังพลังสร้างปัญญา) ${sumFamily} คะแนน</h3>
+                                    คะแนนรวม (พลังพลังสร้างปัญญา)  ${sumFamily} คะแนน</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
@@ -260,7 +260,7 @@
                         <div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  รวมคะแนน (พลังตัวตน) ${sumnIntellect} คะแนน</h3>
+                                  รวมคะแนน (พลังตัวตน) ${sumIntellect} คะแนน</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
