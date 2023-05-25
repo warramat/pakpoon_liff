@@ -148,7 +148,7 @@
       if (result.isConfirmed) {
         let data = {};
         let sumIdentity = 0;
-        let sumFamily = 1;
+        let sumFamily = 0;
         let sumIntellect = 0;
         let sumFriend = 0;
         let sumCommunity = 0;
@@ -202,7 +202,7 @@
             let pop = `<div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  รวมคะแนน (พลังตัวตน) ${sumIdentity} คะแนน</h3>
+                                  รวมคะแนน (พลังตัวตน) ${sumFamily} คะแนน</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
