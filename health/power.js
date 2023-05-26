@@ -210,7 +210,7 @@
                                           <th>ระดับต้นทุนชีวิตพลังตัวตน</th>
                                       </tr>
                                       <tr>
-                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                          <td class="radio">80 คะแนนขึ้นไป </td>
                                           <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
                                       </tr>
                                       <tr>
@@ -239,7 +239,7 @@
                                             <th>ระดับต้นทุนชีวิตพลังครอบครัว</th>
                                         </tr>
                                         <tr>
-                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                          <td class="radio">80 คะแนนขึ้นไป </td>
                                           <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
                                          </tr>
                                         <tr>
@@ -268,7 +268,7 @@
                                            <th>ระดับต้นทุนชีวิตพลังสร้างปัญญา</th>
                                        </tr>
                                        <tr>
-                                           <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                           <td class="radio">80 คะแนนขึ้นไป </td>
                                            <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
                                        </tr>
                                        <tr>
@@ -297,7 +297,7 @@
                                           <th>ระดับต้นทุนชีวิตพลังเพื่อนและกิจกรรม</th> 
                                       </tr>
                                       <tr>
-                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                          <td class="radio">80 คะแนนขึ้นไป</td>
                                           <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
                                          </tr>
                                         <tr>
@@ -325,7 +325,7 @@
                                           <th>ระดับต้นทุนชีวิตพลังชุมชน</th>
                                       </tr>
                                       <tr>
-                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                          <td class="radio">80 คะแนนขึ้นไป </td>
                                           <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
                                       </tr>
                                       <tr>
@@ -354,7 +354,7 @@
                                           <th>ระดับต้นทุนชีวิต</th>
                                       </tr>
                                       <tr>
-                                          <td class="radio">80 คะแนนขึ้นไป คะแนน</td>
+                                          <td class="radio">80 คะแนนขึ้นไป</td>
                                           <td class="radio" style="color: #006600;">อยู่ในเกณฑ์ดีมาก</td>
                                       </tr>
                                       <tr>
