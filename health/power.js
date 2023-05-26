@@ -204,7 +204,7 @@
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
                                   คะแนนพลังตัวตน 77.78 %
                                   </h3>
-                                  <table id="customers1">
+                                  <table id="customers1" style="width:100%">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
                                           <th>ระดับต้นทุนชีวิตพลังตัวตน</th>
@@ -293,7 +293,7 @@
                                   คะแนนพลังเพื่อนและกิจกรรม 66.67 %</h3>
                                   <table id="customers1">
                                       <tr>
-                                          <th>ร้อยละของคะแนน</th>
+                                          <th >ร้อยละของคะแนน</th>
                                           <th>ระดับต้นทุนชีวิตพลังเพื่อนและกิจกรรม</th> 
                                       </tr>
                                       <tr>
