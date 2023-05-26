@@ -232,7 +232,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนพลังครอบครัว ${((sumIdentity)*100/24)} %</h3>
+                                    คะแนนพลังครอบครัว ${((sumFamily)*100/24)} %</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
