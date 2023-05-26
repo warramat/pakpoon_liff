@@ -232,7 +232,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนรวมพลังครอบครัว 70.83 %</h3>
+                                    คะแนนพลังครอบครัว 70.83 %</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
