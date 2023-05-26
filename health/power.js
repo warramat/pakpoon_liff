@@ -202,7 +202,7 @@
             let pop = `<div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังตัวตน ${sumIdentity*45/100} %
+                                  คะแนนพลังตัวตน ${(sumIdentity*1000)} %
                                   </h3>
                                   <table id="customers1">
                                       <tr>
@@ -232,7 +232,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนพลังครอบครัว 70.83 %</h3>
+                                    คะแนนพลังครอบครัว ${sumFamily} %</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
@@ -261,7 +261,7 @@
                          <div class="card">
                            <div class="card-body ">
                                <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                   คะแนนพลังสร้างปัญญา 87.88 %</h3>
+                                   คะแนนพลังสร้างปัญญา ${sumIntellect} %</h3>
                                    <table id="customers1">
                                        <tr>
                                            <th>ร้อยละของคะแนน</th>
@@ -290,7 +290,7 @@
                         <div class="card">
                           <div class="card-body">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังเพื่อนและกิจกรรม 66.67 %</h3>
+                                  คะแนนพลังเพื่อนและกิจกรรม ${sumFriend} %</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
@@ -318,7 +318,7 @@
                       <div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังชุมชน 83.33 %</h3>
+                                  คะแนนพลังชุมชน ${(sumCommunity)} %</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
@@ -347,7 +347,7 @@
                        <div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                              คะแนนรวม ระดับต้นทุนชีวิต 78.47 %</h3>
+                              คะแนนรวม ระดับต้นทุนชีวิต ${sumIdentity} %</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
