@@ -232,7 +232,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                    คะแนนพลังครอบครัว ${sumFamily} %</h3>
+                                    คะแนนพลังครอบครัว ${sumIdentity} %</h3>
                                     <table id="customers1">
                                         <tr>
                                             <th>ร้อยละของคะแนน</th>
@@ -261,7 +261,7 @@
                          <div class="card">
                            <div class="card-body ">
                                <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                   คะแนนพลังสร้างปัญญา ${sumIntellect} %</h3>
+                                   คะแนนพลังสร้างปัญญา ${sumIdentity} %</h3>
                                    <table id="customers1">
                                        <tr>
                                            <th>ร้อยละของคะแนน</th>
@@ -290,7 +290,7 @@
                         <div class="card">
                           <div class="card-body">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังเพื่อนและกิจกรรม ${sumFriend} %</h3>
+                                  คะแนนพลังเพื่อนและกิจกรรม ${sumIdentity} %</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
@@ -318,7 +318,7 @@
                       <div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังชุมชน ${(sumCommunity)} %</h3>
+                                  คะแนนพลังชุมชน ${(sumIdentity)} %</h3>
                                   <table id="customers1">
                                       <tr>
                                           <th>ร้อยละของคะแนน</th>
