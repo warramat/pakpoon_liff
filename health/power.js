@@ -202,7 +202,7 @@
             let pop = `<div class="card">
                           <div class="card-body ">
                               <h3 class="d-flex align-items-center" style="color: blue; flex-direction: column;">
-                                  คะแนนพลังตัวตน ${sumCommunity*45/100} %
+                                  คะแนนพลังตัวตน ${sumIdentity*45/100} %
                                   </h3>
                                   <table id="customers1">
                                       <tr>
