@@ -217,7 +217,7 @@
                                           <td class="radio">70 - 80 คะแนน</td>
                                           <td class="radio" style="color: #0033FF;">อยู่ในเกณฑ์ดี</td>
                                       </tr>
-                                      <tr>
+                                      <tr>r
                                           <td class="radio">60 - 70 คะแนน</td>
                                           <td class="radio" style="color: #FF6600;">อยู่ในเกณฑ์ปานกลาง และควรเสริมสร้างพลังตัวตนเพิ่มเติม</td>
                                     </tr>
