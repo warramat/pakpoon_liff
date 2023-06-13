@@ -192,17 +192,26 @@
               <option value="ศูนย์พัฒนาเด็กเล็ก">ศูนย์พัฒนาเด็กเล็ก</option>
             </select>
             <br />
+
             <label for="position">ตำแหน่ง</label>
-            <input
+            <select
               id="position"
               name="position"
-              class="form-control"
-              type="text"
-              placeholder="กรุณากรอก"
-              aria-label="default input example"
-            />
+              class="form-select"
+            >
+              <option value="" selected disabled hidden>
+                กรุณาเลือกประเภท
+              </option>
+              <option value="ข้าราชการการเมือง">ข้าราชการการเมือง</option>
+              <option value="พนักงานเทศบาล/ข้าราชการ">พนักงานเทศบาล/ข้าราชการ</option>
+              <option value="ลูกจ้างประจำ">ลูกจ้างประจำ</option>
+              <option value="พนักงานจ้างตามภารกิจ">พนักงานจ้างตามภารกิจ</option>
+              <option value="พนักงานจ้างทั่วไป">พนักงานจ้างทั่วไป</option>
+              <option value="ลูกจ้างโครงการ/จ้างเหมาบริการ">ลูกจ้างโครงการ/จ้างเหมาบริการ</option>
+            </select>
             <br />
-            <div class="form-group">
+
+          <div class="form-group">
               <label for="prefix">กอง</label>
               <select
                 id="division"
@@ -222,16 +231,7 @@
               </select>
             </div>
             <br />
-            <label for="cotton">ฝ่าย</label>
-            <input
-              id="cotton"
-              name="cotton"
-              class="form-control"
-              type="text"
-              placeholder="กรุณากรอก"
-              
-              aria-label="default input example"
-            />
+           
           </div>
           <br />
           <div class="form-group">
@@ -277,6 +277,44 @@
           </div>
           <br />
           <div class="form-group">
+            <label for="">เลขบัตรประชาชน</label>
+            <input
+              id=""
+              name=""
+              class="form-control"
+              type="number"
+              placeholder="กรุณากรอก"
+              
+              aria-label="default input example"
+            />
+          </div>
+          <br />
+
+          <div class="form-group">
+            <label for="nickname">ชื่อเล่น</label>
+            <input
+              id="nickname"
+              name="nickname"
+              class="form-control"
+              type="text"
+              placeholder="กรุณากรอก"
+              
+              aria-label="default input example"
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="sex">สถานะ</label>
+            <select id="sex" name="sex" class="form-select" >
+              <option value="" selected disabled hidden>กรุณาเลือก</option>
+              <option value="โสด">โสด</option>
+              <option value="สมรส">สมรส</option>
+              <option value="อย่าร้าง">อย่าร้าง</option>
+              <option value="หม้าย">หม้าย</option>
+            </select>
+          </div>
+          <br />
+          <div class="form-group">
             <label for="sex">เพศ</label>
             <select id="sex" name="sex" class="form-select" >
               <option value="" selected disabled hidden>กรุณาเลือก</option>
@@ -298,6 +336,20 @@
             />
           </div>
           <br />
+          <div class="form-group">
+            <label for="address">ที่อยู่</label>
+            <input
+              id="address"
+              name="address"
+              class="form-control"
+              type="text"
+              placeholder="กรุณากรอก"
+              
+              aria-label="default input example"
+            />
+          </div>
+          <br />
+          
           <h5>การตรวจสุขภาพเบื้องต้น</h5>
           <div class="form-group">
             <label for="weight">น้ำหนัก (กิโลกรัม)</label>
@@ -344,7 +396,8 @@
         </div>
           <br />
           <div class="form-group">
-            <label for="waistline">รอบเอว (นิ้ว)</label>
+            <label for="waistline">รอบเอว (เซนติเมตร)</label>
+            <p>1 นิ้ว = 2.5 เซนติเมตร</p>
             <input
               id="waistline"
               name="waistline"
@@ -740,6 +793,30 @@
                 งานขับรถ
               </label>
             </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                name="job_position"
+                type="checkbox"
+                value="งานด้านการเกษตร/ปศุสัตว์/สัตวแพทย์/ประมง"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                งานด้านการเกษตร/ปศุสัตว์/สัตวแพทย์/ประมง
+              </label>
+            </div>
+
+            <div class="form-group">
+              <label for="other_job_position">อื่นๆ (โปรดระบุ)</label>
+              <input
+                id="other_job_position"
+                name="other_job_position"
+                class="form-control accident-txt"
+                type="text"
+                placeholder="กรุณากรอก"
+                aria-label="default input example"
+              />
+            </div>
+
             <br />
             <div class="form-group">
               <label for="working_life">อายุการทำงาน......ปี.....เดือน</label>
@@ -1179,7 +1256,7 @@
             </div>
             <br />
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="covid1"
                 >ท่านเคยติดเชื้อโควิด-19 (COVID-19) หรือไม่</label
               >
@@ -1206,7 +1283,59 @@
                   เคย
                 </label>
               </div>
+
+            </div> -->
+
+
+            <div class="form-group">
+              <label for="covid1"
+                >ท่านเคยติดเชื้อโควิด-19 (COVID-19) หรือไม่</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input covid1"
+                  name="covid1"
+                  type="radio"
+                  
+                  value="ไม่เคย"
+                />
+                <label class="form-check-label" for="flexCheckDefault">
+                  ไม่เคย
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input covid1"
+                  name="covid1"
+                  type="radio"
+                  value="เคย"
+                />
+                <label class="form-check-label" for="flexCheckChecked">
+                  เคย
+                </label>
+              </div>
             </div>
+            <br />
+
+            <div class="form-group">
+              <div class="form-group">
+                <label for="covid12"
+                  >หากเคย จำนวนกี่ครั้ง</label
+                >
+                <input
+                  id="smoke_often1"
+                  name="covid12"
+                  class="form-control"
+                  type="number"
+                  min="1"
+                  step="1"
+                  placeholder="คำตอบของคุณ"
+                  aria-label="default input example"
+                  
+                />
+              </div>
+            </div>
+
             <br />
             <div class="form-group">
               <label for="covid2">ท่านได้รับวัคซีนมาแล้วจำนวนกี่ เข็ม</label>
