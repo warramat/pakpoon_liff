@@ -100,6 +100,15 @@ $(".covid1").change((e) => {
   }
 });
 
+$(".treatmentrights").change((e) => {
+  if (!$(".treatmentrights")[0].checked) {
+    $("#treatmentrights").attr("disabled", false);
+  } else {
+    $("#treatmentrights").attr("disabled", true);
+    $("#treatmentrights").val("");
+  }
+});
+
 $(".debt_information").change((e) => {
   if (!$(".debt_information")[0].checked) {
     $("#debt_information").attr("disabled", false);
