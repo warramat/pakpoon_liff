@@ -277,14 +277,13 @@
           </div>
           <br />
           <div class="form-group">
-            <label for="">เลขบัตรประชาชน</label>
+            <label for="IDcard">เลขบัตรประชาชน</label>
             <input
-              id=""
-              name=""
+              id="IDcard"
+              name="IDcard"
               class="form-control"
               type="number"
               placeholder="กรุณากรอก"
-              
               aria-label="default input example"
             />
           </div>
@@ -304,8 +303,8 @@
           </div>
           <br />
           <div class="form-group">
-            <label for="sex">สถานะ</label>
-            <select id="sex" name="sex" class="form-select" >
+            <label for="status">สถานะ</label>
+            <select id="status" name="status" class="form-select" >
               <option value="" selected disabled hidden>กรุณาเลือก</option>
               <option value="โสด">โสด</option>
               <option value="สมรส">สมรส</option>
@@ -321,6 +320,18 @@
               <option value="ชาย">ชาย</option>
               <option value="หญิง">หญิง</option>
             </select>
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="tel">เบอร์โทรติดต่อ</label>
+            <input
+              id="tel"
+              name="tel"
+              class="form-control"
+              type="number"
+              placeholder="กรุณากรอก"
+              aria-label="default input example"
+            />
           </div>
           <br />
           <div class="form-group">
@@ -351,6 +362,48 @@
           <br />
           
           <h5>การตรวจสุขภาพเบื้องต้น</h5>
+
+          <div class="form-group">
+            <label for="treatmentrights ">สิทธิการรักษาพยาบาล</label>
+           
+            <div class="form-check">
+              <input
+                class="form-check-input treatmentrights"
+                name="treatmentrights"
+                type="radio"
+                value="สิทธิข้าราชการ/เบิกจ่ายตรงกรมบัญชีกลาง"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                สิทธิข้าราชการ/เบิกจ่ายตรงกรมบัญชีกลาง
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input treatmentrights"
+                name="treatmentrights"
+                type="treatmentrights"
+                value="ไม่มีสิทธิการรักษาพยาบาล"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                ไม่มีสิทธิการรักษาพยาบาล
+              </label>
+            </div>
+            
+            <div class="form-group">
+              <label for="treatmentrights99">อื่นๆ (โปรดระบุ)</label>
+              <input
+                id="treatmentrights99"
+                name="treatmentrights99"
+                class="form-control sick-txt"
+                type="text"
+                placeholder="กรุณากรอก"
+                aria-label="default input example"
+              />
+            </div>
+            <br />
+          </div>
+
+          
           <div class="form-group">
             <label for="weight">น้ำหนัก (กิโลกรัม)</label>
             <input
@@ -806,10 +859,10 @@
             </div>
 
             <div class="form-group">
-              <label for="other_job_position">อื่นๆ (โปรดระบุ)</label>
+              <label for="job99">อื่นๆ (โปรดระบุ)</label>
               <input
-                id="other_job_position"
-                name="other_job_position"
+                id="job99"
+                name="job99"
                 class="form-control accident-txt"
                 type="text"
                 placeholder="กรุณากรอก"
