@@ -90,6 +90,16 @@ $(".smoke_often1").change((e) => {
   }
 });
 
+
+$(".smoke_often1").change((e) => {
+  if (!$(".smoke_often1")[0].checked) {
+    $("#smoke_often1").attr("disabled", false);
+  } else {
+    $("#smoke_often1").attr("disabled", true);
+    $("#smoke_often1").val("");
+  }
+});
+
 $(".debt_information").change((e) => {
   if (!$(".debt_information")[0].checked) {
     $("#debt_information").attr("disabled", false);
