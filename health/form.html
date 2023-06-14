@@ -193,7 +193,7 @@
             </select>
             <br />
 
-            <label for="position">ตำแหน่ง</label>
+            <label for="position">ประเภทการจ้างงาน</label>
             <select
               id="position"
               name="position"
@@ -210,6 +210,21 @@
               <option value="ลูกจ้างโครงการ/จ้างเหมาบริการ">ลูกจ้างโครงการ/จ้างเหมาบริการ</option>
             </select>
             <br />
+
+            <div class="form-group">
+              <label for="Employmenttype">ตำแหน่งงานที่ปฏิบัติ</label>
+              <input
+                id="Employmenttype"
+                name="Employmenttype"
+                class="form-control"
+                type="text"
+                placeholder="กรุณากรอก"
+                
+                aria-label="default input example"
+              />
+            </div>
+            <br />
+            
 
           <div class="form-group">
               <label for="prefix">กอง</label>
@@ -230,9 +245,7 @@
                 <option value="สำนักปลัดเทศบาล">สำนักปลัดเทศบาล</option>
               </select>
             </div>
-            <br />
            
-          </div>
           <br />
           <div class="form-group">
             <label for="prefix">คำนำหน้า</label>
@@ -368,9 +381,9 @@
            
             <div class="form-check">
               <input
-                class="form-check-input treatmentrights"
+                class="form-check-input "
                 name="treatmentrights"
-                type="radio"
+                type="checkbox"
                 value="สิทธิข้าราชการ/เบิกจ่ายตรงกรมบัญชีกลาง"
               />
               <label class="form-check-label" for="flexCheckChecked">
@@ -379,9 +392,61 @@
             </div>
             <div class="form-check">
               <input
-                class="form-check-input treatmentrights"
+                class="form-check-input "
                 name="treatmentrights"
-                type="radio"
+                type="checkbox"
+                value="ไม่มีสิทธิการรักษาพยาบาล"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                สิทธิบัตรทอง
+              </label>
+
+              <label for="hospital">สังกัด โรงพยาบาล</label>
+              <select id="hospital" name="hospital" class="form-select" >
+                <option value="" selected disabled hidden>กรุณาเลือก</option>
+                <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
+                <option value="โรงพยาบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเมืองปากพูน บ้านตลาดพฤหัส</option>
+                <option value="โรงพยาบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเมืองปากพูน บ้านศาลาบางปู</option>
+                <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
+                <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
+                <option value="โรงพยาบาลนครินทร์">โรงพยาบาลนครินทร์</option>
+                <option value="โรงพยาบาลกรุงเทพคริสเตียน">โรงพยาบาลกรุงเทพคริสเตียน</option>
+                <option value="โรงพยาบาลนครพัฒน์">โรงพยาบาลนครพัฒน์</option>
+                <option value="โรงพยาบาลเทศบาลนครนครศรีธรรมราช">โรงพยาบาลเทศบาลนครนครศรีธรรมราช</option>
+                <option value="โรงพยาบาลอื่นๆ">โรงพยาบาลอื่นๆ</option>
+              </select>
+            </div>
+           
+            <div class="form-check">
+              <input
+                class="form-check-input "
+                name="treatmentrights"
+                type="checkbox"
+                value="ไม่มีสิทธิการรักษาพยาบาล"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                สิทธิประกันสังคม
+              </label>
+              <label for="hospital">สังกัด โรงพยาบาล</label>
+              <select id="hospital" name="hospital" class="form-select" >
+                <option value="" selected disabled hidden>กรุณาเลือก</option>
+                <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
+                <option value="โรงพยาบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเมืองปากพูน บ้านตลาดพฤหัส</option>
+                <option value="โรงพยาบาลเมืองปากพูน บ้านศาลาบางปู">โรงพยาบาลเมืองปากพูน บ้านศาลาบางปู</option>
+                <option value="โรงพยาบาลค่ายวชิราวุธ">โรงพยาบาลค่ายวชิราวุธ</option>
+                <option value="โรงพยาบาลท่าศาลา">โรงพยาบาลท่าศาลา</option>
+                <option value="โรงพยาบาลนครินทร์">โรงพยาบาลนครินทร์</option>
+                <option value="โรงพยาบาลกรุงเทพคริสเตียน">โรงพยาบาลกรุงเทพคริสเตียน</option>
+                <option value="โรงพยาบาลนครพัฒน์">โรงพยาบาลนครพัฒน์</option>
+                <option value="โรงพยาบาลเทศบาลนครนครศรีธรรมราช">โรงพยาบาลเทศบาลนครนครศรีธรรมราช</option>
+                <option value="โรงพยาบาลอื่นๆ">โรงพยาบาลอื่นๆ</option>
+              </select>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input "
+                name="treatmentrights"
+                type="checkbox"
                 value="ไม่มีสิทธิการรักษาพยาบาล"
               />
               <label class="form-check-label" for="flexCheckChecked">
