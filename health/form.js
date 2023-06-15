@@ -161,19 +161,19 @@ function set() {
   } else if (BMI >= 18.5 && BMI < 22.9) {
     $("#proportion").val("สมส่วน");
     proportion = "สมส่วน";
-    $("#proportion").css("color", "green");
+    $("#proportion").css("color", "#003300");
   } else if (BMI >= 23 && BMI < 24.9) {
     $("#proportion").val("ท้วม");
     proportion = "ท้วม";
-    $("#proportion").css("color", "yellow");
+    $("#proportion").css("color", "#FF6600");
   } else if (BMI >= 25 && BMI < 29.9) {
     $("#proportion").val("โรคอ้วน");
     proportion = "โรคอ้วน";
-    $("#proportion").css("color", "orange");
+    $("#proportion").css("color", "#FF3300");
   } else if (BMI > 30) {
     $("#proportion").val("โรคอ้วนอันตราย");
     proportion = "โรคอ้วนอันตราย";
-    $("#proportion").css("color", "red");
+    $("#proportion").css("color", "#FF0000");
   }
 }
 
