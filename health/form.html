@@ -315,14 +315,14 @@
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
-              
+              required
               aria-label="default input example"
             />
           </div>
           <br />
           <div class="form-group">
             <label for="status">สถานะ</label>
-            <select id="status" name="status" class="form-select" >
+            <select id="status" name="status" class="form-select" required >
               <option value="" selected disabled hidden>กรุณาเลือก</option>
               <option value="โสด">โสด</option>
               <option value="สมรส">สมรส</option>
@@ -333,7 +333,7 @@
           <br />
           <div class="form-group">
             <label for="sex">เพศ</label>
-            <select id="sex" name="sex" class="form-select" >
+            <select id="sex" name="sex" class="form-select" required >
               <option value="" selected disabled hidden>กรุณาเลือก</option>
               <option value="ชาย">ชาย</option>
               <option value="หญิง">หญิง</option>
@@ -361,7 +361,7 @@
               class="form-control"
               type="number"
               placeholder="กรุณากรอก"
-              
+              required
               aria-label="default input example"
             />
           </div>
@@ -374,7 +374,7 @@
               class="form-control"
               type="text"
               placeholder="กรุณากรอก"
-              
+              required
               aria-label="default input example"
             />
           </div>
@@ -390,6 +390,7 @@
                 class="form-check-input "
                 name="treatmentrights"
                 type="checkbox"
+                required
                 value="สิทธิข้าราชการ/เบิกจ่ายตรงกรมบัญชีกลาง"
               />
               <label class="form-check-label" for="flexCheckChecked">
@@ -408,7 +409,7 @@
               </label>
 
               <label for="hospital">สังกัด โรงพยาบาล</label>
-              <select id="hospital" name="hospital" class="form-select" >
+              <select id="hospital" name="hospital" class="form-select" required >
                 <option value="" selected disabled hidden>กรุณาเลือก</option>
                 <option value="โรงพยาบาลมหาราช">โรงพยาบาลมหาราช</option>
                 <option value="โรงพยาบาลเมืองปากพูน บ้านตลาดพฤหัส">โรงพยาบาลเมืองปากพูน บ้านตลาดพฤหัส</option>
@@ -428,6 +429,7 @@
                 class="form-check-input "
                 name="treatmentrights"
                 type="checkbox"
+                required
                 value="สิทธิประกันสังคม"
               />
               <label class="form-check-label" for="flexCheckChecked">
@@ -469,6 +471,7 @@
                 type="text"
                 placeholder="กรุณากรอก"
                 aria-label="default input example"
+                required
               />
             </div>
             <br />
@@ -483,7 +486,7 @@
               class="form-control"
               type="number"
               placeholder="กรุณากรอก"
-              
+              required
               aria-label="default input example"
             />
           </div>
@@ -506,7 +509,7 @@
                 <div class="form-group">
                     <label for="BMI">ค่า BMI :</label>
                     <input id="BMI" name="BMI" class="form-control" type="text" placeholder=""
-                        aria-label="default input example" disabled>
+                        aria-label="default input example" disabled required>
                 </div>
             </div>
             <div class="col-6">
@@ -542,7 +545,7 @@
                 name="congenital_disease"
                 type="checkbox"
                 value="ไม่มีโรคประจำตัว (ข้ามไปข้อถัดไป)"
-                
+                required
               />
               <label class="form-check-label" for="flexCheckChecked">
                 ไม่มีโรคประจำตัว (ข้ามไปข้อถัดไป)
@@ -639,7 +642,7 @@
                 name="sick"
                 type="checkbox"
                 value="ไม่เคย (ข้ามไปข้อถัดไป)"
-                
+                required
               />
               <label class="form-check-label" for="flexCheckChecked">
                 ไม่เคย (ข้ามไปข้อถัดไป)
@@ -726,6 +729,7 @@
                 name="accident"
                 type="checkbox"
                 value="ไม่เคย (ข้ามไปข้อถัดไป)"
+                required
               />
               <label class="form-check-label" for="flexCheckChecked" >
                 ไม่เคย (ข้ามไปข้อถัดไป)
@@ -834,7 +838,7 @@
                 name="job_position"
                 type="checkbox"
                 value="งานเอกสาร/งานสำนักงาน"
-                
+                required
               />
               <label class="form-check-label" for="flexCheckChecked">
                 งานเอกสาร/งานสำนักงาน
@@ -968,7 +972,7 @@
                 step="1"
                 placeholder="คำตอบของคุณ"
                 aria-label="default input example"
-                
+                required
               />
             </div>
             <br />
@@ -983,7 +987,7 @@
                 step="1"
                 placeholder="คำตอบของคุณ"
                 aria-label="default input example"
-                
+                required
               />
             </div>
             <br />
@@ -995,7 +999,7 @@
                   name="department"
                   type="radio"
                   value="ทำ"
-                  
+                  required
                 />
                 <label class="form-check-label" for="flexCheckDefault">
                   ทำ
