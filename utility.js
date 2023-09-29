@@ -4,13 +4,38 @@ function getTime(datetime) {
 }
 
 function toThaidate(datetime) {
+  const month = [
+    'มกราคม',
+    'กุมภาพันธ์',
+    'มีนาคม',
+    'เมษายน',
+    'พฤษภาคม',
+    'มิถุนายน',
+    'กรกฏาคม',
+    'สิงหาคม',
+    'กันยายน',
+    'ตุลาคม',
+    'พฤศจิกายน',
+    'ธันวาคม'
+  ]
+
+  const dayInWeek = [
+    'อาทิตย์',
+    'จันทร์',
+    'อังคาร',
+    'พุธ',
+    'พฤหัสบดี',
+    'ศุกร์',
+    'เสาร์'
+  ]
   datetime = datetime.split(' ')
   let d = datetime[0].split('-')
   let t = datetime[1]
   d=d.reverse()
   let dtext = d.join('-')
   let newdate = new Date(dtext + " "+t)
-  console.log(newdate);
+  return `วัน${dayInWeek[newdate.getDay()]} ที่ ${newdate.getDate()} ${month[newdate.getMonth()]} พ.ศ. ${Number(newdate.getFullYear())+543}`
+  
 }
 
 
