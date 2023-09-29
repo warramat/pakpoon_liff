@@ -34,7 +34,7 @@ function toThaidate(datetime) {
   d=d.reverse()
   let dtext = d.join('-')
   let newdate = new Date(dtext + " "+t)
-  return `วัน${dayInWeek[newdate.getDay()]} ที่ ${newdate.getDate()} ${month[newdate.getMonth()]} พ.ศ. ${Number(newdate.getFullYear())+543}`
+  return `วัน${dayInWeek[newdate.getDay()]} ที่ ${newdate.getDate()} ${month[newdate.getMonth()]} พ.ศ. ${Number(newdate.getFullYear())+543} เวลา ${t} น.`
   
 }
 
