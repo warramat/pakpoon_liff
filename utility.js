@@ -4,11 +4,13 @@ function getTime(datetime) {
 }
 
 function toThaidate(datetime) {
-  console.log(Date(datetime))
-  
-  return `วัน${day}ที่ ${Number(date[0])}  ${
-    M[Number(date[1]) - 1]
-  } พ.ศ. ${Thaiyear}`;
+  datetime = datetime.split(' ')
+  let d = datetime[0].split('-')
+  let t = datetime[1]
+  d=d.reverse()
+  let dtext = d.join('-')
+  let newdate = new Date(dtext + " "+t)
+  console.log(newdate);
 }
 
 
