@@ -4,7 +4,6 @@ function getTime(datetime) {
 }
 
 function toThaidate(datetime) {
-  moment.locale('th')
   return moment(Date(datetime)).format('LLLL')
 }
 
