@@ -18,7 +18,6 @@ function toThaidate(datetime) {
     'พฤศจิกายน',
     'ธันวาคม'
   ]
-
   const dayInWeek = [
     'อาทิตย์',
     'จันทร์',
